@@ -21,6 +21,7 @@ namespace EletroMath
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
         }
         private Color SelectThemeColor()
         {
@@ -48,7 +49,7 @@ namespace EletroMath
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
-                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    ThemeColor.SecundaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
 
                 }
@@ -108,6 +109,23 @@ namespace EletroMath
             OpenChildForm(new Forms.FormSinais(), sender);
         }
 
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm!=null)
+                activeForm .Close();
+            Reset();
+
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            lblTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            currentButton = null;
+            btnCloseChildForm.Visible= false;
+        }
     }
 
 }

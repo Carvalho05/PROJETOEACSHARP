@@ -12,7 +12,7 @@ namespace EletroMath
 
         public static Color PrimaryColor { get; set; }
         public static Color SecundaryColor { get; set; }
-        public static List<string> ColorList = new List<string>{"#3F51B5",
+        public static List<string> ColorList = new List<string>{    "#3F51B5",
                                                                     "#009688",
                                                                     "#FF5722",
                                                                     "#607D8B",
