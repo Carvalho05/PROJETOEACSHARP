@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,12 +17,15 @@ namespace EletroMath
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        private string idiomaAtual = "portugues";
 
         public FormMainMenu()
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
+            UpdateLanguageButtonText();
+            AtualizarTextos();
         }
         private Color SelectThemeColor()
         {
@@ -51,7 +55,6 @@ namespace EletroMath
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecundaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
-
                 }
             }
         }
@@ -111,8 +114,8 @@ namespace EletroMath
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
-            if (activeForm!=null)
-                activeForm .Close();
+            if (activeForm != null)
+                activeForm.Close();
             Reset();
 
         }
@@ -124,8 +127,51 @@ namespace EletroMath
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
-            btnCloseChildForm.Visible= false;
+            btnCloseChildForm.Visible = false;
         }
-    }
 
+        private void btnLang_Click(object sender, EventArgs e)
+        {
+            {
+                // Toggle between Portuguese and English based on the current language
+                if (idiomaAtual == "portugues")
+                {
+                    idiomaAtual = "ingles";
+                }
+                else
+                {
+                    idiomaAtual = "portugues";
+                }
+                // Atualiza o texto do botão de alteração de idioma com base no idioma atual
+                UpdateLanguageButtonText();
+                AtualizarTextos();
+            }
+        }
+        private void UpdateLanguageButtonText()
+        {
+            // Define o texto do botão de alteração de idioma com base no idioma atual
+            btnLang.Text = idiomaAtual == "portugues" ? "EN" : "PT";
+        }
+        private void AtualizarTextos()
+        {
+            // Verifica o idioma atual e define os textos correspondentes para cada Label
+            if (idiomaAtual == "ingles")
+            {
+                btnRes.Text = "Resistors";
+                btnTeo.Text = "Theorems";
+                btnCon.Text = "Capacitors";
+                btnBob.Text = "Coils";
+                btnSin.Text = "Digital Signals";
+            }
+            else if (idiomaAtual == "portugues")
+            {
+                btnRes.Text = "Resistências";
+                btnTeo.Text = "Teoremas";
+                btnCon.Text = "Condensadores";
+                btnBob.Text = "Bobines";
+                btnSin.Text = "Sinais Digitais";
+            }
+        }
+
+    }
 }
