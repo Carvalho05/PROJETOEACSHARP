@@ -12,6 +12,7 @@ namespace EletroMath.Forms
 {
     public partial class FormSinais : Form
     {
+        private const double M_PI = Math.PI;
         public FormSinais()
         {
             InitializeComponent();
@@ -34,6 +35,64 @@ namespace EletroMath.Forms
             }
         }
 
- 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double amplitude = ParseDouble(txtBoxVolt.Text);
+            double frequencia = ParseDouble(txtBoxFreq.Text);
+            GerarGrafico("Onda Sinusoidal", (tempo) => amplitude * Math.Sin(2 * M_PI * frequencia * tempo));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double amplitude = ParseDouble(txtBoxVolt.Text);
+            double frequencia = ParseDouble(txtBoxFreq.Text);
+            GerarGrafico("Onda Quadrada", (tempo) =>
+            {
+                double periodo = 1.0 / frequencia;
+                double fase = tempo % periodo;
+                return (fase < periodo / 2.0) ? amplitude : -amplitude;
+            });
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double amplitude = ParseDouble(txtBoxVolt.Text);
+            double frequencia = ParseDouble(txtBoxFreq.Text);
+            GerarGrafico("Onda Triangular", (tempo) =>
+            {
+                return (tempo < 0.5) ? 4.0 * amplitude / 1.0 * tempo : 4.0 * amplitude / 1.0 * (1.0 - tempo);
+            });
+        }
+        private void GerarGrafico(string title, Func<double, double> gerarFuncao)
+        {
+            // Limpar pontos anteriores do gráfico
+            chart1.Series.Clear();
+
+            // Adicionar nova série ao gráfico
+            var series = chart1.Series.Add(title);
+
+            // Adicionar pontos à série
+            for (double tempo = 0.0; tempo <= 1.0; tempo += 0.01)
+            {
+                double valor = gerarFuncao(tempo);
+                series.Points.AddXY(tempo, valor);
+            }
+
+            // Configurar propriedades do gráfico
+            chart1.ChartAreas[0].AxisX.Minimum = 0.0;
+            chart1.ChartAreas[0].AxisX.Maximum = 1.0;
+            chart1.ChartAreas[0].AxisY.Minimum = -1.5 * ParseDouble(txtBoxVolt.Text);
+            chart1.ChartAreas[0].AxisY.Maximum = 1.5 * ParseDouble(txtBoxVolt.Text);
+        }
+
+        private double ParseDouble(string text)
+        {
+            double result;
+            if (double.TryParse(text, out result))
+            {
+                return result;
+            }
+            return 0.0; // Valor padrão se não puder ser convertido
+        }
     }
 }

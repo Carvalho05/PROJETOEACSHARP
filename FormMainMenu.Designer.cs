@@ -204,7 +204,7 @@
             this.panelTitleBar.Location = new System.Drawing.Point(293, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(867, 98);
+            this.panelTitleBar.Size = new System.Drawing.Size(889, 98);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnCloseChildForm
@@ -227,7 +227,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 16F);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(395, 28);
+            this.lblTitle.Location = new System.Drawing.Point(406, 28);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(81, 33);
@@ -240,14 +240,16 @@
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanel.Location = new System.Drawing.Point(293, 98);
             this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDesktopPanel.MinimumSize = new System.Drawing.Size(1200, 450);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(867, 617);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(1200, 617);
             this.panelDesktopPanel.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-83, 171);
+            this.pictureBox1.Location = new System.Drawing.Point(-55, 185);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(974, 219);
@@ -262,7 +264,7 @@
             this.btnLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLang.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLang.ForeColor = System.Drawing.Color.White;
-            this.btnLang.Location = new System.Drawing.Point(792, 0);
+            this.btnLang.Location = new System.Drawing.Point(814, 0);
             this.btnLang.Name = "btnLang";
             this.btnLang.Size = new System.Drawing.Size(75, 98);
             this.btnLang.TabIndex = 2;
@@ -274,11 +276,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 715);
+            this.ClientSize = new System.Drawing.Size(1182, 715);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1200, 450);
             this.Name = "FormMainMenu";
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);

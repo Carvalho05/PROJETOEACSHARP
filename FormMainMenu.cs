@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace EletroMath
         private int tempIndex;
         private Form activeForm;
         private string idiomaAtual = "portugues";
+        
 
         public FormMainMenu()
         {
@@ -26,6 +28,7 @@ namespace EletroMath
             btnCloseChildForm.Visible = false;
             UpdateLanguageButtonText();
             AtualizarTextos();
+            this.Text=string.Empty;
         }
         private Color SelectThemeColor()
         {
