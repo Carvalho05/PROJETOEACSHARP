@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.txtBoxFreq = new System.Windows.Forms.TextBox();
             this.txtBoxVolt = new System.Windows.Forms.TextBox();
@@ -47,37 +47,41 @@
             this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chart1.BackColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderSkin.BorderWidth = 0;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(340, 172);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(517, 369);
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
             // 
             // txtBoxFreq
             // 
+            this.txtBoxFreq.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxFreq.Location = new System.Drawing.Point(115, 244);
             this.txtBoxFreq.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxFreq.Name = "txtBoxFreq";
-            this.txtBoxFreq.Size = new System.Drawing.Size(132, 22);
+            this.txtBoxFreq.Size = new System.Drawing.Size(132, 28);
             this.txtBoxFreq.TabIndex = 14;
+            this.txtBoxFreq.Text = "1";
             // 
             // txtBoxVolt
             // 
+            this.txtBoxVolt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxVolt.Location = new System.Drawing.Point(115, 193);
             this.txtBoxVolt.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxVolt.Name = "txtBoxVolt";
-            this.txtBoxVolt.Size = new System.Drawing.Size(132, 22);
+            this.txtBoxVolt.Size = new System.Drawing.Size(132, 28);
             this.txtBoxVolt.TabIndex = 13;
+            this.txtBoxVolt.Text = "1";
             // 
             // label3
             // 

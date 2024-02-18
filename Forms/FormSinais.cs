@@ -17,6 +17,7 @@ namespace EletroMath.Forms
         public FormSinais()
         {
             InitializeComponent();
+            chart1.Visible = false; //esconde o grafico
         }
         private void FormSinais_Load(object sender, EventArgs e)
         {
@@ -40,6 +41,8 @@ namespace EletroMath.Forms
             double amplitude = ParseDouble(txtBoxVolt.Text);
             double frequencia = ParseDouble(txtBoxFreq.Text);
             GerarGrafico("Onda Sinusoidal", (tempo) => amplitude * Math.Sin(2 * M_PI * frequencia * tempo));
+
+            chart1.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,6 +54,7 @@ namespace EletroMath.Forms
                 double periodo = 1.0 / frequencia;
                 double fase = tempo % periodo;
                 return (fase < periodo / 2.0) ? amplitude : -amplitude;
+                chart1.Visible = true;
             });
         }
 
@@ -62,6 +66,7 @@ namespace EletroMath.Forms
             {
                 return (tempo < 0.5) ? 4.0 * amplitude / 1.0 * tempo : 4.0 * amplitude / 1.0 * (1.0 - tempo);
             });
+            chart1.Visible = true;
         }
         private void GerarGrafico(string title, Func<double, double> gerarFuncao)
         {

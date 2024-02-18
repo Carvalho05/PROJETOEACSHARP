@@ -1,0 +1,15 @@
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\bin\Debug\EletroMath.exe.config
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\bin\Debug\EletroMath.exe.manifest
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\bin\Debug\EletroMath.application
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\bin\Debug\EletroMath.exe
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\bin\Debug\EletroMath.pdb
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.csproj.AssemblyReference.cache
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.FormMainMenu.resources
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.Forms.FormSinais.resources
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.Properties.Resources.resources
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.csproj.GenerateResource.cache
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.csproj.CoreCompileInputs.cache
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.exe.manifest
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.application
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.exe
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.pdb
