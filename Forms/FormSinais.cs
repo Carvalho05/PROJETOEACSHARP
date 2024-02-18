@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace EletroMath.Forms
 {
@@ -34,8 +35,7 @@ namespace EletroMath.Forms
                 }
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+            private void button1_Click(object sender, EventArgs e)
         {
             double amplitude = ParseDouble(txtBoxVolt.Text);
             double frequencia = ParseDouble(txtBoxFreq.Text);
@@ -70,12 +70,20 @@ namespace EletroMath.Forms
 
             // Adicionar nova série ao gráfico
             var series = chart1.Series.Add(title);
+            series.ChartType = SeriesChartType.Line;  // Definir o tipo de gráfico como linhas
 
             // Adicionar pontos à série
             for (double tempo = 0.0; tempo <= 1.0; tempo += 0.01)
             {
                 double valor = gerarFuncao(tempo);
-                series.Points.AddXY(tempo, valor);
+
+                // Criar um ponto de dados e definir a cor personalizada
+                var ponto = new DataPoint(tempo, valor);
+                ponto.Color = ThemeColor.PrimaryColor;  // Substitua por sua lógica de obtenção de cor
+
+                // Adicionar ponto de dados à série
+                series.Points.Add(ponto);
+
             }
 
             // Configurar propriedades do gráfico
@@ -83,6 +91,8 @@ namespace EletroMath.Forms
             chart1.ChartAreas[0].AxisX.Maximum = 1.0;
             chart1.ChartAreas[0].AxisY.Minimum = -1.5 * ParseDouble(txtBoxVolt.Text);
             chart1.ChartAreas[0].AxisY.Maximum = 1.5 * ParseDouble(txtBoxVolt.Text);
+
+            series.Color = ThemeColor.PrimaryColor;
         }
 
         private double ParseDouble(string text)
