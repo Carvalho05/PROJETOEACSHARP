@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\ruisi\\source\\repos\\eletromath\\forms\\formsinais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formsinais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\forms\\formcondensadores.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formcondensadores.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\forms\\formrescondu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formrescondu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\forms\\formresistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formresistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\forms\\formresistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formresistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:formmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\ruisi\\source\\repos\\EletroMath\\themecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:themecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCondensadores.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormCondensadores.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FormCondensadores.Designer.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormCondensadores.Designer.cs",
+              "RelativeToolTip": "Forms\\FormCondensadores.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T14:53:11.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCondensadores.cs",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormCondensadores.cs",
+              "RelativeDocumentMoniker": "Forms\\FormCondensadores.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormCondensadores.cs",
+              "RelativeToolTip": "Forms\\FormCondensadores.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T14:14:27.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCondensadores.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormCondensadores.cs",
+              "RelativeDocumentMoniker": "Forms\\FormCondensadores.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormCondensadores.cs [Design]",
+              "RelativeToolTip": "Forms\\FormCondensadores.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T14:14:18.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormSinais.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormSinais.cs",
+              "RelativeDocumentMoniker": "Forms\\FormSinais.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormSinais.cs [Design]",
+              "RelativeToolTip": "Forms\\FormSinais.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T14:08:15.909Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormResCondu.cs",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormResCondu.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResCondu.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormResCondu.cs",
+              "RelativeToolTip": "Forms\\FormResCondu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T14:00:18.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormResistencias.cs",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormResistencias.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResistencias.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormResistencias.cs",
+              "RelativeToolTip": "Forms\\FormResistencias.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T13:59:58.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormResistencias.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormResistencias.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResistencias.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\Forms\\FormResistencias.cs [Design]",
+              "RelativeToolTip": "Forms\\FormResistencias.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T13:30:58.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormMainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\FormMainMenu.cs",
+              "RelativeDocumentMoniker": "FormMainMenu.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\FormMainMenu.cs",
+              "RelativeToolTip": "FormMainMenu.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAnwMsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T15:10:24.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThemeColor.cs",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\ThemeColor.cs",
+              "RelativeDocumentMoniker": "ThemeColor.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\ThemeColor.cs",
+              "RelativeToolTip": "ThemeColor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T15:06:31.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormMainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\FormMainMenu.cs",
+              "RelativeDocumentMoniker": "FormMainMenu.cs",
+              "ToolTip": "C:\\Users\\ruisi\\source\\repos\\EletroMath\\FormMainMenu.cs [Design]",
+              "RelativeToolTip": "FormMainMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T14:16:12.076Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

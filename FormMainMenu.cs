@@ -19,7 +19,8 @@ namespace EletroMath
         private int tempIndex;
         private Form activeForm;
         private string idiomaAtual = "portugues";
-        
+
+
 
         public FormMainMenu()
         {
@@ -29,6 +30,18 @@ namespace EletroMath
             UpdateLanguageButtonText();
             AtualizarTextos();
             this.Text=string.Empty;
+            panelSubMenuRes.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                panelSubMenuRes.Visible = false;
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
         }
         private Color SelectThemeColor()
         {
@@ -58,6 +71,7 @@ namespace EletroMath
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecundaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
+                    btnLang.Visible = false;
                 }
             }
         }
@@ -70,6 +84,7 @@ namespace EletroMath
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.Gainsboro;
                     new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    btnLang.Visible = true;
                 }
             }
         }
@@ -92,26 +107,30 @@ namespace EletroMath
 
         private void btnRes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormResistencias(), sender);
+            showSubMenu(panelSubMenuRes);
         }
 
         private void btnTeo_Click(object sender, EventArgs e)
         {
+            panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormTeoremas(), sender);
         }
 
         private void btnCon_Click(object sender, EventArgs e)
         {
+            panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormCondensadores(), sender);
         }
 
         private void btnBob_Click(object sender, EventArgs e)
         {
+            panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormBobines(), sender);
         }
 
         private void btnSin_Click(object sender, EventArgs e)
         {
+            panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormSinais(), sender);
         }
 
@@ -136,7 +155,6 @@ namespace EletroMath
         private void btnLang_Click(object sender, EventArgs e)
         {
             {
-                // Toggle between Portuguese and English based on the current language
                 if (idiomaAtual == "portugues")
                 {
                     idiomaAtual = "ingles";
@@ -176,5 +194,20 @@ namespace EletroMath
             }
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormResistencias(), sender);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormResTemp(), sender);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormResCondu(), sender);
+        }
     }
 }

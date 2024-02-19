@@ -38,28 +38,34 @@ namespace EletroMath.Forms
         }
             private void button1_Click(object sender, EventArgs e)
         {
+            ResetColors();
             double amplitude = ParseDouble(txtBoxVolt.Text);
             double frequencia = ParseDouble(txtBoxFreq.Text);
             GerarGrafico("Onda Sinusoidal", (tempo) => amplitude * Math.Sin(2 * M_PI * frequencia * tempo));
 
             chart1.Visible = true;
+            button1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ResetColors();
             double amplitude = ParseDouble(txtBoxVolt.Text);
             double frequencia = ParseDouble(txtBoxFreq.Text);
             GerarGrafico("Onda Quadrada", (tempo) =>
             {
+
                 double periodo = 1.0 / frequencia;
                 double fase = tempo % periodo;
                 return (fase < periodo / 2.0) ? amplitude : -amplitude;
-                chart1.Visible = true;
             });
+            chart1.Visible = true;
+            button2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ResetColors();
             double amplitude = ParseDouble(txtBoxVolt.Text);
             double frequencia = ParseDouble(txtBoxFreq.Text);
             GerarGrafico("Onda Triangular", (tempo) =>
@@ -67,6 +73,7 @@ namespace EletroMath.Forms
                 return (tempo < 0.5) ? 4.0 * amplitude / 1.0 * tempo : 4.0 * amplitude / 1.0 * (1.0 - tempo);
             });
             chart1.Visible = true;
+            button3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
         }
         private void GerarGrafico(string title, Func<double, double> gerarFuncao)
         {
@@ -108,6 +115,13 @@ namespace EletroMath.Forms
                 return result;
             }
             return 0.0; // Valor padrão se não puder ser convertido
+        }
+        private void ResetColors()
+        {
+            // Restaura a cor original de todos os botões
+            button1.BackColor = ThemeColor.PrimaryColor;
+            button2.BackColor = ThemeColor.PrimaryColor;
+            button3.BackColor = ThemeColor.PrimaryColor;
         }
     }
 }

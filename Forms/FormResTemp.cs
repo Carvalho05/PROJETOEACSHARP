@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EletroMath.Forms
 {
-    public partial class FormResistencias : Form
+    public partial class FormResTemp : Form
     {
-        public FormResistencias()
+        public FormResTemp()
         {
             InitializeComponent();
             LoadTheme();

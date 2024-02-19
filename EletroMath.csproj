@@ -93,11 +93,23 @@
     <Compile Include="Forms\FormCondensadores.Designer.cs">
       <DependentUpon>FormCondensadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormResCondu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormResCondu.Designer.cs">
+      <DependentUpon>FormResCondu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormResistencias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormResistencias.Designer.cs">
       <DependentUpon>FormResistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormResTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormResTemp.Designer.cs">
+      <DependentUpon>FormResTemp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormSinais.cs">
       <SubType>Form</SubType>
@@ -116,6 +128,12 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCondensadores.resx">
+      <DependentUpon>FormCondensadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormResistencias.resx">
+      <DependentUpon>FormResistencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSinais.resx">
       <DependentUpon>FormSinais.cs</DependentUpon>
