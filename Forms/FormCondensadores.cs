@@ -37,29 +37,17 @@ namespace EletroMath.Forms
             // Verifique se o número máximo de TextBoxes foi atingido
             if (textboxCount <= 6)
             {
-
-
-                // Crie novos controles
-                System.Windows.Forms.Label novaLabel = new System.Windows.Forms.Label();
-                System.Windows.Forms.TextBox novaTextBox = new System.Windows.Forms.TextBox();
-
-
+                
+                System.Windows.Forms.Label newLabel = new System.Windows.Forms.Label();
+                System.Windows.Forms.TextBox newTextBox = new System.Windows.Forms.TextBox();
 
                 // Configure propriedades dos novos controles
-                novaLabel.Text = "Label";
-                novaLabel.Text = string.Format("Resistência {0}", textboxCount);
-                novaTextBox.Width = 88;
-                novaTextBox.Height = 22;
-                novaLabel.Width = 80;
-                novaLabel.Height = 16;
-                // Posicione os novos controles no formulário
-                int top = 85 + textboxCount * 28; // Ajuste a posição conforme necessário
-                novaLabel.Location = new Point(85, top);
-                novaTextBox.Location = new Point(165, top);
+                newLabel.Text = string.Format("Condensador {0}", textboxCount );
+                newLabel.Margin = new Padding(0, 0, 0, 7);
 
-                // Adicione os novos controles ao formulário
-                Controls.Add(novaLabel);
-                Controls.Add(novaTextBox);
+                // Adicione os novos controles ao FlowLayoutPanel
+                flowLayoutPanel1.Controls.Add(newLabel);
+                flowLayoutPanel2.Controls.Add(newTextBox);
 
                 // Incrementa o contador
                 textboxCount++;
@@ -69,11 +57,11 @@ namespace EletroMath.Forms
         {
             if (textboxCount > 3)
             {
-                if (Controls.Count > 2)
+                if (flowLayoutPanel1.Controls.Count > 1)
                 {
-                    // Remova os últimos controles adicionados
-                    Controls.RemoveAt(Controls.Count - 1);
-                    Controls.RemoveAt(Controls.Count - 1);
+                    // Remova os últimos controles adicionados do FlowLayoutPanel
+                    flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
+                    flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     textboxCount--;
                 }
             }
