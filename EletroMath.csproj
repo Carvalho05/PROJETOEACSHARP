@@ -139,6 +139,9 @@
     <EmbeddedResource Include="Forms\FormCondensadores.resx">
       <DependentUpon>FormCondensadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormResCondu.resx">
+      <DependentUpon>FormResCondu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormResistencias.resx">
       <DependentUpon>FormResistencias.cs</DependentUpon>
     </EmbeddedResource>
