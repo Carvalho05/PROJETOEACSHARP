@@ -87,6 +87,16 @@ namespace EletroMath
                     btnLang.Visible = true;
                 }
             }
+            foreach (Control previousBtn in panelSubMenuRes.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(73, 73, 100);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                    new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    btnLang.Visible = true;
+                }
+            }
         }
 
         private void OpenChildForm(Form childForm, object btnSender)
@@ -131,7 +141,21 @@ namespace EletroMath
         private void btnSin_Click(object sender, EventArgs e)
         {
             panelSubMenuRes.Visible = false;
-            OpenChildForm(new Forms.FormSinais(), sender);
+            OpenChildForm(new Forms.FormSinais(idiomaAtual), sender);
+        }
+        private void btnAssoRes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormResistencias(), sender);
+        }
+
+        private void btnTempRes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormResTemp(), sender);
+        }
+
+        private void btnCondRes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormResCondu(), sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
@@ -183,6 +207,9 @@ namespace EletroMath
                 btnCon.Text = "Capacitors";
                 btnBob.Text = "Coils";
                 btnSin.Text = "Digital Signals";
+                btnAssoRes.Text = "Resistor Calculation";
+                btnCondRes.Text = "Conductance";
+                btnTempRes.Text = "Temperature Coefficient";
             }
             else if (idiomaAtual == "portugues")
             {
@@ -191,23 +218,10 @@ namespace EletroMath
                 btnCon.Text = "Condensadores";
                 btnBob.Text = "Bobines";
                 btnSin.Text = "Sinais Digitais";
+                btnAssoRes.Text = "Associação de Resistências";
+                btnCondRes.Text = "Condutância";
+                btnTempRes.Text = "Coeficiente de Temperatura";
             }
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormResistencias(), sender);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormResTemp(), sender);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormResCondu(), sender);
         }
     }
 }

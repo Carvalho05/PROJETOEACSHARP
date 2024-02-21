@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +15,34 @@ namespace EletroMath.Forms
     public partial class FormSinais : Form
     {
         private const double M_PI = Math.PI;
-        public FormSinais()
+        public FormSinais(string idiomaAtual)
         {
             InitializeComponent();
+            AtualizarTextos(idiomaAtual);
             chart1.Visible = false; //esconde o grafico
         }
         private void FormSinais_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+        private void AtualizarTextos(string idiomaAtual)
+        {
+            if (idiomaAtual == "ingles")
+            {
+                button1.Text = "Sinusoidal Wave";
+                button2.Text = "Quadratic Wave";
+                button3.Text = "Triangular Wave";
+                label3.Text = "Frequency";
+                label2.Text = "Voltage";
+            }
+            else if (idiomaAtual == "portugues")
+            {
+                button1.Text = "Onda Sinusoidal";
+                button2.Text = "Onda Quadratica";
+                button3.Text = "Onda Triangular";
+                label3.Text = "Frequência";
+                label2.Text = "Voltagem";
+            }
         }
         private void LoadTheme()
         {
@@ -36,7 +57,7 @@ namespace EletroMath.Forms
                 }
             }
         }
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             ResetColors();
             double amplitude = ParseDouble(txtBoxVolt.Text);
@@ -123,5 +144,6 @@ namespace EletroMath.Forms
             button2.BackColor = ThemeColor.PrimaryColor;
             button3.BackColor = ThemeColor.PrimaryColor;
         }
+
     }
 }

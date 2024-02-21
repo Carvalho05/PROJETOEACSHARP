@@ -30,3 +30,6 @@ C:\Users\ruisi\source\repos\EletroMath\obj\Debug\EletroMath.exe
 C:\Users\ruisi\source\repos\EletroMath\obj\Debug\EletroMath.pdb
 C:\Users\ruisi\source\repos\EletroMath\obj\Debug\EletroMath.Forms.FormResistencias.resources
 C:\Users\ruisi\source\repos\EletroMath\obj\Debug\EletroMath.Forms.FormCondensadores.resources
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.Forms.FormCondensadores.resources
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.Forms.FormResistencias.resources
+C:\Users\carla\Source\Repos\ruips\EletroMathV1\obj\Debug\EletroMath.Forms.FormBobines.resources
