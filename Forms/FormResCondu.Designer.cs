@@ -36,6 +36,7 @@
             this.pctBox4st = new System.Windows.Forms.PictureBox();
             this.pctBox5st = new System.Windows.Forms.PictureBox();
             this.pnlfrstcol = new System.Windows.Forms.Panel();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
@@ -45,7 +46,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox1st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox2st)).BeginInit();
@@ -72,6 +72,7 @@
             this.pctBox1st.Size = new System.Drawing.Size(20, 120);
             this.pctBox1st.TabIndex = 1;
             this.pctBox1st.TabStop = false;
+            this.pctBox1st.Click += new System.EventHandler(this.pctBox1st_Click);
             // 
             // pctBox2st
             // 
@@ -121,6 +122,18 @@
             this.pnlfrstcol.Name = "pnlfrstcol";
             this.pnlfrstcol.Size = new System.Drawing.Size(644, 208);
             this.pnlfrstcol.TabIndex = 18;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton10.Location = new System.Drawing.Point(458, 96);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(59, 17);
+            this.radioButton10.TabIndex = 27;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Branco";
+            this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // radioButton9
             // 
@@ -229,18 +242,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Preto";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton10.Location = new System.Drawing.Point(458, 96);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(59, 17);
-            this.radioButton10.TabIndex = 27;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Branco";
-            this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // FormResCondu
             // 
