@@ -43,6 +43,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRem)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -64,7 +65,7 @@
             // btnRem
             // 
             this.btnRem.Image = ((System.Drawing.Image)(resources.GetObject("btnRem.Image")));
-            this.btnRem.Location = new System.Drawing.Point(204, 109);
+            this.btnRem.Location = new System.Drawing.Point(189, 109);
             this.btnRem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRem.Name = "btnRem";
             this.btnRem.Size = new System.Drawing.Size(39, 46);
@@ -118,7 +119,6 @@
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Resistência";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // labelAssoRes
             // 
@@ -129,7 +129,6 @@
             this.labelAssoRes.Size = new System.Drawing.Size(140, 17);
             this.labelAssoRes.TabIndex = 10;
             this.labelAssoRes.Text = "Associação Resistências";
-            this.labelAssoRes.Click += new System.EventHandler(this.labelAssoRes_Click);
             // 
             // label5
             // 
@@ -206,11 +205,19 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Resistência 2";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(361, 236);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 24);
+            this.textBox2.TabIndex = 24;
+            // 
             // FormResistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 727);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label5);
@@ -252,5 +259,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

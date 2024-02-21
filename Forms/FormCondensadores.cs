@@ -66,6 +66,7 @@ namespace EletroMath.Forms
                 }
             }
         }
+
         private void FormCondensadores_Load(object sender, EventArgs e)
         {
             LoadTheme();

@@ -272,7 +272,7 @@
             this.btnLang.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLang.ForeColor = System.Drawing.Color.White;
             this.btnLang.Location = new System.Drawing.Point(612, 0);
-            this.btnLang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLang.Margin = new System.Windows.Forms.Padding(2);
             this.btnLang.Name = "btnLang";
             this.btnLang.Size = new System.Drawing.Size(56, 80);
             this.btnLang.TabIndex = 2;

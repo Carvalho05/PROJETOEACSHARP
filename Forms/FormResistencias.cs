@@ -66,6 +66,70 @@ namespace EletroMath.Forms
                 }
             }
         }
+        private void ResSerie(TextBox textBoxResultado)
+        {
+            double resistenciaTotal = 0;
+            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+
+            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
+            foreach (Control control in flowLayoutPanel2.Controls)
+            {
+                    double resistencia;
+                    if (double.TryParse(control.Text, out resistencia))
+                    {
+                        resistenciaTotal += resistencia;
+                    }
+                    else
+                    {
+                        // Se um valor não puder ser convertido para double, definimos a flag como false
+                        valoresValidos = false;
+                        break; // Sai do loop, pois não há necessidade de continuar verificando
+                    }
+            }
+
+            if (!valoresValidos)
+            {
+                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                textBoxResultado.Text = "Erro";
+            }
+            else
+            {
+                // Exibimos o valor calculado na TextBox de resultado
+                textBoxResultado.Text = resistenciaTotal.ToString();
+            }
+        }
+        private void ResPar(TextBox textBoxResultado)
+        {
+            double resistenciaTotal = 0;
+            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+
+            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
+            foreach (Control control in flowLayoutPanel2.Controls)
+            {
+                double resistencia;
+                if (double.TryParse(control.Text, out resistencia))
+                {
+                    resistenciaTotal += 1/resistencia;
+                }
+                else
+                {
+                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    valoresValidos = false;
+                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                }
+            }
+            resistenciaTotal = 1 / resistenciaTotal;
+            if (!valoresValidos)
+            {
+                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                textBoxResultado.Text = "Erro";
+            }
+            else
+            {
+                // Exibimos o valor calculado na TextBox de resultado
+                textBoxResultado.Text = resistenciaTotal.ToString();
+            }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -75,7 +139,6 @@ namespace EletroMath.Forms
         private void btnRem_Click(object sender, EventArgs e)
         {
             RemoveBoxes();
-
         }
 
         private void FormResistencias_Load(object sender, EventArgs e)
@@ -83,36 +146,14 @@ namespace EletroMath.Forms
             LoadTheme();
         }
 
-       
-        private void labelAssoRes_Click(object sender, EventArgs e)
+        private void btnSer_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+                ResSerie(textBox2);
         }
 
         private void btnPar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSer_Click(object sender, EventArgs e)
-        {
-
+            ResPar(textBox2);
         }
     }
-   
 }
