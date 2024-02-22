@@ -21,7 +21,6 @@ namespace EletroMath.Forms
             SetupEventHandlers();
 
         }
-        //Aplicar o tema de cores aos botoes
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -137,63 +136,6 @@ namespace EletroMath.Forms
         private void FormResCondu_Load(object sender, EventArgs e)
         {
             LoadTheme();
-        }
-
-        private Color GetItemColor(string itemText)
-        {
-            // Retorna a cor correspondente ao texto do item
-            switch (itemText)
-            {
-                case "Preto":
-                    return Color.Black;
-                case "Castanho":
-                    return Color.Brown;
-                case "Vermelho":
-                    return Color.Red;
-                case "Laranja":
-                    return Color.Orange;
-                case "Amarelo":
-                    return Color.Yellow;
-                case "Verde":
-                    return Color.Green;
-                case "Azul":
-                    return Color.Blue;
-                case "Roxo":
-                    return Color.Purple;
-                case "Cinzento":
-                    return Color.Gray;
-                case "Branco":
-                    return Color.White;
-                default:
-                    return Color.Black;
-            }
-        }
-        private void ComboBox1_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (e.Index >= 0)
-            {
-                // Obtém o texto do item
-                string itemText = comboBox1.Items[e.Index].ToString();
-
-                // Obtém a cor para o texto do item
-                Color itemColor = GetItemColor(itemText);
-
-                // Desenha o fundo com a cor correspondente
-                e.DrawBackground();
-                using (SolidBrush brush = new SolidBrush(itemColor))
-                {
-                    e.Graphics.FillRectangle(brush, e.Bounds);
-                }
-
-                // Desenha o texto do item
-                using (SolidBrush brush = new SolidBrush(e.ForeColor))
-                {
-                    e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds.X, e.Bounds.Y);
-                }
-
-                // Indica que o desenho do item está completo
-                e.DrawFocusRectangle();
-            }
         }
     }
 }

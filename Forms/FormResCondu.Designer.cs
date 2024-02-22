@@ -50,7 +50,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn5stripes = new System.Windows.Forms.Button();
             this.btn4stripes = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox1st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox2st)).BeginInit();
@@ -304,32 +303,11 @@
             this.btn4stripes.UseVisualStyleBackColor = true;
             this.btn4stripes.Click += new System.EventHandler(this.btn4stripes_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Preto",
-            "Castanho",
-            "Vermelho",
-            "Laranja",
-            "Amarelo",
-            "Verde",
-            "Azul",
-            "Roxo",
-            "Cinzento",
-            "Branco"});
-            this.comboBox1.Location = new System.Drawing.Point(798, 356);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 22;
-            // 
             // FormResCondu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 839);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn5stripes);
             this.Controls.Add(this.btn4stripes);
             this.Controls.Add(this.pictureBox1);
@@ -378,6 +356,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn5stripes;
         private System.Windows.Forms.Button btn4stripes;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
