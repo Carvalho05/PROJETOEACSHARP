@@ -19,6 +19,7 @@ namespace EletroMath.Forms
             pnlfrstcol.Visible = false;
             pictureBoxRes.Visible = false;
             SetupEventHandlers();
+            panelTolerancia.Visible = false;
 
         }
         private void LoadTheme()
@@ -60,6 +61,14 @@ namespace EletroMath.Forms
             radioButton10.CheckedChanged += RadioButton_CheckedChanged;
             radioButton11.CheckedChanged += RadioButton_CheckedChanged;
             radioButton12.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton13.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton14.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton15.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton16.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton17.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton18.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton19.CheckedChanged += RadioButton_CheckedChanged;
+            radioButton20.CheckedChanged += RadioButton_CheckedChanged;
 
         }
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -79,6 +88,8 @@ namespace EletroMath.Forms
             radioButton11.Visible = false;
             radioButton12.Visible = false;
             pnlfrstcol.Visible = true;
+            panelTolerancia.SendToBack();
+            pnlfrstcol.BringToFront();
         }
 
 
@@ -90,6 +101,8 @@ namespace EletroMath.Forms
             radioButton11.Visible = false;
             radioButton12.Visible = false;
             pnlfrstcol.Visible = true;
+            panelTolerancia.SendToBack();
+            pnlfrstcol.BringToFront();
         }
 
         private void pctBox3st_Click(object sender, EventArgs e)
@@ -100,11 +113,8 @@ namespace EletroMath.Forms
             radioButton11.Visible = false;
             radioButton12.Visible = false;
             pnlfrstcol.Visible = true;
-        }
-
-        private void radioButton11_CheckedChanged(object sender, EventArgs e)
-        {
-
+            panelTolerancia.SendToBack();
+            pnlfrstcol.BringToFront();
         }
 
         private void pctBox4st_Click(object sender, EventArgs e)
@@ -115,6 +125,9 @@ namespace EletroMath.Forms
             radioButton11.Visible = true;
             radioButton12.Visible = true;
             pnlfrstcol.Visible = true;
+            panelTolerancia.Visible = false;
+            panelTolerancia.SendToBack();
+            pnlfrstcol.BringToFront();
         }
 
         private void btn4stripes_Click(object sender, EventArgs e)
@@ -136,6 +149,15 @@ namespace EletroMath.Forms
         private void FormResCondu_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+
+        private void pctBox5st_Click(object sender, EventArgs e)
+        {
+            pictureBoxSelected = sender as PictureBox;
+            pnlfrstcol.Visible = false;
+            panelTolerancia.Visible = true;
+            panelTolerancia.BringToFront();
+            pnlfrstcol.SendToBack();
         }
     }
 }
