@@ -68,7 +68,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 581);
+            this.panelMenu.Size = new System.Drawing.Size(220, 816);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSin
@@ -174,7 +174,7 @@
             this.btnCondRes.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnCondRes.Size = new System.Drawing.Size(220, 40);
             this.btnCondRes.TabIndex = 2;
-            this.btnCondRes.Text = "Condutância";
+            this.btnCondRes.Text = "Código de Cores";
             this.btnCondRes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCondRes.UseVisualStyleBackColor = true;
             this.btnCondRes.Click += new System.EventHandler(this.btnCondRes_Click);
@@ -261,7 +261,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(668, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1192, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnLang
@@ -271,7 +271,7 @@
             this.btnLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLang.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLang.ForeColor = System.Drawing.Color.White;
-            this.btnLang.Location = new System.Drawing.Point(612, 0);
+            this.btnLang.Location = new System.Drawing.Point(1136, 0);
             this.btnLang.Margin = new System.Windows.Forms.Padding(2);
             this.btnLang.Name = "btnLang";
             this.btnLang.Size = new System.Drawing.Size(56, 80);
@@ -299,7 +299,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 16F);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(305, 23);
+            this.lblTitle.Location = new System.Drawing.Point(567, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(67, 27);
             this.lblTitle.TabIndex = 0;
@@ -312,7 +312,7 @@
             this.panelDesktopPanel.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPanel.MinimumSize = new System.Drawing.Size(900, 366);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(900, 501);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(1192, 736);
             this.panelDesktopPanel.TabIndex = 2;
             // 
             // pictureBox1
@@ -321,7 +321,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(900, 501);
+            this.pictureBox1.Size = new System.Drawing.Size(1192, 736);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -330,7 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 581);
+            this.ClientSize = new System.Drawing.Size(1412, 816);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

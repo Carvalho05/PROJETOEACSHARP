@@ -57,6 +57,13 @@ namespace EletroMath.Forms
                 }
             }
         }
+        private void ResetColors()
+        {
+            // Restaura a cor original de todos os botões
+            button1.BackColor = ThemeColor.PrimaryColor;
+            button2.BackColor = ThemeColor.PrimaryColor;
+            button3.BackColor = ThemeColor.PrimaryColor;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             ResetColors();
@@ -137,13 +144,6 @@ namespace EletroMath.Forms
             }
             return 0.0; // Valor padrão se não puder ser convertido
         }
-        private void ResetColors()
-        {
-            // Restaura a cor original de todos os botões
-            button1.BackColor = ThemeColor.PrimaryColor;
-            button2.BackColor = ThemeColor.PrimaryColor;
-            button3.BackColor = ThemeColor.PrimaryColor;
-        }
-
+    
     }
 }

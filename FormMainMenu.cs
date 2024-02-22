@@ -33,6 +33,7 @@ namespace EletroMath
             panelSubMenuRes.Visible = false;
         }
 
+        //Codigo para esconder o submenu das resistencias
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -43,6 +44,8 @@ namespace EletroMath
             else
                 subMenu.Visible = false;
         }
+
+        //Codigo para a cor random
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
@@ -54,6 +57,8 @@ namespace EletroMath
             string color = ThemeColor.ColorList[index];
             return ColorTranslator.FromHtml(color);
         }
+
+        //Código para realçar botão ao ser pressionado, aplicar tema de cores, esconder/mostrar botoes
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -75,6 +80,8 @@ namespace EletroMath
                 }
             }
         }
+
+        //Codigo para tirar realce do botão previamente pressionado
         private void DisableButton()
         {
             foreach (Control previousBtn in panelMenu.Controls)
@@ -98,7 +105,7 @@ namespace EletroMath
                 }
             }
         }
-
+        //Código para definicoes ao abrir forms
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -158,6 +165,7 @@ namespace EletroMath
             OpenChildForm(new Forms.FormResCondu(), sender);
         }
 
+        //Close button
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
@@ -165,7 +173,7 @@ namespace EletroMath
             Reset();
 
         }
-
+        //Reset as definicoes para o MainMenu
         private void Reset()
         {
             DisableButton();
@@ -176,6 +184,7 @@ namespace EletroMath
             btnCloseChildForm.Visible = false;
         }
 
+        //Codigo para alterar a variavel do idioma
         private void btnLang_Click(object sender, EventArgs e)
         {
             {
@@ -187,19 +196,20 @@ namespace EletroMath
                 {
                     idiomaAtual = "portugues";
                 }
-                // Atualiza o texto do botão de alteração de idioma com base no idioma atual
                 UpdateLanguageButtonText();
                 AtualizarTextos();
             }
         }
+
+        //Codgo para alterar o texto apresetado no botao de idioma
         private void UpdateLanguageButtonText()
         {
-            // Define o texto do botão de alteração de idioma com base no idioma atual
             btnLang.Text = idiomaAtual == "portugues" ? "EN" : "PT";
         }
+
+        //Definicoes de texto a apresentar consoante variavel de idioma
         private void AtualizarTextos()
         {
-            // Verifica o idioma atual e define os textos correspondentes para cada Label
             if (idiomaAtual == "ingles")
             {
                 btnRes.Text = "Resistors";
@@ -208,7 +218,7 @@ namespace EletroMath
                 btnBob.Text = "Coils";
                 btnSin.Text = "Digital Signals";
                 btnAssoRes.Text = "Resistor Calculation";
-                btnCondRes.Text = "Conductance";
+                btnCondRes.Text = "Resistor Color Code";
                 btnTempRes.Text = "Temperature Coefficient";
             }
             else if (idiomaAtual == "portugues")
@@ -219,7 +229,7 @@ namespace EletroMath
                 btnBob.Text = "Bobines";
                 btnSin.Text = "Sinais Digitais";
                 btnAssoRes.Text = "Associação de Resistências";
-                btnCondRes.Text = "Condutância";
+                btnCondRes.Text = "Código Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
             }
         }
