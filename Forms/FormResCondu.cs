@@ -14,14 +14,16 @@ namespace EletroMath.Forms
     {
         int tipoResistencia;
         private PictureBox pictureBoxSelected;
+        double resistenciaOhms;
         public FormResCondu()
         {
             InitializeComponent();
+            comboBoxUnidades.SelectedIndex = 3;
+            textBoxResultado.Text = $"{0}";
             pictureBoxRes.Visible = false;
             flowLayoutPanelCombo.Visible = false;
             labelResultado.Visible = false;
             comboBoxUnidades.Visible = false;
-            comboBoxUnidades.SelectedIndex = 3;
         }
         #region Tema
         private void LoadTheme() // Aplicar tema de cors aos Botoes
@@ -51,6 +53,7 @@ namespace EletroMath.Forms
             SetupColorComboBox(comboBoxFaixa2);
             SetupColorComboBox(comboBoxFaixa3);
             SetupColorComboBox(comboBoxMult);
+            SetupColorComboBox(comboBoxTole);
         }
         #endregion Tema 
 
@@ -66,6 +69,7 @@ namespace EletroMath.Forms
             labelFaixa3.Visible=false;
             btn4stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
             comboBoxUnidades.Visible = true;
+            textBoxResultado.Visible = true;
         }
 
         private void btn5stripes_Click(object sender, EventArgs e)
@@ -79,6 +83,7 @@ namespace EletroMath.Forms
             flowLayoutPanelCombo.Visible = true;
             btn5stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
             comboBoxUnidades.Visible = true;
+            textBoxResultado.Visible = true;
         }
         #endregion TipoResistencia  
 
@@ -206,6 +211,10 @@ namespace EletroMath.Forms
                 CalcularValorResistencia();
             }
         }
+        private void comboBoxUnidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConverterUnidades(textBoxResultado);
+        }
 
         #endregion DefinicoesComboBox
 
@@ -231,9 +240,10 @@ namespace EletroMath.Forms
             {
                 valorResistencia = (primeiroDigito * 100 + segundoDigito * 10) * multiplicador;
             }
+            resistenciaOhms = valorResistencia;
             // Exibe o valor da resistência na textbox
            labelResultado.Visible = true;
-           textBox1.Text=($"{valorResistencia}") + " Ω";
+           textBoxResultado.Text=($"{valorResistencia}");
         }
 
         private int ObterValorDigito(Color cor)// Obter o valor da resistencia associado à cor
@@ -254,6 +264,7 @@ namespace EletroMath.Forms
 
             // Retorna o valor do dígito correspondente à cor
             return coresDigitos.ContainsKey(cor) ? coresDigitos[cor] : 0;
+
         }
 
         private double ObterMultiplicador(Color cor)// Obter o valor do multiplicador associado à cor
@@ -261,16 +272,16 @@ namespace EletroMath.Forms
             // Associa a cor ao valor do multiplicador
             Dictionary<Color, double> coresMultiplicadores = new Dictionary<Color, double>
             {
-                {Color.Black, 1},
-                {Color.Brown, 10},
-                {Color.Red, 100},
-                {Color.Orange, 1}, //k
-                {Color.Yellow, 10},//k
-                {Color.Green, 100}, //k
-                {Color.Blue, 1},//M
-                {Color.Purple, 10},//M
-                {Color.Gray, 100},//M
-                {Color.White, 1},//G
+                {Color.Black, 1},//Ω
+                {Color.Brown, 10},//Ω 
+                {Color.Red, 100},//Ω 
+                {Color.Orange, 1000}, //1kΩ 
+                {Color.Yellow, 10000},//10kΩ 
+                {Color.Green, 100000}, //100kΩ 
+                {Color.Blue, 1000000},//1MΩ 
+                {Color.Purple, 10000000},//10MΩ 
+                {Color.Gray, 100000000},//100MΩ 
+                {Color.White, 1000000000},//1GΩ 
                 {Color.Gold, 0.1},
                 {Color.Silver, 0.01},
 
@@ -280,7 +291,68 @@ namespace EletroMath.Forms
             // Retorna o valor do multiplicador correspondente à cor
             return coresMultiplicadores.ContainsKey(cor) ? coresMultiplicadores[cor] : 1;
         }
-# endregion CalculoResistencias
+        #endregion CalculoResistencias
 
+        #region ConverterUnidades
+        private void ConverterUnidades(TextBox textBoxResultado)
+        {
+            double resistencia = 0;
+            if (!double.TryParse(this.textBoxResultado.Text, out resistencia))
+            {
+                // Se algum valor não puder ser convertido para double, exibe uma mensagem de erro
+                MessageBox.Show("Por favor, Insira Valores Válidos");
+                return;
+            }
+
+
+            // Obtém a opção selecionada na ComboBox como uma string
+            string escolha = comboBoxUnidades.SelectedItem.ToString();
+
+            switch (escolha)
+            {
+                case "GigaOhms (GΩ)":
+                    resistencia = resistenciaOhms * 1e-9;
+                    break;
+
+                case "MegaOhms (MΩ)":
+                    resistencia = resistenciaOhms * 1e-6;
+                    break;
+
+                case "kiloOhms (KΩ)":
+                    resistencia = resistenciaOhms * 1e-3;
+                    break;
+
+                case "Ohms (Ω)":
+                    resistencia= resistenciaOhms;
+                    break;
+
+                case "miliOhms (mΩ)":
+                    resistencia = resistenciaOhms * 1e3;
+                    break;
+
+                case "microOhms (µΩ)":
+                    resistencia = resistenciaOhms * 1e6;
+                    break;
+
+                case "nanoOhms (nΩ)":
+                    resistencia = resistenciaOhms * 1e9;
+                    break;
+
+            }
+
+       
+
+            // Exibe o resultado na TextBox de resultado
+            textBoxResultado.Text = resistencia.ToString("0.####");
+ 
+        }
+
+
+
+
+
+        #endregion ConverterUnidades
+
+       
     }
 }

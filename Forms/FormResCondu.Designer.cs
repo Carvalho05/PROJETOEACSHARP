@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResCondu));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxResultado = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelCombo = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFaixa1 = new System.Windows.Forms.Label();
             this.comboBoxFaixa1 = new System.Windows.Forms.ComboBox();
@@ -60,18 +60,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxResultado
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1027, 396);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
-            this.textBox1.TabIndex = 34;
+            this.textBoxResultado.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxResultado.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxResultado.Location = new System.Drawing.Point(1027, 396);
+            this.textBoxResultado.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxResultado.Name = "textBoxResultado";
+            this.textBoxResultado.ReadOnly = true;
+            this.textBoxResultado.Size = new System.Drawing.Size(100, 19);
+            this.textBoxResultado.TabIndex = 34;
             // 
             // flowLayoutPanelCombo
             // 
@@ -90,7 +90,7 @@
             this.flowLayoutPanelCombo.Location = new System.Drawing.Point(231, 477);
             this.flowLayoutPanelCombo.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelCombo.Name = "flowLayoutPanelCombo";
-            this.flowLayoutPanelCombo.Size = new System.Drawing.Size(481, 175);
+            this.flowLayoutPanelCombo.Size = new System.Drawing.Size(481, 184);
             this.flowLayoutPanelCombo.TabIndex = 33;
             // 
             // labelFaixa1
@@ -144,10 +144,11 @@
             // comboBoxFaixa2
             // 
             this.comboBoxFaixa2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxFaixa2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxFaixa2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxFaixa2.FormattingEnabled = true;
             this.comboBoxFaixa2.IntegralHeight = false;
-            this.comboBoxFaixa2.ItemHeight = 15;
+            this.comboBoxFaixa2.ItemHeight = 20;
             this.comboBoxFaixa2.Items.AddRange(new object[] {
             "Preto",
             "Castanho",
@@ -163,14 +164,14 @@
             this.comboBoxFaixa2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFaixa2.MaxDropDownItems = 10;
             this.comboBoxFaixa2.Name = "comboBoxFaixa2";
-            this.comboBoxFaixa2.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxFaixa2.Size = new System.Drawing.Size(200, 26);
             this.comboBoxFaixa2.TabIndex = 28;
             this.comboBoxFaixa2.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // labelFaixa3
             // 
             this.labelFaixa3.AutoSize = true;
-            this.labelFaixa3.Location = new System.Drawing.Point(2, 115);
+            this.labelFaixa3.Location = new System.Drawing.Point(2, 118);
             this.labelFaixa3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFaixa3.Name = "labelFaixa3";
             this.labelFaixa3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 8);
@@ -181,9 +182,10 @@
             // comboBoxFaixa3
             // 
             this.comboBoxFaixa3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxFaixa3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxFaixa3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxFaixa3.FormattingEnabled = true;
-            this.comboBoxFaixa3.ItemHeight = 15;
+            this.comboBoxFaixa3.ItemHeight = 20;
             this.comboBoxFaixa3.Items.AddRange(new object[] {
             "Preto",
             "Castanho",
@@ -195,10 +197,10 @@
             "Violeta",
             "Cinza",
             "Branco"});
-            this.comboBoxFaixa3.Location = new System.Drawing.Point(2, 146);
+            this.comboBoxFaixa3.Location = new System.Drawing.Point(2, 149);
             this.comboBoxFaixa3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFaixa3.Name = "comboBoxFaixa3";
-            this.comboBoxFaixa3.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxFaixa3.Size = new System.Drawing.Size(200, 26);
             this.comboBoxFaixa3.TabIndex = 30;
             this.comboBoxFaixa3.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -216,10 +218,11 @@
             // comboBoxMult
             // 
             this.comboBoxMult.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxMult.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxMult.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxMult.FormattingEnabled = true;
             this.comboBoxMult.IntegralHeight = false;
-            this.comboBoxMult.ItemHeight = 15;
+            this.comboBoxMult.ItemHeight = 20;
             this.comboBoxMult.Items.AddRange(new object[] {
             "Preto",
             "Castanho",
@@ -236,14 +239,14 @@
             this.comboBoxMult.Location = new System.Drawing.Point(206, 31);
             this.comboBoxMult.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMult.Name = "comboBoxMult";
-            this.comboBoxMult.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxMult.Size = new System.Drawing.Size(200, 26);
             this.comboBoxMult.TabIndex = 32;
             this.comboBoxMult.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // labelTole
             // 
             this.labelTole.AutoSize = true;
-            this.labelTole.Location = new System.Drawing.Point(206, 56);
+            this.labelTole.Location = new System.Drawing.Point(206, 59);
             this.labelTole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTole.Name = "labelTole";
             this.labelTole.Padding = new System.Windows.Forms.Padding(0, 6, 0, 8);
@@ -254,9 +257,10 @@
             // comboBoxTole
             // 
             this.comboBoxTole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxTole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxTole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxTole.FormattingEnabled = true;
-            this.comboBoxTole.ItemHeight = 15;
+            this.comboBoxTole.ItemHeight = 20;
             this.comboBoxTole.Items.AddRange(new object[] {
             "Castanho",
             "Vermelho",
@@ -268,10 +272,10 @@
             "Cinza",
             "Dourado",
             "Prateado"});
-            this.comboBoxTole.Location = new System.Drawing.Point(206, 87);
+            this.comboBoxTole.Location = new System.Drawing.Point(206, 90);
             this.comboBoxTole.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTole.Name = "comboBoxTole";
-            this.comboBoxTole.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxTole.Size = new System.Drawing.Size(200, 26);
             this.comboBoxTole.TabIndex = 34;
             this.comboBoxTole.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
@@ -365,8 +369,10 @@
             // 
             // comboBoxUnidades
             // 
+            this.comboBoxUnidades.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxUnidades.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUnidades.FormattingEnabled = true;
+            this.comboBoxUnidades.ItemHeight = 20;
             this.comboBoxUnidades.Items.AddRange(new object[] {
             "GigaOhms (GΩ)",
             "MegaOhms (MΩ)",
@@ -375,10 +381,11 @@
             "miliOhms (mΩ)",
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
-            this.comboBoxUnidades.Location = new System.Drawing.Point(1132, 396);
+            this.comboBoxUnidades.Location = new System.Drawing.Point(1132, 390);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
-            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 26);
             this.comboBoxUnidades.TabIndex = 36;
+            this.comboBoxUnidades.SelectedIndexChanged += new System.EventHandler(this.comboBoxUnidades_SelectedIndexChanged);
             // 
             // FormResCondu
             // 
@@ -387,7 +394,7 @@
             this.ClientSize = new System.Drawing.Size(1326, 839);
             this.Controls.Add(this.comboBoxUnidades);
             this.Controls.Add(this.labelResultado);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxResultado);
             this.Controls.Add(this.flowLayoutPanelCombo);
             this.Controls.Add(this.pctBox5st);
             this.Controls.Add(this.btn5stripes);
@@ -415,7 +422,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxResultado;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCombo;
         private System.Windows.Forms.Label labelFaixa1;
         private System.Windows.Forms.ComboBox comboBoxFaixa1;
