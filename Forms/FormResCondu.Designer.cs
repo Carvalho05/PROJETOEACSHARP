@@ -87,7 +87,7 @@
             this.flowLayoutPanelCombo.Controls.Add(this.comboBoxTole);
             this.flowLayoutPanelCombo.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelCombo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(231, 477);
+            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(124, 475);
             this.flowLayoutPanelCombo.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelCombo.Name = "flowLayoutPanelCombo";
             this.flowLayoutPanelCombo.Size = new System.Drawing.Size(481, 184);
@@ -281,7 +281,7 @@
             // 
             // pctBox5st
             // 
-            this.pctBox5st.Location = new System.Drawing.Point(685, 307);
+            this.pctBox5st.Location = new System.Drawing.Point(578, 305);
             this.pctBox5st.Name = "pctBox5st";
             this.pctBox5st.Size = new System.Drawing.Size(20, 120);
             this.pctBox5st.TabIndex = 32;
@@ -292,7 +292,7 @@
             this.btn5stripes.FlatAppearance.BorderSize = 0;
             this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5stripes.Location = new System.Drawing.Point(626, 112);
+            this.btn5stripes.Location = new System.Drawing.Point(519, 110);
             this.btn5stripes.Name = "btn5stripes";
             this.btn5stripes.Size = new System.Drawing.Size(119, 41);
             this.btn5stripes.TabIndex = 31;
@@ -305,7 +305,7 @@
             this.btn4stripes.FlatAppearance.BorderSize = 0;
             this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4stripes.Location = new System.Drawing.Point(372, 112);
+            this.btn4stripes.Location = new System.Drawing.Point(265, 110);
             this.btn4stripes.Name = "btn4stripes";
             this.btn4stripes.Size = new System.Drawing.Size(119, 41);
             this.btn4stripes.TabIndex = 30;
@@ -315,7 +315,7 @@
             // 
             // pctBox4st
             // 
-            this.pctBox4st.Location = new System.Drawing.Point(549, 323);
+            this.pctBox4st.Location = new System.Drawing.Point(442, 321);
             this.pctBox4st.Name = "pctBox4st";
             this.pctBox4st.Size = new System.Drawing.Size(20, 93);
             this.pctBox4st.TabIndex = 29;
@@ -323,7 +323,7 @@
             // 
             // pctBox3st
             // 
-            this.pctBox3st.Location = new System.Drawing.Point(511, 323);
+            this.pctBox3st.Location = new System.Drawing.Point(404, 321);
             this.pctBox3st.Name = "pctBox3st";
             this.pctBox3st.Size = new System.Drawing.Size(20, 93);
             this.pctBox3st.TabIndex = 28;
@@ -331,7 +331,7 @@
             // 
             // pctBox2st
             // 
-            this.pctBox2st.Location = new System.Drawing.Point(472, 323);
+            this.pctBox2st.Location = new System.Drawing.Point(365, 321);
             this.pctBox2st.Name = "pctBox2st";
             this.pctBox2st.Size = new System.Drawing.Size(20, 93);
             this.pctBox2st.TabIndex = 27;
@@ -339,7 +339,7 @@
             // 
             // pctBox1st
             // 
-            this.pctBox1st.Location = new System.Drawing.Point(396, 307);
+            this.pctBox1st.Location = new System.Drawing.Point(289, 305);
             this.pctBox1st.Name = "pctBox1st";
             this.pctBox1st.Size = new System.Drawing.Size(20, 120);
             this.pctBox1st.TabIndex = 26;
@@ -348,7 +348,7 @@
             // pictureBoxRes
             // 
             this.pictureBoxRes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRes.Image")));
-            this.pictureBoxRes.Location = new System.Drawing.Point(224, 285);
+            this.pictureBoxRes.Location = new System.Drawing.Point(117, 283);
             this.pictureBoxRes.Name = "pictureBoxRes";
             this.pictureBoxRes.Size = new System.Drawing.Size(670, 167);
             this.pictureBoxRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -369,10 +369,11 @@
             // 
             // comboBoxUnidades
             // 
-            this.comboBoxUnidades.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxUnidades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxUnidades.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUnidades.ForeColor = System.Drawing.SystemColors.MenuText;
             this.comboBoxUnidades.FormattingEnabled = true;
-            this.comboBoxUnidades.ItemHeight = 20;
+            this.comboBoxUnidades.ItemHeight = 15;
             this.comboBoxUnidades.Items.AddRange(new object[] {
             "GigaOhms (GΩ)",
             "MegaOhms (MΩ)",
@@ -383,7 +384,7 @@
             "nanoOhms (nΩ)"});
             this.comboBoxUnidades.Location = new System.Drawing.Point(1132, 390);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
-            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxUnidades.Size = new System.Drawing.Size(130, 23);
             this.comboBoxUnidades.TabIndex = 36;
             this.comboBoxUnidades.SelectedIndexChanged += new System.EventHandler(this.comboBoxUnidades_SelectedIndexChanged);
             // 
