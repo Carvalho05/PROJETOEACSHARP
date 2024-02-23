@@ -29,14 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResCondu));
-            this.pictureBoxRes = new System.Windows.Forms.PictureBox();
-            this.pctBox1st = new System.Windows.Forms.PictureBox();
-            this.pctBox2st = new System.Windows.Forms.PictureBox();
-            this.pctBox3st = new System.Windows.Forms.PictureBox();
-            this.pctBox4st = new System.Windows.Forms.PictureBox();
-            this.btn5stripes = new System.Windows.Forms.Button();
-            this.btn4stripes = new System.Windows.Forms.Button();
-            this.pctBox5st = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -48,99 +41,29 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox1st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox2st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox3st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
+            this.pctBox5st = new System.Windows.Forms.PictureBox();
+            this.btn5stripes = new System.Windows.Forms.Button();
+            this.btn4stripes = new System.Windows.Forms.Button();
+            this.pctBox4st = new System.Windows.Forms.PictureBox();
+            this.pctBox3st = new System.Windows.Forms.PictureBox();
+            this.pctBox2st = new System.Windows.Forms.PictureBox();
+            this.pctBox1st = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRes = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox3st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox2st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox1st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBoxRes
+            // textBox1
             // 
-            this.pictureBoxRes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRes.Image")));
-            this.pictureBoxRes.Location = new System.Drawing.Point(123, 177);
-            this.pictureBoxRes.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxRes.Name = "pictureBoxRes";
-            this.pictureBoxRes.Size = new System.Drawing.Size(670, 167);
-            this.pictureBoxRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxRes.TabIndex = 0;
-            this.pictureBoxRes.TabStop = false;
-            // 
-            // pctBox1st
-            // 
-            this.pctBox1st.Location = new System.Drawing.Point(352, 204);
-            this.pctBox1st.Margin = new System.Windows.Forms.Padding(4);
-            this.pctBox1st.Name = "pctBox1st";
-            this.pctBox1st.Size = new System.Drawing.Size(27, 148);
-            this.pctBox1st.TabIndex = 1;
-            this.pctBox1st.TabStop = false;
-            // 
-            // pctBox2st
-            // 
-            this.pctBox2st.Location = new System.Drawing.Point(453, 223);
-            this.pctBox2st.Margin = new System.Windows.Forms.Padding(4);
-            this.pctBox2st.Name = "pctBox2st";
-            this.pctBox2st.Size = new System.Drawing.Size(27, 114);
-            this.pctBox2st.TabIndex = 2;
-            this.pctBox2st.TabStop = false;
-            // 
-            // pctBox3st
-            // 
-            this.pctBox3st.Location = new System.Drawing.Point(505, 223);
-            this.pctBox3st.Margin = new System.Windows.Forms.Padding(4);
-            this.pctBox3st.Name = "pctBox3st";
-            this.pctBox3st.Size = new System.Drawing.Size(27, 114);
-            this.pctBox3st.TabIndex = 3;
-            this.pctBox3st.TabStop = false;
-            // 
-            // pctBox4st
-            // 
-            this.pctBox4st.Location = new System.Drawing.Point(556, 223);
-            this.pctBox4st.Margin = new System.Windows.Forms.Padding(4);
-            this.pctBox4st.Name = "pctBox4st";
-            this.pctBox4st.Size = new System.Drawing.Size(27, 114);
-            this.pctBox4st.TabIndex = 4;
-            this.pctBox4st.TabStop = false;
-            // 
-            // btn5stripes
-            // 
-            this.btn5stripes.FlatAppearance.BorderSize = 0;
-            this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5stripes.Location = new System.Drawing.Point(660, 57);
-            this.btn5stripes.Margin = new System.Windows.Forms.Padding(4);
-            this.btn5stripes.Name = "btn5stripes";
-            this.btn5stripes.Size = new System.Drawing.Size(159, 50);
-            this.btn5stripes.TabIndex = 21;
-            this.btn5stripes.Text = "5 Faixas";
-            this.btn5stripes.UseVisualStyleBackColor = true;
-            this.btn5stripes.Click += new System.EventHandler(this.btn5strips_Click);
-            // 
-            // btn4stripes
-            // 
-            this.btn4stripes.FlatAppearance.BorderSize = 0;
-            this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4stripes.Location = new System.Drawing.Point(321, 57);
-            this.btn4stripes.Margin = new System.Windows.Forms.Padding(4);
-            this.btn4stripes.Name = "btn4stripes";
-            this.btn4stripes.Size = new System.Drawing.Size(159, 50);
-            this.btn4stripes.TabIndex = 20;
-            this.btn4stripes.Text = "4 Faixas";
-            this.btn4stripes.UseVisualStyleBackColor = true;
-            this.btn4stripes.Click += new System.EventHandler(this.btn4stripes_Click);
-            // 
-            // pctBox5st
-            // 
-            this.pctBox5st.Location = new System.Drawing.Point(737, 204);
-            this.pctBox5st.Margin = new System.Windows.Forms.Padding(4);
-            this.pctBox5st.Name = "pctBox5st";
-            this.pctBox5st.Size = new System.Drawing.Size(27, 148);
-            this.pctBox5st.TabIndex = 22;
-            this.pctBox5st.TabStop = false;
+            this.textBox1.Location = new System.Drawing.Point(1158, 514);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 34;
             // 
             // flowLayoutPanel1
             // 
@@ -155,10 +78,10 @@
             this.flowLayoutPanel1.Controls.Add(this.label6);
             this.flowLayoutPanel1.Controls.Add(this.comboBox6);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(132, 413);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(308, 587);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(641, 215);
-            this.flowLayoutPanel1.TabIndex = 23;
+            this.flowLayoutPanel1.TabIndex = 33;
             // 
             // label2
             // 
@@ -196,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 63);
+            this.label3.Location = new System.Drawing.Point(3, 65);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 7, 0, 10);
             this.label3.Size = new System.Drawing.Size(50, 33);
@@ -219,7 +142,7 @@
             "Violeta",
             "Cinza",
             "Branco"});
-            this.comboBox3.Location = new System.Drawing.Point(3, 99);
+            this.comboBox3.Location = new System.Drawing.Point(3, 101);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(266, 24);
             this.comboBox3.TabIndex = 28;
@@ -228,7 +151,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 126);
+            this.label4.Location = new System.Drawing.Point(3, 128);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 7, 0, 10);
             this.label4.Size = new System.Drawing.Size(50, 33);
@@ -251,7 +174,7 @@
             "Violeta",
             "Cinza",
             "Branco"});
-            this.comboBox4.Location = new System.Drawing.Point(3, 162);
+            this.comboBox4.Location = new System.Drawing.Point(3, 164);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(266, 24);
             this.comboBox4.TabIndex = 30;
@@ -323,12 +246,89 @@
             this.comboBox6.TabIndex = 34;
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
-            // textBox1
+            // pctBox5st
             // 
-            this.textBox1.Location = new System.Drawing.Point(982, 340);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 24;
+            this.pctBox5st.Location = new System.Drawing.Point(913, 378);
+            this.pctBox5st.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBox5st.Name = "pctBox5st";
+            this.pctBox5st.Size = new System.Drawing.Size(27, 148);
+            this.pctBox5st.TabIndex = 32;
+            this.pctBox5st.TabStop = false;
+            // 
+            // btn5stripes
+            // 
+            this.btn5stripes.FlatAppearance.BorderSize = 0;
+            this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5stripes.Location = new System.Drawing.Point(836, 231);
+            this.btn5stripes.Margin = new System.Windows.Forms.Padding(4);
+            this.btn5stripes.Name = "btn5stripes";
+            this.btn5stripes.Size = new System.Drawing.Size(159, 50);
+            this.btn5stripes.TabIndex = 31;
+            this.btn5stripes.Text = "5 Faixas";
+            this.btn5stripes.UseVisualStyleBackColor = true;
+            this.btn5stripes.Click += new System.EventHandler(this.btn5stripes_Click);
+            // 
+            // btn4stripes
+            // 
+            this.btn4stripes.FlatAppearance.BorderSize = 0;
+            this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4stripes.Location = new System.Drawing.Point(497, 231);
+            this.btn4stripes.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4stripes.Name = "btn4stripes";
+            this.btn4stripes.Size = new System.Drawing.Size(159, 50);
+            this.btn4stripes.TabIndex = 30;
+            this.btn4stripes.Text = "4 Faixas";
+            this.btn4stripes.UseVisualStyleBackColor = true;
+            this.btn4stripes.Click += new System.EventHandler(this.btn4stripes_Click);
+            // 
+            // pctBox4st
+            // 
+            this.pctBox4st.Location = new System.Drawing.Point(732, 397);
+            this.pctBox4st.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBox4st.Name = "pctBox4st";
+            this.pctBox4st.Size = new System.Drawing.Size(27, 114);
+            this.pctBox4st.TabIndex = 29;
+            this.pctBox4st.TabStop = false;
+            // 
+            // pctBox3st
+            // 
+            this.pctBox3st.Location = new System.Drawing.Point(681, 397);
+            this.pctBox3st.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBox3st.Name = "pctBox3st";
+            this.pctBox3st.Size = new System.Drawing.Size(27, 114);
+            this.pctBox3st.TabIndex = 28;
+            this.pctBox3st.TabStop = false;
+            // 
+            // pctBox2st
+            // 
+            this.pctBox2st.Location = new System.Drawing.Point(629, 397);
+            this.pctBox2st.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBox2st.Name = "pctBox2st";
+            this.pctBox2st.Size = new System.Drawing.Size(27, 114);
+            this.pctBox2st.TabIndex = 27;
+            this.pctBox2st.TabStop = false;
+            // 
+            // pctBox1st
+            // 
+            this.pctBox1st.Location = new System.Drawing.Point(528, 378);
+            this.pctBox1st.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBox1st.Name = "pctBox1st";
+            this.pctBox1st.Size = new System.Drawing.Size(27, 148);
+            this.pctBox1st.TabIndex = 26;
+            this.pctBox1st.TabStop = false;
+            // 
+            // pictureBoxRes
+            // 
+            this.pictureBoxRes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRes.Image")));
+            this.pictureBoxRes.Location = new System.Drawing.Point(299, 351);
+            this.pictureBoxRes.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxRes.Name = "pictureBoxRes";
+            this.pictureBoxRes.Size = new System.Drawing.Size(670, 167);
+            this.pictureBoxRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxRes.TabIndex = 25;
+            this.pictureBoxRes.TabStop = false;
             // 
             // FormResCondu
             // 
@@ -349,14 +349,14 @@
             this.Name = "FormResCondu";
             this.Text = "Código de Cores";
             this.Load += new System.EventHandler(this.FormResCondu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox1st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox2st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox3st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox3st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox2st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBox1st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,14 +364,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBoxRes;
-        private System.Windows.Forms.PictureBox pctBox1st;
-        private System.Windows.Forms.PictureBox pctBox2st;
-        private System.Windows.Forms.PictureBox pctBox3st;
-        private System.Windows.Forms.PictureBox pctBox4st;
-        private System.Windows.Forms.Button btn5stripes;
-        private System.Windows.Forms.Button btn4stripes;
-        private System.Windows.Forms.PictureBox pctBox5st;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -383,6 +376,13 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pctBox5st;
+        private System.Windows.Forms.Button btn5stripes;
+        private System.Windows.Forms.Button btn4stripes;
+        private System.Windows.Forms.PictureBox pctBox4st;
+        private System.Windows.Forms.PictureBox pctBox3st;
+        private System.Windows.Forms.PictureBox pctBox2st;
+        private System.Windows.Forms.PictureBox pctBox1st;
+        private System.Windows.Forms.PictureBox pictureBoxRes;
     }
 }

@@ -48,7 +48,7 @@ namespace EletroMath.Forms
             btn4stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
         }
 
-        private void btn5strips_Click(object sender, EventArgs e)
+        private void btn5stripes_Click(object sender, EventArgs e)
         {
             ResetColors();
             pictureBoxRes.Visible = true;
@@ -249,5 +249,6 @@ namespace EletroMath.Forms
             // Retorna o valor do multiplicador correspondente à cor
             return coresMultiplicadores.ContainsKey(cor) ? coresMultiplicadores[cor] : 1;
         }
+
     }
 }
