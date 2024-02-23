@@ -247,7 +247,7 @@
             // 
             this.labelCondutancia.AutoSize = true;
             this.labelCondutancia.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCondutancia.Location = new System.Drawing.Point(164, 37);
+            this.labelCondutancia.Location = new System.Drawing.Point(175, 37);
             this.labelCondutancia.Name = "labelCondutancia";
             this.labelCondutancia.Size = new System.Drawing.Size(130, 28);
             this.labelCondutancia.TabIndex = 46;
@@ -255,7 +255,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(258, 188);
+            this.textBox1.Location = new System.Drawing.Point(269, 188);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 28);
             this.textBox1.TabIndex = 47;
@@ -265,7 +265,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(45, 191);
+            this.label1.Location = new System.Drawing.Point(56, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 21);
             this.label1.TabIndex = 48;
@@ -274,7 +274,7 @@
             // comboBoxUnidadesCondutancia
             // 
             this.comboBoxUnidadesCondutancia.FormattingEnabled = true;
-            this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(390, 188);
+            this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(401, 188);
             this.comboBoxUnidadesCondutancia.Name = "comboBoxUnidadesCondutancia";
             this.comboBoxUnidadesCondutancia.Size = new System.Drawing.Size(121, 29);
             this.comboBoxUnidadesCondutancia.TabIndex = 49;
@@ -285,7 +285,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox2.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(181, 482);
+            this.textBox2.Location = new System.Drawing.Point(192, 482);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(122, 25);
             this.textBox2.TabIndex = 51;
@@ -295,7 +295,7 @@
             this.labelResultado1.AutoSize = true;
             this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado1.Location = new System.Drawing.Point(45, 483);
+            this.labelResultado1.Location = new System.Drawing.Point(56, 483);
             this.labelResultado1.Name = "labelResultado1";
             this.labelResultado1.Size = new System.Drawing.Size(139, 24);
             this.labelResultado1.TabIndex = 50;
@@ -306,7 +306,7 @@
             this.btnCal.FlatAppearance.BorderSize = 0;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCal.Location = new System.Drawing.Point(49, 318);
+            this.btnCal.Location = new System.Drawing.Point(60, 318);
             this.btnCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(179, 79);
@@ -320,7 +320,7 @@
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(287, 318);
+            this.btnLimpar.Location = new System.Drawing.Point(298, 318);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(179, 79);

@@ -29,171 +29,407 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBobines));
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.labelResultado2 = new System.Windows.Forms.Label();
+            this.labelResultado1 = new System.Windows.Forms.Label();
+            this.comboBoxIndutancia = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCal = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelindutancia = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
             this.labelAssoRes = new System.Windows.Forms.Label();
             this.btnSer = new System.Windows.Forms.Button();
             this.btnPar = new System.Windows.Forms.Button();
             this.btnRem = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.SuspendLayout();
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox5.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(1355, 697);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(123, 25);
+            this.textBox5.TabIndex = 56;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox3.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(244, 633);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(149, 25);
+            this.textBox3.TabIndex = 55;
+            // 
+            // labelResultado2
+            // 
+            this.labelResultado2.AutoSize = true;
+            this.labelResultado2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelResultado2.ForeColor = System.Drawing.Color.Red;
+            this.labelResultado2.Location = new System.Drawing.Point(1199, 697);
+            this.labelResultado2.Name = "labelResultado2";
+            this.labelResultado2.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado2.TabIndex = 54;
+            this.labelResultado2.Text = "O Resultado é: ";
+            // 
+            // labelResultado1
+            // 
+            this.labelResultado1.AutoSize = true;
+            this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultado1.ForeColor = System.Drawing.Color.Red;
+            this.labelResultado1.Location = new System.Drawing.Point(92, 633);
+            this.labelResultado1.Name = "labelResultado1";
+            this.labelResultado1.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado1.TabIndex = 53;
+            this.labelResultado1.Text = "O Resultado é: ";
+            // 
+            // comboBoxIndutancia
+            // 
+            this.comboBoxIndutancia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxIndutancia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIndutancia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxIndutancia.FormattingEnabled = true;
+            this.comboBoxIndutancia.Location = new System.Drawing.Point(720, 198);
+            this.comboBoxIndutancia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxIndutancia.Name = "comboBoxIndutancia";
+            this.comboBoxIndutancia.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxIndutancia.TabIndex = 52;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(446, 316);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 51;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(617, 256);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 50;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.FlatAppearance.BorderSize = 0;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(411, 443);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(179, 79);
+            this.btnLimpar.TabIndex = 49;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnCal
+            // 
+            this.btnCal.FlatAppearance.BorderSize = 0;
+            this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCal.Location = new System.Drawing.Point(125, 443);
+            this.btnCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCal.Name = "btnCal";
+            this.btnCal.Size = new System.Drawing.Size(179, 79);
+            this.btnCal.TabIndex = 48;
+            this.btnCal.Text = "Calcular";
+            this.btnCal.UseVisualStyleBackColor = true;
+            this.btnCal.Click += new System.EventHandler(this.btnCal_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(68, 316);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(372, 21);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Comprimento do Núcleo da Bobina (em Metros, m)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(68, 256);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(543, 21);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Área da Seção Transversal do Núcleo da Bobina (em Metros Quadrados, m²)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(68, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(556, 21);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Permeabilidade Magnética do Núcleo da Bobina (em Henrys por Metro, H/m)";
+            // 
+            // labelindutancia
+            // 
+            this.labelindutancia.AutoSize = true;
+            this.labelindutancia.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelindutancia.Location = new System.Drawing.Point(308, 59);
+            this.labelindutancia.Name = "labelindutancia";
+            this.labelindutancia.Size = new System.Drawing.Size(214, 28);
+            this.labelindutancia.TabIndex = 44;
+            this.labelindutancia.Text = "Cálculo da Indutância";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel2.Controls.Add(this.textBox4);
+            this.flowLayoutPanel2.Controls.Add(this.textBox6);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1347, 212);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(100, 334);
+            this.flowLayoutPanel2.TabIndex = 42;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(3, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(97, 27);
+            this.textBox4.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(3, 39);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(97, 27);
+            this.textBox6.TabIndex = 16;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1186, 212);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 334);
+            this.flowLayoutPanel1.TabIndex = 41;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(0, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 18);
+            this.label1.Size = new System.Drawing.Size(124, 39);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Condensador 1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(0, 44);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 14);
+            this.label4.Size = new System.Drawing.Size(124, 35);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Condensador 2";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades);
+            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades2);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1455, 212);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(165, 334);
+            this.flowLayoutPanel3.TabIndex = 43;
+            // 
+            // comboBoxUnidades
+            // 
+            this.comboBoxUnidades.FormattingEnabled = true;
+            this.comboBoxUnidades.Location = new System.Drawing.Point(3, 2);
+            this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxUnidades.Name = "comboBoxUnidades";
+            this.comboBoxUnidades.Size = new System.Drawing.Size(161, 27);
+            this.comboBoxUnidades.TabIndex = 0;
+            // 
+            // comboBoxUnidades2
+            // 
+            this.comboBoxUnidades2.FormattingEnabled = true;
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(3, 33);
+            this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
+            this.comboBoxUnidades2.Size = new System.Drawing.Size(161, 27);
+            this.comboBoxUnidades2.TabIndex = 1;
             // 
             // labelAssoRes
             // 
             this.labelAssoRes.AutoSize = true;
-            this.labelAssoRes.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssoRes.Location = new System.Drawing.Point(233, 9);
-            this.labelAssoRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAssoRes.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAssoRes.Location = new System.Drawing.Point(1268, 59);
             this.labelAssoRes.Name = "labelAssoRes";
-            this.labelAssoRes.Size = new System.Drawing.Size(116, 17);
-            this.labelAssoRes.TabIndex = 19;
-            this.labelAssoRes.Text = "Associação Bobines";
+            this.labelAssoRes.Size = new System.Drawing.Size(295, 28);
+            this.labelAssoRes.TabIndex = 40;
+            this.labelAssoRes.Text = "Associação de Condensadores";
             // 
             // btnSer
             // 
             this.btnSer.FlatAppearance.BorderSize = 0;
             this.btnSer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSer.Location = new System.Drawing.Point(316, 406);
-            this.btnSer.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnSer.Location = new System.Drawing.Point(1452, 553);
+            this.btnSer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSer.Name = "btnSer";
-            this.btnSer.Size = new System.Drawing.Size(134, 64);
-            this.btnSer.TabIndex = 18;
+            this.btnSer.Size = new System.Drawing.Size(179, 79);
+            this.btnSer.TabIndex = 39;
             this.btnSer.Text = "Série";
             this.btnSer.UseVisualStyleBackColor = true;
+            this.btnSer.Click += new System.EventHandler(this.btnSer_Click);
             // 
             // btnPar
             // 
             this.btnPar.FlatAppearance.BorderSize = 0;
             this.btnPar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPar.Location = new System.Drawing.Point(149, 406);
-            this.btnPar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnPar.Location = new System.Drawing.Point(1186, 553);
+            this.btnPar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPar.Name = "btnPar";
-            this.btnPar.Size = new System.Drawing.Size(134, 64);
-            this.btnPar.TabIndex = 17;
+            this.btnPar.Size = new System.Drawing.Size(179, 79);
+            this.btnPar.TabIndex = 38;
             this.btnPar.Text = "Paralelo";
             this.btnPar.UseVisualStyleBackColor = true;
+            this.btnPar.Click += new System.EventHandler(this.btnPar_Click);
             // 
             // btnRem
             // 
             this.btnRem.Image = ((System.Drawing.Image)(resources.GetObject("btnRem.Image")));
-            this.btnRem.Location = new System.Drawing.Point(266, 74);
-            this.btnRem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnRem.Location = new System.Drawing.Point(1319, 144);
+            this.btnRem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRem.Name = "btnRem";
-            this.btnRem.Size = new System.Drawing.Size(29, 37);
+            this.btnRem.Size = new System.Drawing.Size(39, 46);
             this.btnRem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRem.TabIndex = 16;
+            this.btnRem.TabIndex = 37;
             this.btnRem.TabStop = false;
             this.btnRem.Click += new System.EventHandler(this.btnRem_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(320, 74);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnAdd.Location = new System.Drawing.Point(1408, 144);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(29, 37);
+            this.btnAdd.Size = new System.Drawing.Size(39, 46);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAdd.TabIndex = 15;
+            this.btnAdd.TabIndex = 36;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // flowLayoutPanel2
+            // textBox7
             // 
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.Controls.Add(this.textBox4);
-            this.flowLayoutPanel2.Controls.Add(this.textBox1);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(316, 117);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(61, 271);
-            this.flowLayoutPanel2.TabIndex = 25;
+            this.textBox7.Location = new System.Drawing.Point(313, 372);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 58;
             // 
-            // textBox4
+            // label6
             // 
-            this.textBox4.Location = new System.Drawing.Point(2, 3);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(98, 23);
-            this.textBox4.TabIndex = 15;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(2, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 23);
-            this.textBox1.TabIndex = 16;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(213, 117);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(97, 271);
-            this.flowLayoutPanel1.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.label4.Location = new System.Drawing.Point(2, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.label4.Size = new System.Drawing.Size(55, 30);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Bobine 1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.label1.Location = new System.Drawing.Point(2, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 17);
-            this.label1.Size = new System.Drawing.Size(55, 32);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Bobine 2";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(68, 373);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(217, 21);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Número de Espiras da Bobina";
             // 
             // FormBobines
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 506);
+            this.ClientSize = new System.Drawing.Size(1883, 1004);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.labelResultado2);
+            this.Controls.Add(this.labelResultado1);
+            this.Controls.Add(this.comboBoxIndutancia);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnCal);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelindutancia);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.labelAssoRes);
             this.Controls.Add(this.btnSer);
             this.Controls.Add(this.btnPar);
             this.Controls.Add(this.btnRem);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormBobines";
             this.Text = "Bobines";
             this.Load += new System.EventHandler(this.FormBobines_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,16 +437,34 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label labelResultado2;
+        private System.Windows.Forms.Label labelResultado1;
+        private System.Windows.Forms.ComboBox comboBoxIndutancia;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnCal;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelindutancia;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.ComboBox comboBoxUnidades;
+        private System.Windows.Forms.ComboBox comboBoxUnidades2;
         private System.Windows.Forms.Label labelAssoRes;
         private System.Windows.Forms.Button btnSer;
         private System.Windows.Forms.Button btnPar;
         private System.Windows.Forms.PictureBox btnRem;
         private System.Windows.Forms.PictureBox btnAdd;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label6;
     }
 }

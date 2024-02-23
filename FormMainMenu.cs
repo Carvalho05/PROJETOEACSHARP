@@ -142,7 +142,7 @@ namespace EletroMath
         private void btnBob_Click(object sender, EventArgs e)
         {
             panelSubMenuRes.Visible = false;
-            OpenChildForm(new Forms.FormBobines(), sender);
+            OpenChildForm(new Forms.FormBobines(idiomaAtual), sender);
         }
 
         private void btnSin_Click(object sender, EventArgs e)
