@@ -136,7 +136,7 @@ namespace EletroMath
         private void btnCon_Click(object sender, EventArgs e)
         {
             panelSubMenuRes.Visible = false;
-            OpenChildForm(new Forms.FormCondensadores(), sender);
+            OpenChildForm(new Forms.FormCondensadores(idiomaAtual), sender);
         }
 
         private void btnBob_Click(object sender, EventArgs e)
@@ -152,7 +152,7 @@ namespace EletroMath
         }
         private void btnAssoRes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormResistencias(), sender);
+            OpenChildForm(new Forms.FormResistencias(idiomaAtual), sender);
         }
 
         private void btnTempRes_Click(object sender, EventArgs e)

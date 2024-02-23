@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResistencias));
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelResultado2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
             this.labelAssoRes = new System.Windows.Forms.Label();
             this.btnSer = new System.Windows.Forms.Button();
             this.btnPar = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxUnidadesCondutancia = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelResultado1 = new System.Windows.Forms.Label();
             this.btnCal = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.flowLayoutPanel2.SuspendLayout();
@@ -66,21 +66,22 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox5.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(982, 655);
+            this.textBox5.Location = new System.Drawing.Point(963, 655);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(0);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(122, 20);
+            this.textBox5.Size = new System.Drawing.Size(90, 25);
             this.textBox5.TabIndex = 45;
             // 
-            // label7
+            // labelResultado2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(826, 655);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 19);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "O Resultado é: ";
+            this.labelResultado2.AutoSize = true;
+            this.labelResultado2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelResultado2.ForeColor = System.Drawing.Color.Red;
+            this.labelResultado2.Location = new System.Drawing.Point(826, 655);
+            this.labelResultado2.Name = "labelResultado2";
+            this.labelResultado2.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado2.TabIndex = 44;
+            this.labelResultado2.Text = "O Resultado é: ";
             // 
             // flowLayoutPanel2
             // 
@@ -100,41 +101,42 @@
             this.textBox4.Location = new System.Drawing.Point(3, 4);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(97, 23);
+            this.textBox4.Size = new System.Drawing.Size(98, 27);
             this.textBox4.TabIndex = 15;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(3, 35);
+            this.textBox3.Location = new System.Drawing.Point(3, 39);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(97, 23);
+            this.textBox3.Size = new System.Drawing.Size(98, 27);
             this.textBox3.TabIndex = 16;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(823, 188);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(859, 188);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 334);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(111, 334);
             this.flowLayoutPanel1.TabIndex = 41;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
-            this.label4.Size = new System.Drawing.Size(84, 35);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Resistência 1";
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(0, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(111, 21);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Resistência 1";
             // 
             // label3
             // 
@@ -142,10 +144,11 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(3, 35);
+            this.label3.Location = new System.Drawing.Point(0, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
-            this.label3.Size = new System.Drawing.Size(84, 35);
+            this.label3.Padding = new System.Windows.Forms.Padding(8, 15, 0, 0);
+            this.label3.Size = new System.Drawing.Size(111, 36);
             this.label3.TabIndex = 14;
             this.label3.Text = "Resistência 2";
             // 
@@ -153,7 +156,7 @@
             // 
             this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades);
-            this.flowLayoutPanel3.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades2);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel3.Location = new System.Drawing.Point(1082, 188);
@@ -167,16 +170,16 @@
             this.comboBoxUnidades.FormattingEnabled = true;
             this.comboBoxUnidades.Location = new System.Drawing.Point(3, 3);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
-            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 27);
             this.comboBoxUnidades.TabIndex = 0;
             // 
-            // comboBox1
+            // comboBoxUnidades2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 1;
+            this.comboBoxUnidades2.FormattingEnabled = true;
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(3, 36);
+            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
+            this.comboBoxUnidades2.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxUnidades2.TabIndex = 1;
             // 
             // labelAssoRes
             // 
@@ -184,7 +187,7 @@
             this.labelAssoRes.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAssoRes.Location = new System.Drawing.Point(932, 37);
             this.labelAssoRes.Name = "labelAssoRes";
-            this.labelAssoRes.Size = new System.Drawing.Size(200, 23);
+            this.labelAssoRes.Size = new System.Drawing.Size(238, 28);
             this.labelAssoRes.TabIndex = 40;
             this.labelAssoRes.Text = "Associação Resistências";
             // 
@@ -244,17 +247,17 @@
             // 
             this.labelCondutancia.AutoSize = true;
             this.labelCondutancia.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCondutancia.Location = new System.Drawing.Point(200, 37);
+            this.labelCondutancia.Location = new System.Drawing.Point(164, 37);
             this.labelCondutancia.Name = "labelCondutancia";
-            this.labelCondutancia.Size = new System.Drawing.Size(108, 23);
+            this.labelCondutancia.Size = new System.Drawing.Size(130, 28);
             this.labelCondutancia.TabIndex = 46;
             this.labelCondutancia.Text = "Condutância";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(270, 188);
+            this.textBox1.Location = new System.Drawing.Point(258, 188);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 24);
+            this.textBox1.Size = new System.Drawing.Size(112, 28);
             this.textBox1.TabIndex = 47;
             // 
             // label1
@@ -264,16 +267,16 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(45, 191);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 17);
+            this.label1.Size = new System.Drawing.Size(207, 21);
             this.label1.TabIndex = 48;
             this.label1.Text = "Insira o Valor da Resistência";
             // 
             // comboBoxUnidadesCondutancia
             // 
             this.comboBoxUnidadesCondutancia.FormattingEnabled = true;
-            this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(402, 188);
+            this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(390, 188);
             this.comboBoxUnidadesCondutancia.Name = "comboBoxUnidadesCondutancia";
-            this.comboBoxUnidadesCondutancia.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxUnidadesCondutancia.Size = new System.Drawing.Size(121, 29);
             this.comboBoxUnidadesCondutancia.TabIndex = 49;
             // 
             // textBox2
@@ -284,19 +287,19 @@
             this.textBox2.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(181, 482);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
+            this.textBox2.Size = new System.Drawing.Size(122, 25);
             this.textBox2.TabIndex = 51;
             // 
-            // label2
+            // labelResultado1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(45, 483);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 19);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "O Resultado é: ";
+            this.labelResultado1.AutoSize = true;
+            this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelResultado1.ForeColor = System.Drawing.Color.Red;
+            this.labelResultado1.Location = new System.Drawing.Point(45, 483);
+            this.labelResultado1.Name = "labelResultado1";
+            this.labelResultado1.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado1.TabIndex = 50;
+            this.labelResultado1.Text = "O Resultado é: ";
             // 
             // btnCal
             // 
@@ -328,18 +331,18 @@
             // 
             // FormResistencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1883, 1004);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCal);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelResultado1);
             this.Controls.Add(this.comboBoxUnidadesCondutancia);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelCondutancia);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelResultado2);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -369,11 +372,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelResultado2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.ComboBox comboBoxUnidades;
         private System.Windows.Forms.Label labelAssoRes;
@@ -386,11 +389,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxUnidadesCondutancia;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelResultado1;
         private System.Windows.Forms.Button btnCal;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxUnidades2;
     }
 }

@@ -7,40 +7,64 @@ namespace EletroMath.Forms
     public partial class FormResistencias : Form
     {
         #region Misc
-        public FormResistencias()
+
+        //Criação de Variável Geral de Idioma para o Código Condensadores
+        private string idiomaResistencias;
+        public FormResistencias(string idiomaAtual)
         {
             InitializeComponent();
+
+            //Associação da Variãvel Geral de Idioma das Resistências com a do Programa
+            this.idiomaResistencias = idiomaAtual;
+
+            AtualizarTextos();
+
 
             //Opções da comboBoxUnidades
             comboBoxUnidades.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidades.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidades.Items.Add("kiloOhms (KΩ)");
+            comboBoxUnidades.Items.Add("KiloOhms (kΩ)");
             comboBoxUnidades.Items.Add("Ohms (Ω)");
-            comboBoxUnidades.Items.Add("miliOhms (mΩ)");
-            comboBoxUnidades.Items.Add("microOhms (µΩ)");
-            comboBoxUnidades.Items.Add("nanoOhms (nΩ)");
+            comboBoxUnidades.Items.Add("MiliOhms (mΩ)");
+            comboBoxUnidades.Items.Add("MicroOhms (µΩ)");
+            comboBoxUnidades.Items.Add("NanoOhms (nΩ)");
 
             // Indice da opção desejada como seleção inicial
             comboBoxUnidades.SelectedIndex = 3;
 
+
+            //Opçoes da comboBoxUnidades2
+            comboBoxUnidades2.Items.Add("GigaOhms (GΩ)");
+            comboBoxUnidades2.Items.Add("MegaOhms (MΩ)");
+            comboBoxUnidades2.Items.Add("KiloOhms (kΩ)");
+            comboBoxUnidades2.Items.Add("Ohms (Ω)");
+            comboBoxUnidades2.Items.Add("MiliOhms (mΩ)");
+            comboBoxUnidades2.Items.Add("MicroOhms (µΩ)");
+            comboBoxUnidades2.Items.Add("NanoOhms (nΩ)");
+
+            // Indice da opção desejada como seleção inicial
+            comboBoxUnidades2.SelectedIndex = 3;
+
+
             //Opções da comboBoxCondutancia
             comboBoxUnidadesCondutancia.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidadesCondutancia.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidadesCondutancia.Items.Add("kiloOhms (KΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("KiloOhms (kΩ)");
             comboBoxUnidadesCondutancia.Items.Add("Ohms (Ω)");
-            comboBoxUnidadesCondutancia.Items.Add("miliOhms (mΩ)");
-            comboBoxUnidadesCondutancia.Items.Add("microOhms (µΩ)");
-            comboBoxUnidadesCondutancia.Items.Add("nanoOhms (nΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("MiliOhms (mΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("MicroOhms (µΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("NanoOhms (nΩ)");
 
             // Indice da opção desejada como seleção inicial
             comboBoxUnidadesCondutancia.SelectedIndex = 3;
 
+
             //Esconder Resultado no Cálculo de Associação de Resistências
-            label7.Visible = false;
+            labelResultado2.Visible = false;
             textBox5.Visible = false;
 
             //Esconder Resultado no Cálculo da Capacitância
-            label2.Visible = false;
+            labelResultado1.Visible = false;
             textBox2.Visible = false;
         }
 
@@ -56,11 +80,49 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
+            labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
         private void FormResistencias_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+
+        private void AtualizarTextos()
+        {
+            if (idiomaResistencias == "ingles")
+            {
+                label1.Text = "Enter the Resistance Value";
+                label2.Text = "Resistor 1";
+                label3.Text = "Resistor 2";
+                labelResultado1.Text = "The result is:";
+                labelResultado2.Text = "The result is:";
+                labelCondutancia.Text = "Calculation of Conductance";
+                labelAssoRes.Text = "Resistors Association";
+                btnSer.Text = "Series";
+                btnPar.Text = "Parallel";
+                btnCal.Text = "Calculate";
+                btnLimpar.Text = "Clear";
+                textBox1.Location = new Point(220, 187);
+                comboBoxUnidadesCondutancia.Location = new Point(340, 187);
+            }
+            else if (idiomaResistencias == "portugues")
+            {
+                label1.Text = "Insira o Valor da Resistência";
+                label2.Text = "Resistência 1";
+                label3.Text = "Resistência 2";
+                labelResultado1.Text = "O Resultado é:";
+                labelResultado2.Text = "O Resultado é:";
+                labelCondutancia.Text = "Cálculo da Condutância";
+                labelAssoRes.Text = "Associação de Resistências";
+                btnSer.Text = "Série";
+                btnPar.Text = "Paralelo";
+                btnCal.Text = "Calcular";
+                btnLimpar.Text = "Limpar";
+                textBox1.Location = new Point(224, 187);
+                comboBoxUnidadesCondutancia.Location = new Point(345, 187);
+            }
         }
         #endregion Misc
 
@@ -78,10 +140,21 @@ namespace EletroMath.Forms
                 ComboBox newComboBox = new ComboBox();
 
                 // Propriedades dos novos controles
-                newLabel.Text = string.Format("Resistência {0}", textboxCount);
-                newLabel.Margin = new Padding(0, 0, 0, 7);
-                newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de texto 
-                newLabel.ForeColor = Color.Blue; // Aplicar cor azul
+
+                if (idiomaResistencias == "portugues")
+                {
+                    newLabel.Text = string.Format(" Resistência {0}", textboxCount);
+                    newLabel.Margin = new Padding(5, 0, 0, 6);
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de texto 
+                    newLabel.ForeColor = Color.Blue; // Aplicar cor azul
+                }
+                else if (idiomaResistencias == "ingles")
+                {
+                    newLabel.Text = string.Format(" Resistor {0}", textboxCount);
+                    newLabel.Margin = new Padding(5, 0, 0, 6);
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de texto 
+                    newLabel.ForeColor = Color.Blue; // Aplicar cor azul
+                }
 
                 // Adição de caixas
                 flowLayoutPanel1.Controls.Add(newLabel);
@@ -151,8 +224,16 @@ namespace EletroMath.Forms
             if (!valoresValidos)
             {
                 // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
-                MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
-                label7.Visible = false;
+                if (idiomaResistencias == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaResistencias == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+
+                labelResultado2.Visible = false;
                 textBox5.Visible = false;
                 return;
             }
@@ -160,7 +241,7 @@ namespace EletroMath.Forms
             {
                 // Exibimos o valor calculado na TextBox de resultado
                 textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
-                label7.Visible = true;
+                labelResultado2.Visible = true;
                 textBox5.Visible = true;
             }
         }
@@ -190,8 +271,16 @@ namespace EletroMath.Forms
             if (!valoresValidos)
             {
                 // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
-                MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
-                label7.Visible = false;
+                if (idiomaResistencias == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaResistencias == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+
+                labelResultado2.Visible = false;
                 textBox5.Visible = false;
                 return;
             }
@@ -199,11 +288,12 @@ namespace EletroMath.Forms
             {
                 // Exibimos o valor calculado na TextBox de resultado
                 textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
-                label7.Visible = true;
+                labelResultado2.Visible = true;
                 textBox5.Visible = true;
             }
         }
 
+        //Cálculo Condutância
         private void Condutancia(TextBox textBoxResultado) 
         {
             double resistencia = 0, condutancia = 0;
@@ -211,8 +301,15 @@ namespace EletroMath.Forms
             if (!double.TryParse(textBox1.Text, out resistencia))
             {
                 // Se algum valor não puder ser convertido para double, exibe uma mensagem de erro
-                MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
-                label2.Visible = false;
+                if (idiomaResistencias == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaResistencias == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+                labelResultado1.Visible = false;
                 textBox2.Visible = false;
                 return;
             }
@@ -221,8 +318,15 @@ namespace EletroMath.Forms
             if (comboBoxUnidadesCondutancia.SelectedItem == null)
             {
                 // Se nenhuma opção foi selecionada, exibe uma mensagem de erro
-                MessageBox.Show("Por favor, Selecione uma Unidade da Lista");
-                label2.Visible = false;
+                if (idiomaResistencias == "portugues")
+                {
+                    MessageBox.Show("Por favor, Selecione uma Unidade da Lista");
+                }
+                else if (idiomaResistencias == "ingles")
+                {
+                    MessageBox.Show("Please Select a Unit from the List");
+                }
+                labelResultado1.Visible = false;
                 textBox2.Visible = false;
                 return;
             }
@@ -267,7 +371,7 @@ namespace EletroMath.Forms
 
             // Exibe o resultado na TextBox de resultado
             textBoxResultado.Text = condutancia.ToString("0.####") + " Siemens";
-            label2.Visible = true;
+            labelResultado1.Visible = true;
             textBox2.Visible = true;
         }
 
@@ -306,8 +410,8 @@ namespace EletroMath.Forms
             textBox1.Text = "";
             textBox2.Text = "";
             textBox2.Visible = false;
-            label2.Visible = false;
-            comboBoxUnidadesCondutancia.SelectedItem = 3;
+            labelResultado1.Visible = false;
+            comboBoxUnidadesCondutancia.SelectedIndex = 3;
         }
 
         #endregion Codigo Botoes
