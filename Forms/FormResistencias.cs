@@ -93,6 +93,7 @@ namespace EletroMath.Forms
         {
             if (idiomaResistencias == "ingles")
             {
+                //Tradução das Frases
                 label1.Text = "Enter the Resistance Value";
                 label2.Text = "Resistor 1";
                 label3.Text = "Resistor 2";
@@ -104,11 +105,18 @@ namespace EletroMath.Forms
                 btnPar.Text = "Parallel";
                 btnCal.Text = "Calculate";
                 btnLimpar.Text = "Clear";
-                textBox1.Location = new Point(220, 187);
-                comboBoxUnidadesCondutancia.Location = new Point(340, 187);
+
+                //Ajuste nas Posições
+                textBox1.Location = new Point(223, 187);
+                comboBoxUnidadesCondutancia.Location = new Point(343, 187);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(35, 0, 0, 0);
+                labelResultado2.Padding = new Padding(35, 0, 0, 0);
             }
             else if (idiomaResistencias == "portugues")
             {
+                //Tradução das Frases
                 label1.Text = "Insira o Valor da Resistência";
                 label2.Text = "Resistência 1";
                 label3.Text = "Resistência 2";
@@ -120,8 +128,14 @@ namespace EletroMath.Forms
                 btnPar.Text = "Paralelo";
                 btnCal.Text = "Calcular";
                 btnLimpar.Text = "Limpar";
-                textBox1.Location = new Point(224, 187);
-                comboBoxUnidadesCondutancia.Location = new Point(345, 187);
+
+                //Ajuste nas Posições
+                textBox1.Location = new Point(227, 187);
+                comboBoxUnidadesCondutancia.Location = new Point(347, 187);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(25, 0, 0, 0);
+                labelResultado2.Padding = new Padding(25, 0, 0, 0);
             }
         }
         #endregion Misc

@@ -56,13 +56,24 @@ namespace EletroMath.Forms
 
 
             //Opçoes da comboBoxIndutância
-            comboBoxIndutancia.Items.Add("Ferro");
-            comboBoxIndutancia.Items.Add("Aço");
-            comboBoxIndutancia.Items.Add("Niquel");
-            comboBoxIndutancia.Items.Add("Cobalto");
-            comboBoxIndutancia.Items.Add("Cobre");
-            comboBoxIndutancia.Items.Add("Ar");
-
+            if (idiomaBobines == "portugues")
+            {
+                comboBoxIndutancia.Items.Add("Ferro");
+                comboBoxIndutancia.Items.Add("Aço");
+                comboBoxIndutancia.Items.Add("Niquel");
+                comboBoxIndutancia.Items.Add("Cobalto");
+                comboBoxIndutancia.Items.Add("Cobre");
+                comboBoxIndutancia.Items.Add("Ar");
+            }
+            else if (idiomaBobines == "ingles")
+            {
+                comboBoxIndutancia.Items.Add("Iron");
+                comboBoxIndutancia.Items.Add("Steel");
+                comboBoxIndutancia.Items.Add("Nickel");
+                comboBoxIndutancia.Items.Add("Cobalt");
+                comboBoxIndutancia.Items.Add("Copper");
+                comboBoxIndutancia.Items.Add("Air");
+            }
 
             // Indice da opção desejada como seleção inicial
             comboBoxIndutancia.SelectedIndex = -1;
@@ -100,6 +111,7 @@ namespace EletroMath.Forms
         {
             if (idiomaBobines == "ingles")
             {
+                //Tradução das Frases
                 label2.Text = "Permeability of the Coil Core Material (in Henrys per Meter, H/m)";
                 label3.Text = "Cross-sectional Area of the Coil Core (in Square Meters, m²)";
                 label5.Text = "Length of the Coil Core (in Meters, m)";
@@ -114,13 +126,20 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Clear";
                 label1.Text = "Coil 1";
                 label4.Text = "Coil 2";
-                textBox1.Location = new Point(410, 215);
-                textBox2.Location = new Point(290, 263);
-                textBox7.Location = new Point(225, 310);
-                comboBoxIndutancia.Location = new Point(450, 168);
+
+                //Ajuste nas Posições
+                textBox1.Location = new Point(410, 206);
+                textBox2.Location = new Point(290, 255);
+                textBox7.Location = new Point(225, 300);
+                comboBoxIndutancia.Location = new Point(450, 160);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(15, 0, 0, 0);
+                labelResultado2.Padding = new Padding(15, 0, 0, 0);
             }
             else if (idiomaBobines == "portugues")
             {
+                //Tradução das Frases
                 label2.Text = "Permeabilidade Magnética do Núcleo da Bobina (em Henrys por Metro, H/m)";
                 label3.Text = "Área da Seção Transversal do Núcleo da Bobina (em Metros Quadrados, m²)";
                 label5.Text = "Comprimento do Núcleo da Bobina (em Metros, m)";
@@ -135,9 +154,15 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Limpar";
                 label1.Text = "Bobine 1";
                 label4.Text = "Bobine 2";
-                textBox1.Location = new Point(518, 215);
-                textBox2.Location = new Point(365, 263);
-                comboBoxIndutancia.Location = new Point(520, 168);
+
+                //Ajuste nas Posições
+                textBox1.Location = new Point(518, 206);
+                textBox2.Location = new Point(365, 255);
+                comboBoxIndutancia.Location = new Point(520, 160);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(0, 0, 0, 0);
+                labelResultado2.Padding = new Padding(0, 0, 0, 0);
             }
         }
 
@@ -362,26 +387,32 @@ namespace EletroMath.Forms
             // Define o valor do diaelétrico com base na opção selecionada
             switch (escolha)
             {
+                case "Iron":
                 case "Ferro":
                     Pmagnetica = 6000;
                     break;
 
+                case "Steel":
                 case "Aço":
                     Pmagnetica = 3000;
                     break;
 
+                case "Nickel":
                 case "Niquel":
                     Pmagnetica = 600;
                     break;
 
+                case "Cobalt":
                 case "Cobalto":
                     Pmagnetica = 2000;
                     break;
 
+                case "Copper":
                 case "Cobre":
                     Pmagnetica = 0.000001;
                     break;
 
+                case "Air":
                 case "Ar":
                     Pmagnetica = 1;
                     break;
@@ -392,7 +423,7 @@ namespace EletroMath.Forms
             double indutancia = Pmagnetica * area * (nEspiras * nEspiras) / comprimento;
 
             //Imprime o Resultado
-            textBoxResultado.Text = indutancia.ToString("0.####") + "Henrys";
+            textBoxResultado.Text = indutancia.ToString("0.####") + " Henrys";
             labelResultado1.Visible = true;
             textBox3.Visible = true;
        

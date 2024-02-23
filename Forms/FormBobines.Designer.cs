@@ -74,7 +74,7 @@
             this.textBox5.Location = new System.Drawing.Point(1355, 697);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(123, 25);
+            this.textBox5.Size = new System.Drawing.Size(322, 25);
             this.textBox5.TabIndex = 56;
             // 
             // textBox3
@@ -83,10 +83,10 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox3.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(244, 633);
+            this.textBox3.Location = new System.Drawing.Point(244, 673);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 25);
+            this.textBox3.Size = new System.Drawing.Size(323, 25);
             this.textBox3.TabIndex = 55;
             // 
             // labelResultado2
@@ -105,7 +105,7 @@
             this.labelResultado1.AutoSize = true;
             this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado1.Location = new System.Drawing.Point(92, 633);
+            this.labelResultado1.Location = new System.Drawing.Point(92, 673);
             this.labelResultado1.Name = "labelResultado1";
             this.labelResultado1.Size = new System.Drawing.Size(139, 24);
             this.labelResultado1.TabIndex = 53;
@@ -144,7 +144,7 @@
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(411, 443);
+            this.btnLimpar.Location = new System.Drawing.Point(411, 481);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(179, 79);
@@ -158,7 +158,7 @@
             this.btnCal.FlatAppearance.BorderSize = 0;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCal.Location = new System.Drawing.Point(125, 443);
+            this.btnCal.Location = new System.Drawing.Point(125, 481);
             this.btnCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(179, 79);

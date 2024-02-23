@@ -49,21 +49,41 @@ namespace EletroMath.Forms
 
 
             //Opçoes da comboBoxCapacitância
-            comboBoxCapacitância.Items.Add("Ar");
-            comboBoxCapacitância.Items.Add("Papel");
-            comboBoxCapacitância.Items.Add("Vidro");
-            comboBoxCapacitância.Items.Add("PVC (Policloreto de Vinila)");
-            comboBoxCapacitância.Items.Add("Cerâmica");
-            comboBoxCapacitância.Items.Add("Água (20°C)");
-            comboBoxCapacitância.Items.Add("Mica");
-            comboBoxCapacitância.Items.Add("Teflon (PTFE)");
-            comboBoxCapacitância.Items.Add("Poliestireno (PS)");
-            comboBoxCapacitância.Items.Add("Polietileno (PE)");
-            comboBoxCapacitância.Items.Add("Polipropileno (PP)");
-            comboBoxCapacitância.Items.Add("Poliuretano (PU)");
-            comboBoxCapacitância.Items.Add("Borracha de Silicone");
-            comboBoxCapacitância.Items.Add("Borracha Etileno Propileno");
-            
+
+            if (idiomaCondensadores == "portugues")
+            {
+                comboBoxCapacitância.Items.Add("Ar");
+                comboBoxCapacitância.Items.Add("Papel");
+                comboBoxCapacitância.Items.Add("Vidro");
+                comboBoxCapacitância.Items.Add("PVC (Policloreto de Vinila)");
+                comboBoxCapacitância.Items.Add("Cerâmica");
+                comboBoxCapacitância.Items.Add("Água (20°C)");
+                comboBoxCapacitância.Items.Add("Mica");
+                comboBoxCapacitância.Items.Add("Teflon (PTFE)");
+                comboBoxCapacitância.Items.Add("Poliestireno (PS)");
+                comboBoxCapacitância.Items.Add("Polietileno (PE)");
+                comboBoxCapacitância.Items.Add("Polipropileno (PP)");
+                comboBoxCapacitância.Items.Add("Poliuretano (PU)");
+                comboBoxCapacitância.Items.Add("Borracha de Silicone");
+                comboBoxCapacitância.Items.Add("Borracha Etileno Propileno");
+            }
+            else if (idiomaCondensadores == "ingles")
+            {
+                comboBoxCapacitância.Items.Add("Air");
+                comboBoxCapacitância.Items.Add("Paper");
+                comboBoxCapacitância.Items.Add("Glass");
+                comboBoxCapacitância.Items.Add("PVC (Polyvinyl Chloride)");
+                comboBoxCapacitância.Items.Add("Ceramic");
+                comboBoxCapacitância.Items.Add("Water (20°C)");
+                comboBoxCapacitância.Items.Add("Mica");
+                comboBoxCapacitância.Items.Add("Teflon (PTFE)");
+                comboBoxCapacitância.Items.Add("Polystyrene (PS)");
+                comboBoxCapacitância.Items.Add("Polyethylene (PE)");
+                comboBoxCapacitância.Items.Add("Polypropylene (PP)");
+                comboBoxCapacitância.Items.Add("Polyurethane (PU)");
+                comboBoxCapacitância.Items.Add("Silicone Rubber");
+                comboBoxCapacitância.Items.Add("Ethylene Propylene Rubber");
+            }
             // Indice da opção desejada como seleção inicial
             comboBoxCapacitância.SelectedIndex = -1;
 
@@ -100,6 +120,7 @@ namespace EletroMath.Forms
         {
             if (idiomaCondensadores == "ingles")
             {
+                //Tradução das Frases
                 label2.Text = "Permittivity of the Dielectric Material between the Plates (in Farads per Meter, F/m)";
                 label3.Text = "Overlap Area of the Plates (in Square Meters, m²)";
                 label5.Text = "Distance between the Plates (in Meters, m)";
@@ -113,12 +134,19 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Clear";
                 label1.Text = "Capacitor 1";
                 label4.Text = "Capacitor 2";
+
+                //Ajuste nas Posições
                 textBox1.Location = new Point(335, 205);
                 textBox2.Location = new Point(300, 253);
                 comboBoxCapacitância.Location = new Point(535, 158);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(15, 0, 0, 0);
+                labelResultado2.Padding = new Padding(15, 0, 0, 0);
             }
             else if (idiomaCondensadores == "portugues")
             {
+                //Tradução das Frases
                 label2.Text = "Permitividade do Material Dialétrico entre as Placas (em Farads por Metro, F/m)";
                 label3.Text = "Área de Sobreposição das Placas (em Metros Quadrados, m²)";
                 label5.Text = "Distância entre as Placas (em Metros, m)";
@@ -132,6 +160,8 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Limpar";
                 label1.Text = "Condensador 1";
                 label4.Text = "Condensador 2";
+
+                //Ajuste nas Posições
                 textBox1.Location = new Point(410, 205);
                 textBox2.Location = new Point(288, 253);
                 comboBoxCapacitância.Location = new Point(515, 158);
@@ -358,26 +388,32 @@ namespace EletroMath.Forms
             // Define o valor do diaelétrico com base na opção selecionada
             switch (escolha)
             {
+                case "Air":
                 case "Ar":
                     dialetrico = 1;
                     break;
 
+                case "Paper":
                 case "Papel":
                     dialetrico = 4.75;
                     break;
 
+                case "Glass":
                 case "Vidro":
                     dialetrico = 7;
                     break;
 
+                case "PVC (Polyvinyl Chloride)":
                 case "PVC (Policloreto de Vinila)":
                     dialetrico = 5.6;
                     break;
 
+                case "Ceramic":
                 case "Cerâmica":
                     dialetrico = 6;
                     break;
 
+                case "Water (20°C)":
                 case "Água (20°C)":
                     dialetrico = 80;
                     break;
@@ -390,26 +426,32 @@ namespace EletroMath.Forms
                     dialetrico = 2.05;
                     break;
 
+                case "Polystyrene (PS)":
                 case "Poliestireno (PS)":
                     dialetrico = 2.65;
                     break;
 
+                case "Polyethylene (PE)":
                 case "Polietileno (PE)":
                     dialetrico = 2.32;
                     break;
 
+                case "Polypropylene (PP)":
                 case "Polipropileno (PP)":
                     dialetrico = 2.25;
                     break;
 
+                case "Polyurethane (PU)":
                 case "Poliuretano (PU)":
                     dialetrico = 5.75;
                     break;
 
+                case "Silicone Rubber":
                 case "Borracha de Silicone":
                     dialetrico = 3.25;
                     break;
 
+                case "Ethylene Propylene Rubber":
                 case "Borracha Etileno Propileno":
                     dialetrico = 2.9;
                     break;

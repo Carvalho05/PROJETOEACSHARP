@@ -69,7 +69,7 @@
             this.textBox5.Location = new System.Drawing.Point(963, 655);
             this.textBox5.Margin = new System.Windows.Forms.Padding(0);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(90, 25);
+            this.textBox5.Size = new System.Drawing.Size(244, 25);
             this.textBox5.TabIndex = 45;
             // 
             // labelResultado2
@@ -78,6 +78,7 @@
             this.labelResultado2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.labelResultado2.ForeColor = System.Drawing.Color.Red;
             this.labelResultado2.Location = new System.Drawing.Point(826, 655);
+            this.labelResultado2.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.labelResultado2.Name = "labelResultado2";
             this.labelResultado2.Size = new System.Drawing.Size(139, 24);
             this.labelResultado2.TabIndex = 44;
@@ -285,9 +286,10 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox2.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(192, 482);
+            this.textBox2.Location = new System.Drawing.Point(192, 483);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 25);
+            this.textBox2.Size = new System.Drawing.Size(260, 25);
             this.textBox2.TabIndex = 51;
             // 
             // labelResultado1
@@ -296,6 +298,7 @@
             this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
             this.labelResultado1.Location = new System.Drawing.Point(56, 483);
+            this.labelResultado1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.labelResultado1.Name = "labelResultado1";
             this.labelResultado1.Size = new System.Drawing.Size(139, 24);
             this.labelResultado1.TabIndex = 50;
