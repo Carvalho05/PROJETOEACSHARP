@@ -288,7 +288,7 @@
             this.btn5stripes.FlatAppearance.BorderSize = 0;
             this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5stripes.Location = new System.Drawing.Point(627, 188);
+            this.btn5stripes.Location = new System.Drawing.Point(626, 112);
             this.btn5stripes.Name = "btn5stripes";
             this.btn5stripes.Size = new System.Drawing.Size(119, 41);
             this.btn5stripes.TabIndex = 31;
@@ -301,7 +301,7 @@
             this.btn4stripes.FlatAppearance.BorderSize = 0;
             this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4stripes.Location = new System.Drawing.Point(373, 188);
+            this.btn4stripes.Location = new System.Drawing.Point(372, 112);
             this.btn4stripes.Name = "btn4stripes";
             this.btn4stripes.Size = new System.Drawing.Size(119, 41);
             this.btn4stripes.TabIndex = 30;
@@ -371,10 +371,10 @@
             "GigaOhms (GΩ)",
             "MegaOhms (MΩ)",
             "kiloOhms (KΩ)",
-            "Ohms (Ω)\"",
-            "miliOhms (mΩ)\"",
-            "microOhms (µΩ)\"",
-            "nanoOhms (nΩ)\""});
+            "Ohms (Ω)",
+            "miliOhms (mΩ)",
+            "microOhms (µΩ)",
+            "nanoOhms (nΩ)"});
             this.comboBoxUnidades.Location = new System.Drawing.Point(1132, 396);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
             this.comboBoxUnidades.Size = new System.Drawing.Size(121, 23);

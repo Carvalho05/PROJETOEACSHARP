@@ -20,6 +20,8 @@ namespace EletroMath.Forms
             pictureBoxRes.Visible = false;
             flowLayoutPanelCombo.Visible = false;
             labelResultado.Visible = false;
+            comboBoxUnidades.Visible = false;
+            comboBoxUnidades.SelectedIndex = 3;
         }
         #region Tema
         private void LoadTheme() // Aplicar tema de cors aos Botoes
@@ -63,6 +65,7 @@ namespace EletroMath.Forms
             comboBoxFaixa3.Visible = false;
             labelFaixa3.Visible=false;
             btn4stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
+            comboBoxUnidades.Visible = true;
         }
 
         private void btn5stripes_Click(object sender, EventArgs e)
@@ -75,6 +78,7 @@ namespace EletroMath.Forms
             labelFaixa3.Visible = true;
             flowLayoutPanelCombo.Visible = true;
             btn5stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
+            comboBoxUnidades.Visible = true;
         }
         #endregion TipoResistencia  
 

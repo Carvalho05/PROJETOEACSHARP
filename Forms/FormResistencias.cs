@@ -80,10 +80,10 @@ namespace EletroMath.Forms
                 // Propriedades dos novos controles
                 newLabel.Text = string.Format("Resistência {0}", textboxCount);
                 newLabel.Margin = new Padding(0, 0, 0, 7);
-                newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a fonte como Calibri, tamanho 10.2 e negrito
-                newLabel.ForeColor = Color.Blue; // Definindo a cor do texto como Azul
+                newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de texto 
+                newLabel.ForeColor = Color.Blue; // Aplicar cor azul
 
-                // Adicionamento de novos controles ao FlowLayoutPanel
+                // Adição de caixas
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
                 flowLayoutPanel3.Controls.Add(newComboBox);
