@@ -202,7 +202,7 @@ namespace EletroMath.Forms
             double valorResistencia = (primeiroDigito * 100 + segundoDigito * 10 + terceiroDigito) * multiplicador;
 
             // Exibe o valor da resistência onde for apropriado (pode ser em uma label, console, etc.)
-           textBox1.Text=($"{valorResistencia}");
+           textBox1.Text=($"{valorResistencia}") + " Ohms";
         }
 
         private int ObterValorDigito(Color cor)

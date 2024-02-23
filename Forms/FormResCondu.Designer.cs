@@ -49,6 +49,7 @@
             this.pctBox2st = new System.Windows.Forms.PictureBox();
             this.pctBox1st = new System.Windows.Forms.PictureBox();
             this.pictureBoxRes = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).BeginInit();
@@ -60,9 +61,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1158, 514);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(1369, 488);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(134, 23);
             this.textBox1.TabIndex = 34;
             // 
             // flowLayoutPanel1
@@ -95,6 +101,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox2.FormattingEnabled = true;
@@ -128,6 +135,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.ItemHeight = 16;
@@ -160,6 +168,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.ItemHeight = 16;
@@ -192,6 +201,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.ItemHeight = 16;
@@ -226,6 +236,7 @@
             // 
             // comboBox6
             // 
+            this.comboBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.ItemHeight = 16;
@@ -330,11 +341,23 @@
             this.pictureBoxRes.TabIndex = 25;
             this.pictureBoxRes.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(1135, 487);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 24);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "O Valor da Resistência é";
+            // 
             // FormResCondu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1557, 1033);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pctBox5st);
@@ -384,5 +407,6 @@
         private System.Windows.Forms.PictureBox pctBox2st;
         private System.Windows.Forms.PictureBox pctBox1st;
         private System.Windows.Forms.PictureBox pictureBoxRes;
+        private System.Windows.Forms.Label label1;
     }
 }
