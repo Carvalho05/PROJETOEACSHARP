@@ -12,25 +12,25 @@ namespace EletroMath.Forms
             InitializeComponent();
 
             //Opções da comboBoxUnidades
-            comboBoxUnidades.Items.Add("GigaOhms (GO)");
-            comboBoxUnidades.Items.Add("MegaOhms (MO)");
-            comboBoxUnidades.Items.Add("kiloOhms (KO)");
-            comboBoxUnidades.Items.Add("Ohms (O)");
-            comboBoxUnidades.Items.Add("miliOhms (mO)");
-            comboBoxUnidades.Items.Add("microOhms (µO)");
-            comboBoxUnidades.Items.Add("nanoOhms (nO)");
+            comboBoxUnidades.Items.Add("GigaOhms (GΩ)");
+            comboBoxUnidades.Items.Add("MegaOhms (MΩ)");
+            comboBoxUnidades.Items.Add("kiloOhms (KΩ)");
+            comboBoxUnidades.Items.Add("Ohms (Ω)");
+            comboBoxUnidades.Items.Add("miliOhms (mΩ)");
+            comboBoxUnidades.Items.Add("microOhms (µΩ)");
+            comboBoxUnidades.Items.Add("nanoOhms (nΩ)");
 
             // Indice da opção desejada como seleção inicial
             comboBoxUnidades.SelectedIndex = 3;
 
             //Opções da comboBoxCondutancia
-            comboBoxUnidadesCondutancia.Items.Add("GigaOhms (GO)");
-            comboBoxUnidadesCondutancia.Items.Add("MegaOhms (MO)");
-            comboBoxUnidadesCondutancia.Items.Add("kiloOhms (KO)");
-            comboBoxUnidadesCondutancia.Items.Add("Ohms (O)");
-            comboBoxUnidadesCondutancia.Items.Add("miliOhms (mO)");
-            comboBoxUnidadesCondutancia.Items.Add("microOhms (µO)");
-            comboBoxUnidadesCondutancia.Items.Add("nanoOhms (nO)");
+            comboBoxUnidadesCondutancia.Items.Add("GigaOhms (GΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("MegaOhms (MΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("kiloOhms (KΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("Ohms (Ω)");
+            comboBoxUnidadesCondutancia.Items.Add("miliOhms (mΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("microOhms (µΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("nanoOhms (nΩ)");
 
             // Indice da opção desejada como seleção inicial
             comboBoxUnidadesCondutancia.SelectedIndex = 3;
@@ -65,7 +65,7 @@ namespace EletroMath.Forms
         #endregion Misc
 
         #region Adicionar/Remover Caixas Texto
-        private int textboxCount = 2;
+        private int textboxCount = 3;
 
         private void AddBoxes()
         {
@@ -89,13 +89,13 @@ namespace EletroMath.Forms
                 flowLayoutPanel3.Controls.Add(newComboBox);
 
                 //Opções da ComboBox
-                newComboBox.Items.Add("GigaOhms (GO)");
-                newComboBox.Items.Add("MegaOhms (MO)");
-                newComboBox.Items.Add("kiloOhms (KO)");
-                newComboBox.Items.Add("Ohms (O)");
-                newComboBox.Items.Add("miliOhms (mO)");
-                newComboBox.Items.Add("microOhms (µO)");
-                newComboBox.Items.Add("nanoOhms (nO)");
+                newComboBox.Items.Add("GigaOhms (GΩ)");
+                newComboBox.Items.Add("MegaOhms (MΩ)");
+                newComboBox.Items.Add("kiloOhms (KΩ)");
+                newComboBox.Items.Add("Ohms (Ω)");
+                newComboBox.Items.Add("miliOhms (mΩ)");
+                newComboBox.Items.Add("microOhms (µΩ)");
+                newComboBox.Items.Add("nanoOhms (nΩ)");
 
                 // Indice da opção desejada como seleção inicial
                 newComboBox.SelectedIndex = 3;
@@ -107,7 +107,7 @@ namespace EletroMath.Forms
 
         private void RemoveBoxes()
         {
-            if (textboxCount > 2)
+            if (textboxCount > 3)
             {
                 if (flowLayoutPanel1.Controls.Count > 1)
                 {
@@ -159,7 +159,7 @@ namespace EletroMath.Forms
             else
             {
                 // Exibimos o valor calculado na TextBox de resultado
-                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ohms";
+                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
                 label7.Visible = true;
                 textBox5.Visible = true;
             }
@@ -198,7 +198,7 @@ namespace EletroMath.Forms
             else
             {
                 // Exibimos o valor calculado na TextBox de resultado
-                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ohms";
+                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
                 label7.Visible = true;
                 textBox5.Visible = true;
             }
@@ -233,30 +233,30 @@ namespace EletroMath.Forms
             // Define o valor do diaelétrico com base na opção selecionada
             switch (escolha)
             {
-                case "GigaOhms (GO)":
+                case "GigaOhms (GΩ)":
                     resistencia *= 1e9;
                     break;
 
-                case "MegaOhms (MO)":
+                case "MegaOhms (MΩ)":
                     resistencia *= 1e6;
                     break;
 
-                case "kiloOhms (KO)":
+                case "kiloOhms (KΩ)":
                     resistencia *= 1e3;
                     break;
 
-                case "Ohms (O)":
+                case "Ohms (Ω)":
                     break;
 
-                case "miliOhms (mO)":
+                case "miliOhms (mΩ)":
                     resistencia *= 1e-3;
                     break;
 
-                case "microOhms (µO)":
+                case "microOhms (µΩ)":
                     resistencia *= 1e-6;
                     break;
 
-                case "nanoOhms (nO)":
+                case "nanoOhms (nΩ)":
                     resistencia *= 1e-9;
                     break;
 

@@ -57,6 +57,7 @@ namespace EletroMath.Forms
             textBox3.Visible = false;
 
         }
+        //Aplicar tema de cores aos botoes
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -77,7 +78,7 @@ namespace EletroMath.Forms
         #endregion Misc
 
         #region Adicionar/Remover Caixas Texto
-        private int textboxCount = 2;
+        private int textboxCount = 3;
         private void AddBoxes()
         {
             // Verificação se o número máximo de TextBoxes foi atingido
@@ -118,7 +119,7 @@ namespace EletroMath.Forms
         }
         private void RemoveBoxes()
         {
-            if (textboxCount > 2)
+            if (textboxCount > 3)
             {
                 if (flowLayoutPanel1.Controls.Count > 1)
                 {

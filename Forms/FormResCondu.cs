@@ -12,15 +12,17 @@ namespace EletroMath.Forms
 {
     public partial class FormResCondu : Form
     {
+        int tipoResistencia;
         private PictureBox pictureBoxSelected;
         public FormResCondu()
         {
             InitializeComponent();
             pictureBoxRes.Visible = false;
-
-
+            flowLayoutPanelCombo.Visible = false;
+            labelResultado.Visible = false;
         }
-        private void LoadTheme()
+        #region Tema
+        private void LoadTheme() // Aplicar tema de cors aos Botoes
         {
             foreach (Control btns in this.Controls)
             {
@@ -32,39 +34,52 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+            labelResultado.ForeColor = ThemeColor.PrimaryColor;
         }
-        // Codigo para retirar o realce do botao das resistencias
-        private void ResetColors()
+        private void ResetColors()  // Codigo para retirar o realce do botao das resistencias
         {
 
             btn4stripes.BackColor = ThemeColor.PrimaryColor;
             btn5stripes.BackColor = ThemeColor.PrimaryColor;
+        } 
+        private void FormResCondu_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+            SetupColorComboBox(comboBoxFaixa1);
+            SetupColorComboBox(comboBoxFaixa2);
+            SetupColorComboBox(comboBoxFaixa3);
+            SetupColorComboBox(comboBoxMult);
         }
+        #endregion Tema 
+
+        #region TipoResistencia
         private void btn4stripes_Click(object sender, EventArgs e)
         {
+            tipoResistencia = 4;
             ResetColors();
             pictureBoxRes.Visible = true;
             pctBox3st.Visible = false;
+            flowLayoutPanelCombo.Visible = true;
+            comboBoxFaixa3.Visible = false;
+            labelFaixa3.Visible=false;
             btn4stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
         }
 
         private void btn5stripes_Click(object sender, EventArgs e)
         {
+            tipoResistencia = 5;
             ResetColors();
             pictureBoxRes.Visible = true;
             pctBox3st.Visible = true;
+            comboBoxFaixa3.Visible = true;
+            labelFaixa3.Visible = true;
+            flowLayoutPanelCombo.Visible = true;
             btn5stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
         }
+        #endregion TipoResistencia  
 
-        private void FormResCondu_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
-            SetupColorComboBox(comboBox2);
-            SetupColorComboBox(comboBox3);
-            SetupColorComboBox(comboBox4);
-            SetupColorComboBox(comboBox5);
-        }
-        private void DrawItemHandler(object sender, DrawItemEventArgs e)
+      
+        private void DrawItemHandler(object sender, DrawItemEventArgs e) //Pinta as linhas da combobox de acordo com a cor do texto
         {
             if (e.Index >= 0)
             {
@@ -101,11 +116,9 @@ namespace EletroMath.Forms
 
             // Conecta o evento DrawItem ao manipulador DrawItemHandler
             comboBox.DrawItem += new DrawItemEventHandler(DrawItemHandler);
-
-         
         }
 
-        private Color GetItemColor(string itemText)
+        private Color GetItemColor(string itemText) //Pintar as faixas da resistencia consoante o texto da ComboBox 
         {
             switch (itemText)
             {
@@ -134,15 +147,16 @@ namespace EletroMath.Forms
                 case "Prateado":
                     return Color.Silver;
                 default:
-                    return comboBox2.ForeColor; // Retorna a cor padrão se não houver correspondência
+                    return comboBoxFaixa1.ForeColor; // Retorna a cor padrão se não houver correspondência
             }
         }
 
+        #region DefinicoesComboBox
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedItem != null)
+            if (comboBoxFaixa1.SelectedItem != null)
             {
-                string corSelecionada = comboBox2.SelectedItem.ToString();
+                string corSelecionada = comboBoxFaixa1.SelectedItem.ToString();
 
                 pctBox1st.BackColor = GetItemColor(corSelecionada);
             }
@@ -150,9 +164,9 @@ namespace EletroMath.Forms
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox3.SelectedItem != null)
+            if (comboBoxFaixa2.SelectedItem != null)
             {
-                string corSelecionada = comboBox3.SelectedItem.ToString();
+                string corSelecionada = comboBoxFaixa2.SelectedItem.ToString();
 
                 pctBox2st.BackColor = GetItemColor(corSelecionada);
             }
@@ -160,9 +174,9 @@ namespace EletroMath.Forms
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox4.SelectedItem != null)
+            if (comboBoxFaixa3.SelectedItem != null)
             {
-                string corSelecionada = comboBox4.SelectedItem.ToString();
+                string corSelecionada = comboBoxFaixa3.SelectedItem.ToString();
 
                 pctBox3st.BackColor = GetItemColor(corSelecionada);
             }
@@ -170,9 +184,9 @@ namespace EletroMath.Forms
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox5.SelectedItem != null)
+            if (comboBoxMult.SelectedItem != null)
             {
-                string corSelecionada = comboBox5.SelectedItem.ToString();
+                string corSelecionada = comboBoxMult.SelectedItem.ToString();
 
                 pctBox4st.BackColor = GetItemColor(corSelecionada);
             }
@@ -180,32 +194,45 @@ namespace EletroMath.Forms
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox6.SelectedItem != null)
+            if (comboBoxTole.SelectedItem != null)
             {
-                string corSelecionada = comboBox6.SelectedItem.ToString();
+                string corSelecionada = comboBoxTole.SelectedItem.ToString();
 
                 pctBox5st.BackColor = GetItemColor(corSelecionada);
                 CalcularValorResistencia();
             }
         }
+
+        #endregion DefinicoesComboBox
+
+
+        #region CalculoResistencias
         private void CalcularValorResistencia()
         {
             // Obtém os valores dos dígitos a partir das cores escolhidas
             int primeiroDigito = ObterValorDigito(pctBox1st.BackColor);
             int segundoDigito = ObterValorDigito(pctBox2st.BackColor);
             int terceiroDigito = ObterValorDigito(pctBox3st.BackColor);
+            double valorResistencia = 0;
 
             // Obtém o multiplicador a partir da cor da faixa multiplicadora
             double multiplicador = ObterMultiplicador(pctBox4st.BackColor);
 
             // Calcula o valor da resistência
-            double valorResistencia = (primeiroDigito * 100 + segundoDigito * 10 + terceiroDigito) * multiplicador;
-
-            // Exibe o valor da resistência onde for apropriado (pode ser em uma label, console, etc.)
-           textBox1.Text=($"{valorResistencia}") + " Ohms";
+            if (tipoResistencia == 5)
+            {
+                valorResistencia = (primeiroDigito * 100 + segundoDigito * 10 + terceiroDigito) * multiplicador;
+            }
+            else
+            {
+                valorResistencia = (primeiroDigito * 100 + segundoDigito * 10) * multiplicador;
+            }
+            // Exibe o valor da resistência na textbox
+           labelResultado.Visible = true;
+           textBox1.Text=($"{valorResistencia}") + " Ω";
         }
 
-        private int ObterValorDigito(Color cor)
+        private int ObterValorDigito(Color cor)// Obter o valor da resistencia associado à cor
         {
          Dictionary<Color, int> coresDigitos = new Dictionary<Color, int>
         {
@@ -225,7 +252,7 @@ namespace EletroMath.Forms
             return coresDigitos.ContainsKey(cor) ? coresDigitos[cor] : 0;
         }
 
-        private double ObterMultiplicador(Color cor)
+        private double ObterMultiplicador(Color cor)// Obter o valor do multiplicador associado à cor
         {
             // Associa a cor ao valor do multiplicador
             Dictionary<Color, double> coresMultiplicadores = new Dictionary<Color, double>
@@ -249,6 +276,7 @@ namespace EletroMath.Forms
             // Retorna o valor do multiplicador correspondente à cor
             return coresMultiplicadores.ContainsKey(cor) ? coresMultiplicadores[cor] : 1;
         }
+# endregion CalculoResistencias
 
     }
 }
