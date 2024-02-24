@@ -52,8 +52,8 @@
             this.labelResultado = new System.Windows.Forms.Label();
             this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
             this.textBoxValor = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelValor = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanelCombo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).BeginInit();
@@ -69,7 +69,7 @@
             this.textBoxResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxResultado.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxResultado.Location = new System.Drawing.Point(1369, 487);
+            this.textBoxResultado.Location = new System.Drawing.Point(406, 445);
             this.textBoxResultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxResultado.Name = "textBoxResultado";
             this.textBoxResultado.Size = new System.Drawing.Size(133, 23);
@@ -89,7 +89,7 @@
             this.flowLayoutPanelCombo.Controls.Add(this.comboBoxTole);
             this.flowLayoutPanelCombo.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelCombo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(165, 585);
+            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(128, 502);
             this.flowLayoutPanelCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelCombo.Name = "flowLayoutPanelCombo";
             this.flowLayoutPanelCombo.Size = new System.Drawing.Size(641, 226);
@@ -222,7 +222,7 @@
             // 
             // pctBox5st
             // 
-            this.pctBox5st.Location = new System.Drawing.Point(771, 375);
+            this.pctBox5st.Location = new System.Drawing.Point(1058, 214);
             this.pctBox5st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox5st.Name = "pctBox5st";
             this.pctBox5st.Size = new System.Drawing.Size(27, 148);
@@ -234,7 +234,7 @@
             this.btn5stripes.FlatAppearance.BorderSize = 0;
             this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5stripes.Location = new System.Drawing.Point(692, 135);
+            this.btn5stripes.Location = new System.Drawing.Point(928, 95);
             this.btn5stripes.Margin = new System.Windows.Forms.Padding(4);
             this.btn5stripes.Name = "btn5stripes";
             this.btn5stripes.Size = new System.Drawing.Size(159, 50);
@@ -248,7 +248,7 @@
             this.btn4stripes.FlatAppearance.BorderSize = 0;
             this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4stripes.Location = new System.Drawing.Point(353, 135);
+            this.btn4stripes.Location = new System.Drawing.Point(589, 95);
             this.btn4stripes.Margin = new System.Windows.Forms.Padding(4);
             this.btn4stripes.Name = "btn4stripes";
             this.btn4stripes.Size = new System.Drawing.Size(159, 50);
@@ -259,7 +259,7 @@
             // 
             // pctBox4st
             // 
-            this.pctBox4st.Location = new System.Drawing.Point(589, 395);
+            this.pctBox4st.Location = new System.Drawing.Point(876, 234);
             this.pctBox4st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox4st.Name = "pctBox4st";
             this.pctBox4st.Size = new System.Drawing.Size(27, 114);
@@ -268,7 +268,7 @@
             // 
             // pctBox3st
             // 
-            this.pctBox3st.Location = new System.Drawing.Point(539, 395);
+            this.pctBox3st.Location = new System.Drawing.Point(826, 234);
             this.pctBox3st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox3st.Name = "pctBox3st";
             this.pctBox3st.Size = new System.Drawing.Size(27, 114);
@@ -277,7 +277,7 @@
             // 
             // pctBox2st
             // 
-            this.pctBox2st.Location = new System.Drawing.Point(487, 395);
+            this.pctBox2st.Location = new System.Drawing.Point(774, 234);
             this.pctBox2st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox2st.Name = "pctBox2st";
             this.pctBox2st.Size = new System.Drawing.Size(27, 114);
@@ -286,7 +286,7 @@
             // 
             // pctBox1st
             // 
-            this.pctBox1st.Location = new System.Drawing.Point(385, 375);
+            this.pctBox1st.Location = new System.Drawing.Point(672, 214);
             this.pctBox1st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox1st.Name = "pctBox1st";
             this.pctBox1st.Size = new System.Drawing.Size(27, 148);
@@ -296,7 +296,7 @@
             // pictureBoxRes
             // 
             this.pictureBoxRes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRes.Image")));
-            this.pictureBoxRes.Location = new System.Drawing.Point(156, 348);
+            this.pictureBoxRes.Location = new System.Drawing.Point(443, 187);
             this.pictureBoxRes.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxRes.Name = "pictureBoxRes";
             this.pictureBoxRes.Size = new System.Drawing.Size(670, 167);
@@ -309,7 +309,7 @@
             this.labelResultado.AutoSize = true;
             this.labelResultado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultado.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado.Location = new System.Drawing.Point(1135, 487);
+            this.labelResultado.Location = new System.Drawing.Point(172, 445);
             this.labelResultado.Name = "labelResultado";
             this.labelResultado.Size = new System.Drawing.Size(212, 24);
             this.labelResultado.TabIndex = 35;
@@ -330,7 +330,7 @@
             "miliOhms (mΩ)",
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
-            this.comboBoxUnidades.Location = new System.Drawing.Point(1509, 488);
+            this.comboBoxUnidades.Location = new System.Drawing.Point(546, 446);
             this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
             this.comboBoxUnidades.Size = new System.Drawing.Size(172, 27);
@@ -345,13 +345,6 @@
             this.textBoxValor.TabIndex = 37;
             this.textBoxValor.TextChanged += new System.EventHandler(this.textBoxValor_TextChanged);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 38;
-            // 
             // labelValor
             // 
             this.labelValor.AutoSize = true;
@@ -361,13 +354,34 @@
             this.labelValor.TabIndex = 39;
             this.labelValor.Text = "Valor da Resistência";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 19;
+            this.comboBox1.Items.AddRange(new object[] {
+            "GigaOhms (GΩ)",
+            "MegaOhms (MΩ)",
+            "kiloOhms (KΩ)",
+            "Ohms (Ω)",
+            "miliOhms (mΩ)",
+            "microOhms (µΩ)",
+            "nanoOhms (nΩ)"});
+            this.comboBox1.Location = new System.Drawing.Point(1509, 548);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(172, 27);
+            this.comboBox1.TabIndex = 40;
+            // 
             // FormResCondu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1768, 1033);
+            this.ClientSize = new System.Drawing.Size(1713, 1033);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.labelValor);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.textBoxValor);
             this.Controls.Add(this.comboBoxUnidades);
             this.Controls.Add(this.labelResultado);
@@ -423,7 +437,7 @@
         private System.Windows.Forms.Label labelResultado;
         private System.Windows.Forms.ComboBox comboBoxUnidades;
         private System.Windows.Forms.TextBox textBoxValor;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label labelValor;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
