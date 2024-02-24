@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -529,7 +530,8 @@ namespace EletroMath.Forms
             {Color.White, 9}
             };
 
-            foreach (var corValor in coresDigitos)
+            return coresDigitos.ContainsKey[valor] ? coresDigitos(valor) : Color.Black;
+            /*foreach (var corValor in coresDigitos)
             {
                 // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
 
@@ -541,7 +543,7 @@ namespace EletroMath.Forms
                     // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido
                 }
             }
-            return Color.Black;
+            return Color.Black;*/
 
         }
 
@@ -582,14 +584,23 @@ namespace EletroMath.Forms
         }
         private void ObterCores()
         {
-
+            int primeiroDigito=0, segundoDigito=0, terceiroDigito=0, multiplicador = 0; 
             string valorRes = textBoxValor.Text;
             int tamanhodaRes = valorRes.Length;
 
-            int primeiroDigito = valorRes[0];
-            int segundoDigito = valorRes[1];
-            int terceiroDigito = valorRes[2];
-            int multiplicador=0;
+            if (tamanhodaRes >= 1)
+            {
+                primeiroDigito = valorRes[0];
+            }
+            else if (tamanhodaRes >= 2)
+            {
+                segundoDigito = valorRes[1];
+            }
+            else if (tipoResistencia == 5)
+            {
+                terceiroDigito = valorRes[2];
+            }
+            
 
             switch (tamanhodaRes)
             {
@@ -625,9 +636,14 @@ namespace EletroMath.Forms
                     break;
             }
 
+
+            pctBox1st.BackColor = ObterCorDigito(primeiroDigito);
+            pctBox2st.BackColor = ObterCorDigito(segundoDigito);
+            pctBox3st.BackColor = ObterCorDigito(terceiroDigito);
+            pctBox4st.BackColor = ObterCorDigito(multiplicador);
             // Mapear os dígitos para cores
-           // string corPrimeiroDigito = MapearDigitoParaCor(primeiroDigito);
-           // string corSegundoDigito = MapearDigitoParaCor(segundoDigito);
+            // string corPrimeiroDigito = MapearDigitoParaCor(primeiroDigito);
+            // string corSegundoDigito = MapearDigitoParaCor(segundoDigito);
             //string corMultiplicador = MapearMultiplicadorParaCor(multiplicador);
 
 
@@ -635,6 +651,10 @@ namespace EletroMath.Forms
 
          }
 
+        private void textBoxValor_TextChanged(object sender, EventArgs e)
+        {
+            ObterCores();
+        }
     }
     
 

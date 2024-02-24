@@ -222,7 +222,7 @@
             // pctBox5st
             // 
             this.pctBox5st.Location = new System.Drawing.Point(771, 375);
-            this.pctBox5st.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctBox5st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox5st.Name = "pctBox5st";
             this.pctBox5st.Size = new System.Drawing.Size(27, 148);
             this.pctBox5st.TabIndex = 32;
@@ -234,7 +234,7 @@
             this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5stripes.Location = new System.Drawing.Point(692, 135);
-            this.btn5stripes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn5stripes.Margin = new System.Windows.Forms.Padding(4);
             this.btn5stripes.Name = "btn5stripes";
             this.btn5stripes.Size = new System.Drawing.Size(159, 50);
             this.btn5stripes.TabIndex = 31;
@@ -248,7 +248,7 @@
             this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4stripes.Location = new System.Drawing.Point(353, 135);
-            this.btn4stripes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn4stripes.Margin = new System.Windows.Forms.Padding(4);
             this.btn4stripes.Name = "btn4stripes";
             this.btn4stripes.Size = new System.Drawing.Size(159, 50);
             this.btn4stripes.TabIndex = 30;
@@ -259,7 +259,7 @@
             // pctBox4st
             // 
             this.pctBox4st.Location = new System.Drawing.Point(589, 395);
-            this.pctBox4st.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctBox4st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox4st.Name = "pctBox4st";
             this.pctBox4st.Size = new System.Drawing.Size(27, 114);
             this.pctBox4st.TabIndex = 29;
@@ -268,7 +268,7 @@
             // pctBox3st
             // 
             this.pctBox3st.Location = new System.Drawing.Point(539, 395);
-            this.pctBox3st.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctBox3st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox3st.Name = "pctBox3st";
             this.pctBox3st.Size = new System.Drawing.Size(27, 114);
             this.pctBox3st.TabIndex = 28;
@@ -277,7 +277,7 @@
             // pctBox2st
             // 
             this.pctBox2st.Location = new System.Drawing.Point(487, 395);
-            this.pctBox2st.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctBox2st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox2st.Name = "pctBox2st";
             this.pctBox2st.Size = new System.Drawing.Size(27, 114);
             this.pctBox2st.TabIndex = 27;
@@ -286,7 +286,7 @@
             // pctBox1st
             // 
             this.pctBox1st.Location = new System.Drawing.Point(385, 375);
-            this.pctBox1st.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctBox1st.Margin = new System.Windows.Forms.Padding(4);
             this.pctBox1st.Name = "pctBox1st";
             this.pctBox1st.Size = new System.Drawing.Size(27, 148);
             this.pctBox1st.TabIndex = 26;
@@ -296,7 +296,7 @@
             // 
             this.pictureBoxRes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRes.Image")));
             this.pictureBoxRes.Location = new System.Drawing.Point(156, 348);
-            this.pictureBoxRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxRes.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxRes.Name = "pictureBoxRes";
             this.pictureBoxRes.Size = new System.Drawing.Size(670, 167);
             this.pictureBoxRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -330,7 +330,7 @@
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
             this.comboBoxUnidades.Location = new System.Drawing.Point(1509, 488);
-            this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
             this.comboBoxUnidades.Size = new System.Drawing.Size(172, 27);
             this.comboBoxUnidades.TabIndex = 36;
@@ -342,6 +342,7 @@
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(100, 22);
             this.textBoxValor.TabIndex = 37;
+            this.textBoxValor.TextChanged += new System.EventHandler(this.textBoxValor_TextChanged);
             // 
             // FormResCondu
             // 
@@ -361,7 +362,7 @@
             this.Controls.Add(this.pctBox2st);
             this.Controls.Add(this.pctBox1st);
             this.Controls.Add(this.pictureBoxRes);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormResCondu";
             this.Text = "Código de Cores";
             this.Load += new System.EventHandler(this.FormResCondu_Load);
