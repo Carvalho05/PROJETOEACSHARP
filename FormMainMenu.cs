@@ -162,7 +162,7 @@ namespace EletroMath
 
         private void btnCondRes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormResCondu(), sender);
+            OpenChildForm(new Forms.FormResCondu(idiomaAtual), sender);
         }
 
         //Close button

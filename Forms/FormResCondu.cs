@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace EletroMath.Forms
 {
@@ -15,9 +16,10 @@ namespace EletroMath.Forms
         int tipoResistencia;
         private PictureBox pictureBoxSelected;
         double resistenciaOhms;
-        public FormResCondu()
+        public FormResCondu(string idiomaAtual)
         {
             InitializeComponent();
+            AtualizarTextos(idiomaAtual);
             comboBoxUnidades.SelectedIndex = 3;
             pictureBoxRes.Visible = false;
             flowLayoutPanelCombo.Visible = false;
@@ -57,6 +59,151 @@ namespace EletroMath.Forms
         }
         #endregion Tema 
 
+        #region Idioma
+        private void AtualizarTextos(string idiomaAtual)
+        {
+            if (idiomaAtual == "ingles")
+            {
+                btn4stripes.Text = "4 Bands";
+                btn5stripes.Text = "5 Bands";
+                labelResultado.Text = "Resistor Value";
+                labelFaixa1.Text = "1st Band";
+                labelFaixa2.Text = "2nd Band";
+                labelFaixa3.Text = "3rd Band";
+                labelMultip.Text = "Multiplier";
+                labelTole.Text = "Tolerance";
+
+                comboBoxFaixa1.Items.Add("Brown");
+                comboBoxFaixa1.Items.Add("Red");
+                comboBoxFaixa1.Items.Add("Orange");
+                comboBoxFaixa1.Items.Add("Yellow");
+                comboBoxFaixa1.Items.Add("Green");
+                comboBoxFaixa1.Items.Add("Blue");
+                comboBoxFaixa1.Items.Add("Violet");
+                comboBoxFaixa1.Items.Add("Grey");
+                comboBoxFaixa1.Items.Add("White");
+
+                comboBoxFaixa2.Items.Add("Black");
+                comboBoxFaixa2.Items.Add("Brown");
+                comboBoxFaixa2.Items.Add("Red");
+                comboBoxFaixa2.Items.Add("Orange");
+                comboBoxFaixa2.Items.Add("Yellow");
+                comboBoxFaixa2.Items.Add("Green");
+                comboBoxFaixa2.Items.Add("Blue");
+                comboBoxFaixa2.Items.Add("Violet");
+                comboBoxFaixa2.Items.Add("Grey");
+                comboBoxFaixa2.Items.Add("White");
+
+
+                comboBoxFaixa3.Items.Add("Black");
+                comboBoxFaixa3.Items.Add("Brown");
+                comboBoxFaixa3.Items.Add("Red");
+                comboBoxFaixa3.Items.Add("Orange");
+                comboBoxFaixa3.Items.Add("Yellow");
+                comboBoxFaixa3.Items.Add("Green");
+                comboBoxFaixa3.Items.Add("Blue");
+                comboBoxFaixa3.Items.Add("Violet");
+                comboBoxFaixa3.Items.Add("Grey");
+                comboBoxFaixa3.Items.Add("White");
+
+
+                comboBoxMult.Items.Add("Black");
+                comboBoxMult.Items.Add("Brown");
+                comboBoxMult.Items.Add("Red");
+                comboBoxMult.Items.Add("Orange");
+                comboBoxMult.Items.Add("Yellow");
+                comboBoxMult.Items.Add("Green");
+                comboBoxMult.Items.Add("Blue");
+                comboBoxMult.Items.Add("Violet");
+                comboBoxMult.Items.Add("Grey");
+                comboBoxMult.Items.Add("White");
+                comboBoxMult.Items.Add("Gold");
+                comboBoxMult.Items.Add("Silver");
+
+                comboBoxTole.Items.Add("Brown");
+                comboBoxTole.Items.Add("Red");
+                comboBoxTole.Items.Add("Orange");
+                comboBoxTole.Items.Add("Yellow");
+                comboBoxTole.Items.Add("Green");
+                comboBoxTole.Items.Add("Blue");
+                comboBoxTole.Items.Add("Violet");
+                comboBoxTole.Items.Add("Grey");
+                comboBoxTole.Items.Add("Gold");
+                comboBoxTole.Items.Add("Silver");
+            }
+            else if (idiomaAtual == "portugues")
+            {
+                btn4stripes.Text = "4 Faixas";
+                btn5stripes.Text = "5 Faixas";
+                labelResultado.Text = "Valor da Resistência";
+                labelFaixa1.Text = "Faixa 1";
+                labelFaixa2.Text = "Faixa 2";
+                labelFaixa3.Text = "Faixa 3";
+                labelMultip.Text = "Multiplicador";
+                labelTole.Text = "Tolerância";
+
+                comboBoxFaixa1.Items.Add("Castanho");
+                comboBoxFaixa1.Items.Add("Vermelho");
+                comboBoxFaixa1.Items.Add("Laranja");
+                comboBoxFaixa1.Items.Add("Amarelo");
+                comboBoxFaixa1.Items.Add("Verde");
+                comboBoxFaixa1.Items.Add("Azul");
+                comboBoxFaixa1.Items.Add("Violeta");
+                comboBoxFaixa1.Items.Add("Cinza");
+                comboBoxFaixa1.Items.Add("Branco");
+
+                comboBoxFaixa2.Items.Add("Pretp");
+                comboBoxFaixa2.Items.Add("Castanho");
+                comboBoxFaixa2.Items.Add("Vermelho");
+                comboBoxFaixa2.Items.Add("Laranja");
+                comboBoxFaixa2.Items.Add("Amarelo");
+                comboBoxFaixa2.Items.Add("Verde");
+                comboBoxFaixa2.Items.Add("Azul");
+                comboBoxFaixa2.Items.Add("Violeta");
+                comboBoxFaixa2.Items.Add("Cinza");
+                comboBoxFaixa2.Items.Add("Branco");
+
+
+                comboBoxFaixa3.Items.Add("Preto");
+                comboBoxFaixa3.Items.Add("Castanho");
+                comboBoxFaixa3.Items.Add("Vermelho");
+                comboBoxFaixa3.Items.Add("Laranja");
+                comboBoxFaixa3.Items.Add("Amarelo");
+                comboBoxFaixa3.Items.Add("Verde");
+                comboBoxFaixa3.Items.Add("Azul");
+                comboBoxFaixa3.Items.Add("Violeta");
+                comboBoxFaixa3.Items.Add("Cinza");
+                comboBoxFaixa3.Items.Add("Branco");
+
+
+                comboBoxMult.Items.Add("Preto");
+                comboBoxMult.Items.Add("Castanho");
+                comboBoxMult.Items.Add("Vermelho");
+                comboBoxMult.Items.Add("Laranja");
+                comboBoxMult.Items.Add("Amarelo");
+                comboBoxMult.Items.Add("Verde");
+                comboBoxMult.Items.Add("Azul");
+                comboBoxMult.Items.Add("Violeta");
+                comboBoxMult.Items.Add("Cinza");
+                comboBoxMult.Items.Add("Branco");
+                comboBoxMult.Items.Add("Dourado");
+                comboBoxMult.Items.Add("Prateado");
+
+                comboBoxTole.Items.Add("Castanho");
+                comboBoxTole.Items.Add("Vermelho");
+                comboBoxTole.Items.Add("Laranja");
+                comboBoxTole.Items.Add("Amarelo");
+                comboBoxTole.Items.Add("Verde");
+                comboBoxTole.Items.Add("Azul");
+                comboBoxTole.Items.Add("Violeta");
+                comboBoxTole.Items.Add("Cinza");
+                comboBoxTole.Items.Add("Dourado");
+                comboBoxTole.Items.Add("Prateado");
+            }
+        }
+
+      
+        #endregion Idioma
         #region TipoResistencia
         private void btn4stripes_Click(object sender, EventArgs e)
         {
@@ -88,8 +235,7 @@ namespace EletroMath.Forms
             labelResultado.Visible = true;
         }
         #endregion TipoResistencia  
-
-      
+        #region ComboBox
         private void DrawItemHandler(object sender, DrawItemEventArgs e) //Pinta as linhas da combobox de acordo com a cor do texto
         {
             if (e.Index >= 0)
@@ -128,34 +274,46 @@ namespace EletroMath.Forms
             // Conecta o evento DrawItem ao manipulador DrawItemHandler
             comboBox.DrawItem += new DrawItemEventHandler(DrawItemHandler);
         }
-
+        #endregion ComboBox
         private Color GetItemColor(string itemText) //Pintar as faixas da resistencia consoante o texto da ComboBox 
         {
             switch (itemText)
             {
                 case "Preto":
+                case "Black":
                     return Color.Black;
                 case "Castanho":
+                case "Brown":
                     return Color.SaddleBrown;
                 case "Vermelho":
+                case "Red":
                     return Color.Red;
                 case "Laranja":
+                case "Orange":
                     return Color.Orange;
                 case "Amarelo":
+                case "Yellow":
                     return Color.Yellow;
                 case "Verde":
+                case "Green":
                     return Color.Green;
                 case "Azul":
+                case "Blue":
                     return Color.Blue;
                 case "Violeta":
+                case "Violet":
                     return Color.Purple;
                 case "Cinza":
+                case "Grey":
                     return Color.Gray;
                 case "Branco":
+                case "White":
                     return Color.White;
                 case "Dourado":
+                case "Gold":
                     return Color.Goldenrod;
                 case "Prateado":
+                case "Silver":
                     return Color.Silver;
                 default:
                     return comboBoxFaixa1.ForeColor; // Retorna a cor padrão se não houver correspondência
@@ -231,20 +389,19 @@ namespace EletroMath.Forms
         private void CalcularValorResistencia()
         {
             double valorResistencia = 0;
-            var (cor1, primeiroDigito) = ValoreCorDigito(pctBox1st.BackColor);
-            var (cor2, segundoDigito) = ValoreCorDigito(pctBox2st.BackColor);
+            int primeiroDigito = ObterValorDigito(pctBox1st.BackColor);
+            int segundoDigito = ObterValorDigito(pctBox2st.BackColor);
 
 
 
 
             // Obtém o multiplicador a partir da cor da faixa multiplicadora
-            var (cormultiplicador, multiplicador) = ValoreCorMultiplicador(pctBox4st.BackColor);
+            double multiplicador = ObterMultiplicador(pctBox4st.BackColor);
 
             // Calcula o valor da resistência
             if (tipoResistencia == 5)
             {
-                var (cor3, terceiroDigito) = ValoreCorDigito(pctBox3st.BackColor);
-                valorResistencia = (primeiroDigito * 100 + segundoDigito * 10 + terceiroDigito) * multiplicador;
+                int terceiroDigito = ObterValorDigito(pctBox3st.BackColor); valorResistencia = (primeiroDigito * 100 + segundoDigito * 10 + terceiroDigito) * multiplicador;
             }
             else
             {
@@ -255,9 +412,9 @@ namespace EletroMath.Forms
            textBoxResultado.Text=($"{valorResistencia}");
         }
 
-        private (Color cor, int valor) ValoreCorDigito(Color cor)// Obter o valor da resistencia associado à cor
+        private int ObterValorDigito(Color cor)// Obter o valor da resistencia associado à cor
         {
-         Dictionary<Color, int> coresDigitos = new Dictionary<Color, int>
+            Dictionary<Color, int> coresDigitos = new Dictionary<Color, int>
         {
             {Color.Black, 0},
             {Color.SaddleBrown, 1},
@@ -272,30 +429,32 @@ namespace EletroMath.Forms
             };
 
             // Retorna o valor do dígito correspondente à cor
-            return coresDigitos.ContainsKey(cor) ? (cor, coresDigitos[cor]) : (cor, 0);
-
+            return coresDigitos.ContainsKey(cor) ? coresDigitos[cor] : 0;
         }
 
-        private (Color cor, double valor) ValoreCorMultiplicador(Color cor)// Obter o valor do multiplicador associado à cor
+        private double ObterMultiplicador(Color cor)// Obter o valor do multiplicador associado à cor
         {
             // Associa a cor ao valor do multiplicador
             Dictionary<Color, double> coresMultiplicadores = new Dictionary<Color, double>
             {
-                {Color.Black, 1},//Ω
-                {Color.Brown, 10},//Ω 
-                {Color.Red, 100},//Ω 
-                {Color.Orange, 1000}, //1kΩ 
-                {Color.Yellow, 10000},//10kΩ 
-                {Color.Green, 100000}, //100kΩ 
-                {Color.Blue, 1000000},//1MΩ 
-                {Color.Purple, 10000000},//10MΩ 
-                {Color.Gray, 100000000},//100MΩ 
-                {Color.White, 1000000000},//1GΩ 
+                {Color.Black, 1},
+                {Color.Brown, 10},
+                {Color.Red, 100},
+                {Color.Orange, 1}, //k
+                {Color.Yellow, 10},//k
+                {Color.Green, 100}, //k
+                {Color.Blue, 1},//M
+                {Color.Purple, 10},//M
+                {Color.Gray, 100},//M
+                {Color.White, 1},//G
                 {Color.Gold, 0.1},
-                {Color.Silver, 0.01},       
+                {Color.Silver, 0.01},
+
+
             };
 
-            return coresMultiplicadores.ContainsKey(cor) ? (cor, coresMultiplicadores[cor]) : (cor, 1);
+            // Retorna o valor do multiplicador correspondente à cor
+            return coresMultiplicadores.ContainsKey(cor) ? coresMultiplicadores[cor] : 1;
         }
         #endregion CalculoResistencias
 
@@ -352,6 +511,129 @@ namespace EletroMath.Forms
 
         #endregion ConverterUnidades
 
-       
+       private Color ObterCorDigito(int valor)// Obter o valor da resistencia associado à cor
+        {
+            Dictionary<Color, int> coresDigitos = new Dictionary<Color, int>
+        {
+            {Color.Black, 0},
+            {Color.SaddleBrown, 1},
+            {Color.Red, 2},
+            {Color.Orange, 3},
+            {Color.Yellow, 4},
+            {Color.Green, 5},
+            {Color.Blue, 6},
+            {Color.Purple, 7},
+            {Color.Gray, 8},
+            {Color.White, 9}
+            };
+
+            foreach (var corValor in coresDigitos)
+            {
+                // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
+
+                if (corValor.Value == valor)
+                {
+                    // Verifica se o valor associado à chave atual é igual ao valor fornecido como parâmetro
+
+                    return corValor.Key;
+                    // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido
+                }
+            }
+            return Color.Black;
+
+        }
+
+        private Color ObterCorMultiplicador(int valor)// Obter o valor do multiplicador associado à cor
+        {
+            // Associa a cor ao valor do multiplicador
+            Dictionary<Color, double> coresMultiplicadores = new Dictionary<Color, double>
+            {
+                {Color.Black, 1},
+                {Color.Brown, 10},
+                {Color.Red, 100},
+                {Color.Orange, 1}, //k
+                {Color.Yellow, 10},//k
+                {Color.Green, 100}, //k
+                {Color.Blue, 1},//M
+                {Color.Purple, 10},//M
+                {Color.Gray, 100},//M
+                {Color.White, 1},//G
+                {Color.Gold, 0.1},
+                {Color.Silver, 0.01},
+
+
+            };
+
+            foreach (var corMultiplicador in coresMultiplicadores)
+            {
+                // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
+
+                if (corMultiplicador.Value == valor)
+                {
+                    // Verifica se o valor associado à chave atual é igual ao valor fornecido como parâmetro
+
+                    return corMultiplicador.Key;
+                    // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido
+                }
+            }
+            return Color.Black;
+        }
+        private void ObterCores()
+        {
+
+            string valorRes = textBoxValor.Text;
+            int tamanhodaRes = valorRes.Length;
+
+            int primeiroDigito = valorRes[0];
+            int segundoDigito = valorRes[1];
+            int terceiroDigito = valorRes[2];
+            int multiplicador=0;
+
+            switch (tamanhodaRes)
+            {
+                case 4:
+                    multiplicador = 10;
+                    break;
+                case 5:
+                    multiplicador = 100;
+                    break;
+                case 6:
+                    multiplicador = 1000;
+                    break;
+                case 7:
+                    multiplicador = 10000;
+                    break;
+                case 8:
+                    multiplicador = 100000;
+                    break;
+                case 9:
+                    multiplicador = 1000000;
+                    break;
+                case 10:
+                    multiplicador = 10000000;
+                    break;
+                case 11:
+                    multiplicador = 100000000;
+                    break;
+                case 12:
+                    multiplicador = 1000000000;
+                    break;
+                default:
+                    multiplicador = 1;
+                    break;
+            }
+
+            // Mapear os dígitos para cores
+           // string corPrimeiroDigito = MapearDigitoParaCor(primeiroDigito);
+           // string corSegundoDigito = MapearDigitoParaCor(segundoDigito);
+            //string corMultiplicador = MapearMultiplicadorParaCor(multiplicador);
+
+
+            // Construir o código de cores
+
+         }
+
     }
+    
+
 }
