@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EletroMath.Forms
@@ -36,11 +37,11 @@ namespace EletroMath.Forms
             //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidades2.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidades2.Items.Add("KiloOhms (kΩ)");
+            comboBoxUnidades2.Items.Add("kiloOhms (KΩ)");
             comboBoxUnidades2.Items.Add("Ohms (Ω)");
-            comboBoxUnidades2.Items.Add("MiliOhms (mΩ)");
-            comboBoxUnidades2.Items.Add("MicroOhms (µΩ)");
-            comboBoxUnidades2.Items.Add("NanoOhms (nΩ)");
+            comboBoxUnidades2.Items.Add("miliOhms (mΩ)");
+            comboBoxUnidades2.Items.Add("microOhms (µΩ)");
+            comboBoxUnidades2.Items.Add("nanoOhms (nΩ)");
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
@@ -176,7 +177,7 @@ namespace EletroMath.Forms
                 // Adição de caixas
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
-                flowLayoutPanel3.Controls.Add(newComboBox);
+                flowLayoutPanel2.Controls.Add(newComboBox);
 
                 //Opções da ComboBox
                 newComboBox.Items.Add("GigaOhms (GΩ)");
@@ -196,7 +197,7 @@ namespace EletroMath.Forms
         }
 
         //Função para Remover Caixas de Texto
-        private void RemoveBoxes()
+       private void RemoveBoxes()
         {
             //Remove as Caixas Inseridas até só Existir Menos que 3
             if (textboxCount > 3)
@@ -206,7 +207,7 @@ namespace EletroMath.Forms
                     // Remova os Últimos Controles Adicionados dos FlowLayoutPanels
                     flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
                     flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
-                    flowLayoutPanel3.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
+                    flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     textboxCount--;
                 }
             }
@@ -217,70 +218,61 @@ namespace EletroMath.Forms
         #region Calculo Resistencias
 
         #region Codigo Calculo 
-        /*private void ConverterUnidades(TextBox textBoxResultado)
+        private double ConverterUnidade(double valor, string unidade)
         {
-            double resistencia = 0;
-
-            // Obtém a opção selecionada na ComboBox como uma string
-            string escolha = comboBoxUnidades.SelectedItem.ToString();
-
-            switch (escolha)
+            switch (unidade)
             {
                 case "GigaOhms (GΩ)":
-                    resistencia = resistenciaOhms * 1e-9;
-                    break;
+                    return valor * 1e9;
 
                 case "MegaOhms (MΩ)":
-                    resistencia = resistenciaOhms * 1e-6;
-                    break;
+                    return valor * 1e6;
 
                 case "kiloOhms (KΩ)":
-                    resistencia = resistenciaOhms * 1e-3;
-                    break;
+                    return valor * 1e3;
 
                 case "Ohms (Ω)":
-                    resistencia = resistenciaOhms;
-                    break;
+                    return valor;
 
                 case "miliOhms (mΩ)":
-                    resistencia = resistenciaOhms * 1e3;
-                    break;
+                    return valor * 1e-3;
 
                 case "microOhms (µΩ)":
-                    resistencia = resistenciaOhms * 1e6;
-                    break;
+                    return valor * 1e-6;
 
                 case "nanoOhms (nΩ)":
-                    resistencia = resistenciaOhms * 1e9;
-                    break;
+                    return valor * 1e-9;
 
+                default:
+                    // Se a unidade não for reconhecida, retorna o valor original
+                    return valor;
             }
-
-
-
-            // Exibe o resultado na TextBox de resultado
-            textBoxResultado.Text = resistencia.ToString("0.####");
-
-        }*/
+        }
         //Cálculo Série Resistências
         private void ResSerie(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
-            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
+            bool valoresValidos = true; 
 
-            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
             {
+                Control controlResistencia = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
+
                 double Resistencia;
-                if (double.TryParse(control.Text, out Resistencia))
+                string unidade = controlUnidade.Text;
+
+                if (double.TryParse(controlResistencia.Text, out Resistencia))
                 {
+                    // Aplica a conversão de unidades à resistência individual
+                    Resistencia = ConverterUnidade(Resistencia, unidade);
+
                     ResistenciaTotal += Resistencia;
                 }
                 else
                 {
-                    // Se um Valor não puder ser Vonvertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
+                    break;
                 }
             }
 
@@ -490,6 +482,7 @@ namespace EletroMath.Forms
         #endregion Codigo Botoes
 
         #endregion Calculo Resistencias
+
 
     }
 }
