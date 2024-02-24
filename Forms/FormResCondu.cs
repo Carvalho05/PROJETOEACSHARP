@@ -77,7 +77,7 @@ namespace EletroMath.Forms
                 labelFaixa3.Text = "3rd Band";
                 labelMultip.Text = "Multiplier";
                 labelTole.Text = "Tolerance";
-                labelValor.Text = "Reistor Value";
+                labelValor.Text = "Resistor Value (in Ω)";
 
                 comboBoxFaixa1.Items.Add("Brown");
                 comboBoxFaixa1.Items.Add("Red");
@@ -148,7 +148,7 @@ namespace EletroMath.Forms
                 labelFaixa3.Text = "Faixa 3";
                 labelMultip.Text = "Multiplicador";
                 labelTole.Text = "Tolerância";
-                labelValor.Text = "Valor da Resistência";
+                labelValor.Text = "Valor da Resistência (em Ω)";
 
                 comboBoxFaixa1.Items.Add("Castanho");
                 comboBoxFaixa1.Items.Add("Vermelho");
