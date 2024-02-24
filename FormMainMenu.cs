@@ -311,5 +311,29 @@ namespace EletroMath
         {
 
         }
+
+        private void panelTitleBar_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void botaoFechar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void botaoMaximizar_Click_1(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void botaoMinimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
