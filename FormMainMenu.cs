@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,9 +31,18 @@ namespace EletroMath
             UpdateLanguageButtonText();
             AtualizarTextos();
             this.Text=string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             panelSubMenuRes.Visible = false;
             panelSubMenuTeo.Visible = false;
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
 
         //Codigo para esconder o submenu das resistencias
         private void showSubMenu(Panel subMenu)
@@ -261,6 +271,45 @@ namespace EletroMath
                 btnCondRes.Text = "Código Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
             }
+        }
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botaoFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void botaoMaximizar_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState= FormWindowState.Normal;
+        }
+
+        private void botaoMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState=FormWindowState.Minimized;
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
