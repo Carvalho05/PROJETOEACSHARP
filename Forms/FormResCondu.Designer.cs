@@ -54,6 +54,7 @@
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.labelValor = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxTolerancia = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelCombo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).BeginInit();
@@ -69,7 +70,7 @@
             this.textBoxResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxResultado.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxResultado.Location = new System.Drawing.Point(406, 445);
+            this.textBoxResultado.Location = new System.Drawing.Point(342, 445);
             this.textBoxResultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxResultado.Name = "textBoxResultado";
             this.textBoxResultado.Size = new System.Drawing.Size(133, 23);
@@ -309,7 +310,7 @@
             this.labelResultado.AutoSize = true;
             this.labelResultado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultado.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado.Location = new System.Drawing.Point(172, 445);
+            this.labelResultado.Location = new System.Drawing.Point(124, 445);
             this.labelResultado.Name = "labelResultado";
             this.labelResultado.Size = new System.Drawing.Size(212, 24);
             this.labelResultado.TabIndex = 35;
@@ -330,7 +331,7 @@
             "miliOhms (mΩ)",
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
-            this.comboBoxUnidades.Location = new System.Drawing.Point(546, 446);
+            this.comboBoxUnidades.Location = new System.Drawing.Point(597, 447);
             this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
             this.comboBoxUnidades.Size = new System.Drawing.Size(172, 27);
@@ -339,18 +340,18 @@
             // 
             // textBoxValor
             // 
-            this.textBoxValor.Location = new System.Drawing.Point(1369, 550);
+            this.textBoxValor.Location = new System.Drawing.Point(1320, 556);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(133, 22);
             this.textBoxValor.TabIndex = 37;
-            this.textBoxValor.TextChanged += new System.EventHandler(this.textBoxValor_TextChanged);
             // 
             // labelValor
             // 
             this.labelValor.AutoSize = true;
+            this.labelValor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelValor.Location = new System.Drawing.Point(1136, 553);
             this.labelValor.Name = "labelValor";
-            this.labelValor.Size = new System.Drawing.Size(132, 16);
+            this.labelValor.Size = new System.Drawing.Size(178, 24);
             this.labelValor.TabIndex = 39;
             this.labelValor.Text = "Valor da Resistência";
             // 
@@ -369,17 +370,30 @@
             "miliOhms (mΩ)",
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
-            this.comboBox1.Location = new System.Drawing.Point(1509, 548);
+            this.comboBox1.Location = new System.Drawing.Point(1470, 553);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(172, 27);
             this.comboBox1.TabIndex = 40;
+            // 
+            // textBoxTolerancia
+            // 
+            this.textBoxTolerancia.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxTolerancia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTolerancia.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxTolerancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTolerancia.Location = new System.Drawing.Point(494, 446);
+            this.textBoxTolerancia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTolerancia.Name = "textBoxTolerancia";
+            this.textBoxTolerancia.Size = new System.Drawing.Size(96, 23);
+            this.textBoxTolerancia.TabIndex = 41;
             // 
             // FormResCondu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1713, 1033);
+            this.Controls.Add(this.textBoxTolerancia);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.labelValor);
             this.Controls.Add(this.textBoxValor);
@@ -439,5 +453,6 @@
         private System.Windows.Forms.TextBox textBoxValor;
         private System.Windows.Forms.Label labelValor;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBoxTolerancia;
     }
 }

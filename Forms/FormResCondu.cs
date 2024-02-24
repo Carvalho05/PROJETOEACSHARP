@@ -394,12 +394,9 @@ namespace EletroMath.Forms
             int primeiroDigito = ObterValorDigito(pctBox1st.BackColor);
             int segundoDigito = ObterValorDigito(pctBox2st.BackColor);
 
-
-
-
             // Obtém o multiplicador a partir da cor da faixa multiplicadora
             double multiplicador = ObterMultiplicador(pctBox4st.BackColor);
-
+            string tolerancia =ObterValorTolerancia(pctBox5st.BackColor);
             // Calcula o valor da resistência
             if (tipoResistencia == 5)
             {
@@ -409,9 +406,11 @@ namespace EletroMath.Forms
             {
                 valorResistencia = (primeiroDigito * 100 + segundoDigito * 10) * multiplicador;
             }
+
             resistenciaOhms = valorResistencia;
             // Exibe o valor da resistência na textbox
             textBoxResultado.Text = ($"{valorResistencia}");
+            textBoxTolerancia.Text = ($"± {tolerancia}");
         }
 
         private int ObterValorDigito(Color cor)// Obter o valor da resistencia associado à cor
@@ -457,6 +456,25 @@ namespace EletroMath.Forms
 
             // Retorna o valor do multiplicador correspondente à cor
             return coresMultiplicadores.ContainsKey(cor) ? coresMultiplicadores[cor] : 1;
+        }
+        private string ObterValorTolerancia(Color cor)// Obter o valor da resistencia associado à cor
+        {
+            Dictionary<Color, string> coresDigitos = new Dictionary<Color, string>
+        {
+            {Color.SaddleBrown, "1%"},
+            {Color.Red, "2%"},
+            {Color.Orange, "0.05%"},
+            {Color.Yellow, "0.02%"},
+            {Color.Green, "0.5%"},
+            {Color.Blue, "0.25%"},
+            {Color.Purple, "0.1%"},
+            {Color.Gray, "0.01%"},
+            {Color.Gold, "5%"},
+            {Color.Silver, "10%"}
+        };
+
+            // Retorna o valor do dígito correspondente à cor
+            return coresDigitos.ContainsKey(cor) ? coresDigitos[cor] : "20%";
         }
         #endregion CalculoResistencias
 
