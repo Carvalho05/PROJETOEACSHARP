@@ -76,7 +76,7 @@ namespace EletroMath
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecundaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
-                    btnLang.Visible = false;
+                    btnLang.Visible = true;
                 }
             }
         }
@@ -162,7 +162,7 @@ namespace EletroMath
 
         private void btnCondRes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormResCondu(), sender);
+            OpenChildForm(new Forms.FormResCondu(idiomaAtual), sender);
         }
 
         //Close button
