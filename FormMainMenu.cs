@@ -132,7 +132,7 @@ namespace EletroMath
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-
+        #region AcoesClique
         private void btnRes_Click(object sender, EventArgs e)
         {
             panelSubMenuTeo.Visible = false;
@@ -179,6 +179,20 @@ namespace EletroMath
         {
             OpenChildForm(new Forms.FormResCondu(idiomaAtual), sender);
         }
+        private void btnSMteo1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTeo1(), sender);
+        }
+
+        private void btnSMteo2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTeo2(), sender);
+        }
+
+        private void btnSMteo3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTeo3(), sender);
+        }
 
         //Close button
         private void btnCloseChildForm_Click(object sender, EventArgs e)
@@ -215,7 +229,7 @@ namespace EletroMath
                 AtualizarTextos();
             }
         }
-
+        #endregion AcoesClique
         //Codgo para alterar o texto apresetado no botao de idioma
         private void UpdateLanguageButtonText()
         {
@@ -247,21 +261,6 @@ namespace EletroMath
                 btnCondRes.Text = "Código Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
             }
-        }
-
-        private void btnSMteo1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormTeo1(), sender);
-        }
-
-        private void btnSMteo2_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormTeo2(), sender);
-        }
-
-        private void btnSMteo3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormTeo3(), sender);
         }
     }
 }
