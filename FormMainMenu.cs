@@ -268,7 +268,7 @@ namespace EletroMath
                 btnBob.Text = "Bobines";
                 btnSin.Text = "Sinais Digitais";
                 btnAssoRes.Text = "Associação de Resistências";
-                btnCondRes.Text = "Código Cores";
+                btnCondRes.Text = "Código de Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
             }
         }
