@@ -21,7 +21,6 @@ namespace EletroMath.Forms
             InitializeComponent();
             AtualizarTextos(idiomaAtual);
             comboBoxUnidades.SelectedIndex = 3;
-            comboBoxUnidades2.SelectedIndex = 3;
             pictureBoxRes.Visible = false;
             flowLayoutPanelCombo.Visible = false;
             labelResultado.Visible = false;
@@ -437,6 +436,15 @@ namespace EletroMath.Forms
             labelResultado.Visible = false;
             comboBoxUnidades.Visible = false;
             ObterCores();
+        }
+
+        async private void comboBoxUnidades2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxUnidades2 != null)
+            {
+                string corSelecionada = comboBoxUnidades2.SelectedItem.ToString();
+                pctBox5st.BackColor = GetItemColor(corSelecionada);
+            }
         }
         #endregion DefinicoesComboBox
 

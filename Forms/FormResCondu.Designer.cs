@@ -364,18 +364,23 @@
             this.comboBoxUnidades2.FormattingEnabled = true;
             this.comboBoxUnidades2.ItemHeight = 19;
             this.comboBoxUnidades2.Items.AddRange(new object[] {
-            "GigaOhms (GΩ)",
-            "MegaOhms (MΩ)",
-            "kiloOhms (KΩ)",
-            "Ohms (Ω)",
-            "miliOhms (mΩ)",
-            "microOhms (µΩ)",
-            "nanoOhms (nΩ)"});
+            "±1%",
+            "±2%\"",
+            "±0.05%",
+            "±0.02%",
+            "±0.5%",
+            "±0.25%",
+            "±0.1%",
+            "±0.01%",
+            "±5%",
+            "±10%",
+            "±20%"});
             this.comboBoxUnidades2.Location = new System.Drawing.Point(1460, 554);
             this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxUnidades2.Name = "comboBoxUnidades2";
             this.comboBoxUnidades2.Size = new System.Drawing.Size(172, 27);
             this.comboBoxUnidades2.TabIndex = 40;
+            this.comboBoxUnidades2.SelectedIndexChanged += new System.EventHandler(this.comboBoxUnidades2_SelectedIndexChanged);
             // 
             // textBoxTolerancia
             // 
