@@ -350,7 +350,7 @@
             // 
             this.labelValor.AutoSize = true;
             this.labelValor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValor.Location = new System.Drawing.Point(1136, 553);
+            this.labelValor.Location = new System.Drawing.Point(1114, 553);
             this.labelValor.Name = "labelValor";
             this.labelValor.Size = new System.Drawing.Size(178, 24);
             this.labelValor.TabIndex = 39;
