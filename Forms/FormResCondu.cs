@@ -307,27 +307,27 @@ namespace EletroMath.Forms
                     return Color.Red;
                 case "Laranja":
                 case "Orange":
-                case "±0.05%"
+                case "±0.05%":
                     return Color.Orange;
                 case "Amarelo":
                 case "Yellow":
-                case "%0.02%":
+                case "±0.02%":
                     return Color.Yellow;
                 case "Verde":
                 case "Green":
-                case "%0.5%":
+                case "±0.5%":
                     return Color.Green;
                 case "Azul":
                 case "Blue":
-                case "%0.25%":
+                case "±0.25%":
                     return Color.Blue;
                 case "Violeta":
                 case "Violet":
-                case "%0.1%":
+                case "±0.1%":
                     return Color.Purple;
                 case "Cinza":
                 case "Grey":
-                case "%0.01%":
+                case "±0.01%":
                     return Color.Gray;
                 case "Branco":
                 case "White":
@@ -340,7 +340,7 @@ namespace EletroMath.Forms
                 case "Silver":
                 case "±10%":
                     return Color.Silver;
-                case "±20%:
+                case "±20%":
                     return Color.Transparent;
                 default:
                     return comboBoxFaixa1.ForeColor; // Retorna a cor padrão se não houver correspondência

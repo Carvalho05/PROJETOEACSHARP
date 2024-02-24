@@ -95,6 +95,7 @@ namespace EletroMath.Forms
             if (idiomaResistencias == "ingles")
             {
                 //Tradução das Frases
+                this.Text = "Conductance and Resistor Calculation";
                 label1.Text = "Enter the Resistance Value";
                 label2.Text = "Resistor 1";
                 label3.Text = "Resistor 2";
@@ -118,6 +119,7 @@ namespace EletroMath.Forms
             else if (idiomaResistencias == "portugues")
             {
                 //Tradução das Frases
+                this.Text = "Condutância e Cálculo de Resistências";
                 label1.Text = "Insira o Valor da Resistência";
                 label2.Text = "Resistência 1";
                 label3.Text = "Resistência 2";

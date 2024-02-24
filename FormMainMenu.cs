@@ -256,7 +256,7 @@ namespace EletroMath
                 btnCon.Text = "Capacitors";
                 btnBob.Text = "Coils";
                 btnSin.Text = "Digital Signals";
-                btnAssoRes.Text = "Resistor Calculation";
+                btnAssoRes.Text = "Resistor Calculation and Condutance";
                 btnCondRes.Text = "Resistor Color Code";
                 btnTempRes.Text = "Temperature Coefficient";
             }
@@ -267,7 +267,7 @@ namespace EletroMath
                 btnCon.Text = "Condensadores";
                 btnBob.Text = "Bobines";
                 btnSin.Text = "Sinais Digitais";
-                btnAssoRes.Text = "Associação de Resistências";
+                btnAssoRes.Text = "Cálculo de Resistências e Condutância";
                 btnCondRes.Text = "Código de Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
             }
