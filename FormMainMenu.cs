@@ -76,7 +76,7 @@ namespace EletroMath
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecundaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForm.Visible = true;
-                    btnLang.Visible = true;
+                    btnLang.Visible = false;
                 }
             }
         }

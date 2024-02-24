@@ -64,6 +64,7 @@ namespace EletroMath.Forms
         {
             if (idiomaAtual == "ingles")
             {
+                this.Text = "Color Code";
                 btn4stripes.Text = "4 Bands";
                 btn5stripes.Text = "5 Bands";
                 labelResultado.Text = "Resistor Value";
@@ -133,6 +134,7 @@ namespace EletroMath.Forms
             }
             else if (idiomaAtual == "portugues")
             {
+                this.Text = "Código de Cores";
                 btn4stripes.Text = "4 Faixas";
                 btn5stripes.Text = "5 Faixas";
                 labelResultado.Text = "Valor da Resistência";

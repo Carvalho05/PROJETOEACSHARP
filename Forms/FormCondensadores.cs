@@ -122,6 +122,7 @@ namespace EletroMath.Forms
             if (idiomaCondensadores == "ingles")
             {
                 //Tradução das Frases
+                this.Text = "Capacitors";
                 label2.Text = "Permittivity of the Dielectric Material between the Plates (in Farads per Meter, F/m)";
                 label3.Text = "Overlap Area of the Plates (in Square Meters, m²)";
                 label5.Text = "Distance between the Plates (in Meters, m)";
@@ -136,6 +137,8 @@ namespace EletroMath.Forms
                 label1.Text = "Capacitor 1";
                 label4.Text = "Capacitor 2";
 
+               
+
                 //Ajuste nas Posições
                 textBox1.Location = new Point(335, 205);
                 textBox2.Location = new Point(300, 253);
@@ -148,6 +151,7 @@ namespace EletroMath.Forms
             else if (idiomaCondensadores == "portugues")
             {
                 //Tradução das Frases
+                this.Text = "Condensadores";
                 label2.Text = "Permitividade do Material Dialétrico entre as Placas (em Farads por Metro, F/m)";
                 label3.Text = "Área de Sobreposição das Placas (em Metros Quadrados, m²)";
                 label5.Text = "Distância entre as Placas (em Metros, m)";

@@ -46,7 +46,7 @@ namespace EletroMath.Forms
             comboBoxUnidades2.Items.Add("GigaHenrys (GH)");
             comboBoxUnidades2.Items.Add("MegaHenrys (MH)");
             comboBoxUnidades2.Items.Add("KiloHenrys (kH)");
-            comboBoxUnidades2.Items.Add("Henrys (F)");
+            comboBoxUnidades2.Items.Add("Henrys (H)");
             comboBoxUnidades2.Items.Add("MiliHenrys (mH)");
             comboBoxUnidades2.Items.Add("MicroHenrys (µH)");
             comboBoxUnidades2.Items.Add("NanoHenrys (nH)");
@@ -113,6 +113,7 @@ namespace EletroMath.Forms
             if (idiomaBobines == "ingles")
             {
                 //Tradução das Frases
+                this.Text = "Coils";
                 label2.Text = "Permeability of the Coil Core Material (in Henrys per Meter, H/m)";
                 label3.Text = "Cross-sectional Area of the Coil Core (in Square Meters, m²)";
                 label5.Text = "Length of the Coil Core (in Meters, m)";
@@ -140,6 +141,7 @@ namespace EletroMath.Forms
             }
             else if (idiomaBobines == "portugues")
             {
+                this.Text = "Bobines";
                 //Tradução das Frases
                 label2.Text = "Permeabilidade Magnética do Núcleo da Bobina (em Henrys por Metro, H/m)";
                 label3.Text = "Área da Seção Transversal do Núcleo da Bobina (em Metros Quadrados, m²)";

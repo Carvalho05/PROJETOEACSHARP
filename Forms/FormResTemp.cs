@@ -108,17 +108,13 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
-
-            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
-            button1.ForeColor = ThemeColor.PrimaryColor;
-            button2.ForeColor = ThemeColor.PrimaryColor;
-
         }
 
         private void AtualizarTextos()
         {
             if(idiomaCoeficiente == "portugues")
             {
+                this.Text = "Coeficiente de Temperatura";
                 labelCoeficiente.Text = "Coeficiente de Temperatura";
                 labelResultado1.Text = "O Resultado é:";
                 btnCal.Text = "Calcular";
@@ -128,6 +124,7 @@ namespace EletroMath.Forms
             }
             else if (idiomaCoeficiente == "ingles")
             {
+                this.Text = "Temperature Coefficient";
                 labelCoeficiente.Text = "Temperature Coefficient";
                 labelResultado1.Text = "The result is:";
                 btnCal.Text = "Calculate";
@@ -136,12 +133,6 @@ namespace EletroMath.Forms
                 button2.Text = "Calculate R2";
             }
         }
-
-        private void FormFormResTemp_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
-        }
-
         #endregion Misc
 
         #region Coeficiente
@@ -508,5 +499,9 @@ namespace EletroMath.Forms
 
         #endregion Coeficiente
 
+        private void FormResTemp_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
     }
 }

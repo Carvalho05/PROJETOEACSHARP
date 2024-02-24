@@ -29,6 +29,7 @@ namespace EletroMath.Forms
         {
             if (idiomaAtual == "ingles")
             {
+                this.Text = "Digital Signals";
                 button1.Text = "Sinusoidal Wave";
                 button2.Text = "Quadratic Wave";
                 button3.Text = "Triangular Wave";
@@ -37,6 +38,7 @@ namespace EletroMath.Forms
             }
             else if (idiomaAtual == "portugues")
             {
+                this.Text = "Sinais Digitais";
                 button1.Text = "Onda Sinusoidal";
                 button2.Text = "Onda Quadratica";
                 button3.Text = "Onda Triangular";

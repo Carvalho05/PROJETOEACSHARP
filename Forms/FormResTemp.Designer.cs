@@ -255,7 +255,16 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCoeficiente);
             this.Name = "FormResTemp";
-            this.Text = "Coeficiente de Temperatura";
+            if (idiomaCoeficiente=="ingles")
+            {
+                this.Text = "Temperature Coefficient";
+            }
+            else
+            {
+                this.Text = "Coeficiente de Temperatura";
+
+            }
+            this.Load += new System.EventHandler(this.FormResTemp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
