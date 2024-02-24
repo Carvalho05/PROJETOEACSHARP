@@ -22,14 +22,14 @@ namespace EletroMath.Forms
         {
             InitializeComponent();
 
-            //Associação da Variãvel Geral de Idioma dos Bobines com a do Programa
+            //Associação da Variável Geral de Idioma dos Bobines com a do Programa
             this.idiomaBobines = idiomaAtual;
 
             //Função para trocar o Idioma das Caixas de Texto conforme o Idioma Selecionado
             AtualizarTextos();
 
 
-            //Opçoes da comboBoxUnidades
+            //Opções da comboBoxUnidades
             comboBoxUnidades.Items.Add("GigaHenrys (GH)");
             comboBoxUnidades.Items.Add("MegaHenrys (MH)");
             comboBoxUnidades.Items.Add("KiloHenrys (kH)");
@@ -38,11 +38,11 @@ namespace EletroMath.Forms
             comboBoxUnidades.Items.Add("MicroHenrys (µH)");
             comboBoxUnidades.Items.Add("NanoHenrys (nH)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
 
 
-            //Opçoes da comboBoxUnidades2
+            //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaHenrys (GH)");
             comboBoxUnidades2.Items.Add("MegaHenrys (MH)");
             comboBoxUnidades2.Items.Add("KiloHenrys (kH)");
@@ -51,11 +51,11 @@ namespace EletroMath.Forms
             comboBoxUnidades2.Items.Add("MicroHenrys (µH)");
             comboBoxUnidades2.Items.Add("NanoHenrys (nH)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
 
 
-            //Opçoes da comboBoxIndutância
+            //Opções da comboBoxIndutância
             if (idiomaBobines == "portugues")
             {
                 comboBoxIndutancia.Items.Add("Ferro");
@@ -75,7 +75,7 @@ namespace EletroMath.Forms
                 comboBoxIndutancia.Items.Add("Air");
             }
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxIndutancia.SelectedIndex = -1;
 
 
@@ -83,12 +83,13 @@ namespace EletroMath.Forms
             labelResultado2.Visible = false;
             textBox5.Visible = false;
 
-            //Esconder Resultado no Cálculo da Capacitância
+            //Esconder Resultado no Cálculo da Indutância
             labelResultado1.Visible = false;
             textBox3.Visible = false;
 
         }
-        //Aplicar tema de cores aos botoes
+
+        //Aplicar Tema de Cores aos Botões
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -173,10 +174,14 @@ namespace EletroMath.Forms
         #endregion Misc
 
         #region Adicionar/Remover Caixas Texto
+
+        //Inicia Contador de Caixas de Texto no Valor 3
         private int textboxCount = 3;
+
+        //Função para Adicionar Caixas de Texto
         private void AddBoxes()
         {
-            // Verificação se o número máximo de TextBoxes foi atingido
+            // Verificação se o Número Máximo de TextBoxes foi Atingido
             if (textboxCount <= 8)
             {
 
@@ -186,28 +191,28 @@ namespace EletroMath.Forms
 
                 if (idiomaBobines == "portugues")
                 {
-                    // Propriedades dos novos controles
+                    // Propriedades dos Novos Controles
                     newLabel.Text = string.Format("Bobine {0}", textboxCount);
                     newLabel.Margin = new Padding(5, 0, 0, 6);
-                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a fonte como Calibri, tamanho 10.2 e negrito
-                    newLabel.ForeColor = Color.Blue; // Definindo a cor do texto como Azul
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a Fonte como Calibri, Tamanho 10.2 e Negrito
+                    newLabel.ForeColor = Color.Blue; // Definindo a Cor do Texto como Azul
                 }
                 else if (idiomaBobines == "ingles")
                 {
                     newLabel.Text = string.Format("Coil {0}", textboxCount);
                     newLabel.Margin = new Padding(5, 0, 0, 6);
-                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a fonte como Calibri, tamanho 10.2 e negrito
-                    newLabel.ForeColor = Color.Blue; // Definindo a cor do texto como Azul
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a Fonte como Calibri, Tamanho 10.2 e Negrito
+                    newLabel.ForeColor = Color.Blue; // Definindo a Cor do Texto como Azul
 
 
                 }
 
-                // Adicionamento de novos controles ao FlowLayoutPanel
+                // Adicionamento de Novos Controles aos FlowLayoutPanels
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
                 flowLayoutPanel3.Controls.Add(newComboBox);
 
-                //Opçoes da ComboBox
+                //Opções da ComboBox
                 newComboBox.Items.Add("GigaHenrys (GH)");
                 newComboBox.Items.Add("MegaHenrys (MH)");
                 newComboBox.Items.Add("KiloHenrys (kH)");
@@ -216,20 +221,23 @@ namespace EletroMath.Forms
                 newComboBox.Items.Add("MicroHenrys (µH)");
                 newComboBox.Items.Add("NanoHenrys (nH)");
 
-                // Indice da opção desejada como seleção inicial
+                // Indice da Opção Desejada como Seleção Inicial
                 newComboBox.SelectedIndex = 3;
 
-                // Incrementa o contador
+                // Incrementa o Contador
                 textboxCount++;
             }
         }
+
+        //Função para Remover Caixas de Texto
         private void RemoveBoxes()
         {
+            //Remove as Caixas Inseridas até só Existir Menos que 3
             if (textboxCount > 3)
             {
                 if (flowLayoutPanel1.Controls.Count > 1)
                 {
-                    // Remova os últimos controles adicionados do FlowLayoutPanel
+                    //Remove os Últimos Controles Adicionados aos FlowLayoutPanels
                     flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
                     flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     flowLayoutPanel3.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
@@ -248,7 +256,7 @@ namespace EletroMath.Forms
         private void BobSerie(TextBox textBoxResultado)
         {
             double BobineTotal = 0;
-            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -260,15 +268,15 @@ namespace EletroMath.Forms
                 }
                 else
                 {
-                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    // Se um Valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
 
             if (!valoresValidos)
             {
-                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro 
                 if (idiomaBobines == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -284,7 +292,7 @@ namespace EletroMath.Forms
             }
             else
             {
-                // Exibimos o valor calculado na TextBox de resultado
+                // Exibimos o Calor Calculado na TextBox de Resultado
                 textBoxResultado.Text = BobineTotal.ToString("0.####") + " Henrys";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
@@ -295,7 +303,7 @@ namespace EletroMath.Forms
         private void BobParalelo(TextBox textBoxResultado)
         {
             double BobineTotal = 0;
-            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -307,15 +315,15 @@ namespace EletroMath.Forms
                 }
                 else
                 {
-                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    // Se um Valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
             BobineTotal = 1 / BobineTotal;
             if (!valoresValidos)
             {
-                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
                 if (idiomaBobines == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -331,7 +339,7 @@ namespace EletroMath.Forms
             }
             else
             {
-                // Exibimos o valor calculado na TextBox de resultado
+                // Exibimos o Valor Calculado na TextBox de Resultado
                 textBoxResultado.Text = BobineTotal.ToString("0.####") + " Henrys";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
@@ -343,12 +351,12 @@ namespace EletroMath.Forms
         {
             double Pmagnetica = 0, area = 0, comprimento = 0, nEspiras = 0;
 
-            // Verifica se a conversão dos valores das TextBoxes é bem-sucedida
+            // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
             if (!double.TryParse(textBox1.Text, out area) ||
                 !double.TryParse(textBox7.Text, out nEspiras) ||
                 !double.TryParse(textBox2.Text, out comprimento))
             {
-                // Se algum valor não puder ser convertido para double, exibe uma mensagem de erro
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
                 if (idiomaBobines == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -363,10 +371,10 @@ namespace EletroMath.Forms
                 return;
             }
 
-            // Verifica se uma opção foi selecionada na ComboBox
+            // Verifica se uma Opção foi Selecionada na ComboBox
             if (comboBoxIndutancia.SelectedItem == null)
             {
-                // Se nenhuma opção foi selecionada, exibe uma mensagem de erro
+                // Se Nenhuma Opção for Selecionada, Exibe uma Mensagem de Erro
                 if (idiomaBobines == "portugues")
                 {
                     MessageBox.Show("Por favor, Selecione um Material na Lista");
@@ -381,10 +389,10 @@ namespace EletroMath.Forms
                 return;
             }
 
-            // Obtém a opção selecionada na ComboBox como uma string
+            // Obtém a Opção Selecionada na ComboBox como uma String
             string escolha = comboBoxIndutancia.SelectedItem.ToString();
 
-            // Define o valor do diaelétrico com base na opção selecionada
+            // Define o Valor da Permiabilidade Magnética com Base na Opção Selecionada
             switch (escolha)
             {
                 case "Iron":
@@ -419,7 +427,7 @@ namespace EletroMath.Forms
 
             }
 
-            // Realiza o cálculo da capacitância do Bobine
+            // Realiza o Cálculo da Indutância da Bobine
             double indutancia = Pmagnetica * area * (nEspiras * nEspiras) / comprimento;
 
             //Imprime o Resultado
@@ -434,38 +442,48 @@ namespace EletroMath.Forms
         #region Codigo Botoes
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //Adiciona Caixa de Texto
             AddBoxes();
         }
 
         private void btnRem_Click(object sender, EventArgs e)
         {
+            //Remove Caixa de Texto
             RemoveBoxes();
         }
 
         private void btnPar_Click(object sender, EventArgs e)
         {
+            //Executa Programa BobParalelo(textBox5)
             BobParalelo(textBox5);
         }
 
         private void btnSer_Click(object sender, EventArgs e)
         {
+            //Executa Programa BobSerie(textBox5)
             BobSerie(textBox5);
         }
 
         private void btnCal_Click(object sender, EventArgs e)
         {
+            //Executa Programa Indutancia(textBox5)
             Indutancia(textBox3);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            //Limpa as TextBox
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox7.Text = "";
+
+            //Esconde a Impressão de Resultado
             textBox3.Visible = false;
             labelResultado1.Visible = false;
-            comboBoxIndutancia.SelectedItem = null;
+
+            //Limpa a Opção Selecionada na ComboBoxMaterial
+            comboBoxIndutancia.SelectedIndex = -1;
         }
 
         #endregion Codigo Botoes

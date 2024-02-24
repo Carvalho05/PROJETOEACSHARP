@@ -157,7 +157,7 @@ namespace EletroMath
 
         private void btnTempRes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormResTemp(), sender);
+            OpenChildForm(new Forms.FormResTemp(idiomaAtual), sender);
         }
 
         private void btnCondRes_Click(object sender, EventArgs e)

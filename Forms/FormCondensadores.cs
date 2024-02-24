@@ -16,13 +16,13 @@ namespace EletroMath.Forms
         {
             InitializeComponent();
             
-            //Associação da Variãvel Geral de Idioma dos Condensadores com a do Programa
+            //Associação da Variável Geral de Idioma dos Condensadores com a do Programa
             this.idiomaCondensadores = idiomaAtual;
             
             AtualizarTextos();
 
 
-            //Opçoes da comboBoxUnidades
+            //Opções da comboBoxUnidades
             comboBoxUnidades.Items.Add("GigaFarads (GF)");
             comboBoxUnidades.Items.Add("MegaFarads (MF)");
             comboBoxUnidades.Items.Add("KiloFarads (KF)");
@@ -31,11 +31,11 @@ namespace EletroMath.Forms
             comboBoxUnidades.Items.Add("MicroFarads (µF)");
             comboBoxUnidades.Items.Add("NanoFarads (nF)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
 
 
-            //Opçoes da comboBoxUnidades2
+            //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaFarads (GF)");
             comboBoxUnidades2.Items.Add("MegaFarads (MF)");
             comboBoxUnidades2.Items.Add("KiloFarads (KF)");
@@ -44,11 +44,11 @@ namespace EletroMath.Forms
             comboBoxUnidades2.Items.Add("MicroFarads (µF)");
             comboBoxUnidades2.Items.Add("NanoFarads (nF)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
 
 
-            //Opçoes da comboBoxCapacitância
+            //Opções da comboBoxCapacitância
 
             if (idiomaCondensadores == "portugues")
             {
@@ -84,7 +84,7 @@ namespace EletroMath.Forms
                 comboBoxCapacitância.Items.Add("Silicone Rubber");
                 comboBoxCapacitância.Items.Add("Ethylene Propylene Rubber");
             }
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxCapacitância.SelectedIndex = -1;
 
 
@@ -97,7 +97,7 @@ namespace EletroMath.Forms
             textBox3.Visible = false;
 
         }
-        //Aplicar tema de cores aos botoes
+        //Aplicar Tema de Cores aos Botões
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -175,7 +175,11 @@ namespace EletroMath.Forms
         #endregion Misc
 
         #region Adicionar/Remover Caixas Texto
+
+        //Inicia Contador de Caixas de Texto no Valor 3
         private int textboxCount = 3;
+
+        //Função para Adicionar Caixas de Texto
         private void AddBoxes()
         {
             // Verificação se o número máximo de TextBoxes foi atingido
@@ -191,25 +195,25 @@ namespace EletroMath.Forms
                     // Propriedades dos novos controles
                     newLabel.Text = string.Format("Condensador {0}", textboxCount);
                     newLabel.Margin = new Padding(5, 0, 0, 6);
-                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a fonte como Calibri, tamanho 10.2 e negrito
-                    newLabel.ForeColor = Color.Blue; // Definindo a cor do texto como Azul
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a Fonte como Calibri, Tamanho 10.2 e Negrito
+                    newLabel.ForeColor = Color.Blue; // Definindo a Cor do Texto como Azul
                 }
                 else if (idiomaCondensadores == "ingles")
                 {
                     newLabel.Text = string.Format("Capacitor {0}", textboxCount);
                     newLabel.Margin = new Padding(5, 0, 0, 6);
-                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a fonte como Calibri, tamanho 10.2 e negrito
-                    newLabel.ForeColor = Color.Blue; // Definindo a cor do texto como Azul
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Definindo a Fonte como Calibri, Tamanho 10.2 e Negrito
+                    newLabel.ForeColor = Color.Blue; // Definindo a Cor do Texto como Azul
                 
                 
                 }
 
-                // Adicionamento de novos controles ao FlowLayoutPanel
+                // Adicionamento de Novos Controles ao FlowLayoutPanel
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
                 flowLayoutPanel3.Controls.Add(newComboBox);
 
-                //Opçoes da ComboBox
+                //Opções da ComboBox
                 newComboBox.Items.Add("GigaFarads (GF)");
                 newComboBox.Items.Add("MegaFarads (MF)");
                 newComboBox.Items.Add("kiloFarads (KF)");
@@ -218,20 +222,23 @@ namespace EletroMath.Forms
                 newComboBox.Items.Add("microFarads (µF)");
                 newComboBox.Items.Add("nanoFarads (nF)");
                 
-                // Indice da opção desejada como seleção inicial
+                // Indice da Opção Desejada como Seleção Inicial
                 newComboBox.SelectedIndex = 3;
 
-                // Incrementa o contador
+                // Incrementa o Contador
                 textboxCount++;
             }
         }
+
+        //Função para Remover Caixas de Texto
         private void RemoveBoxes()
         {
+            //Remove as Caixas Inseridas até só Existir Menos que 3
             if (textboxCount > 3)
             {
                 if (flowLayoutPanel1.Controls.Count > 1)
                 {
-                    // Remova os últimos controles adicionados do FlowLayoutPanel
+                    // Remova os Últimos Controles Adicionados dos FlowLayoutPanels
                     flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
                     flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     flowLayoutPanel3.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
@@ -250,7 +257,7 @@ namespace EletroMath.Forms
         private void ConParalelo(TextBox textBoxResultado)
         {
             double CondensadorTotal = 0;
-            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -262,15 +269,15 @@ namespace EletroMath.Forms
                 }
                 else
                 {
-                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    // Se um valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
 
             if (!valoresValidos)
             {
-                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
                 if (idiomaCondensadores == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -286,7 +293,7 @@ namespace EletroMath.Forms
             }
             else
             {
-                // Exibimos o valor calculado na TextBox de resultado
+                // Exibimos o Valor Calculado na TextBox de Resultado
                 textBoxResultado.Text = CondensadorTotal.ToString("0.####") + " Farads";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
@@ -297,7 +304,7 @@ namespace EletroMath.Forms
         private void ConSerie(TextBox textBoxResultado)
         {
             double CondensadorTotal = 0;
-            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -309,15 +316,15 @@ namespace EletroMath.Forms
                 }
                 else
                 {
-                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    // Se um Valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
             CondensadorTotal = 1 / CondensadorTotal;
             if (!valoresValidos)
             {
-                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
                 if (idiomaCondensadores == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -333,7 +340,7 @@ namespace EletroMath.Forms
             }
             else
             {
-                // Exibimos o valor calculado na TextBox de resultado
+                // Exibimos o Valor Calculado na TextBox de Resultado
                 textBoxResultado.Text = CondensadorTotal.ToString("0.####") + " Farads";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
@@ -345,11 +352,11 @@ namespace EletroMath.Forms
         {
             double dialetrico = 0, area = 0, distancia = 0;
 
-            // Verifica se a conversão dos valores das TextBoxes é bem-sucedida
+            // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
             if (!double.TryParse(textBox1.Text, out area) ||
                 !double.TryParse(textBox2.Text, out distancia))
             {
-                // Se algum valor não puder ser convertido para double, exibe uma mensagem de erro
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
                 if (idiomaCondensadores == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -364,10 +371,10 @@ namespace EletroMath.Forms
                 return;
             }
 
-            // Verifica se uma opção foi selecionada na ComboBox
+            // Verifica se uma Opção foi Selecionada na ComboBox
             if (comboBoxCapacitância.SelectedItem == null)
             {
-                // Se nenhuma opção foi selecionada, exibe uma mensagem de erro
+                // Se a Opção Selecionada for Inválida, Exibe uma Mensagem de Erro
                 if (idiomaCondensadores == "portugues")
                 {
                     MessageBox.Show("Por favor, Selecione um Material na Lista");
@@ -382,10 +389,10 @@ namespace EletroMath.Forms
                 return;
             }
 
-            // Obtém a opção selecionada na ComboBox como uma string
+            // Obtém a Opção Selecionada na ComboBox como uma String
             string escolha = comboBoxCapacitância.SelectedItem.ToString();
 
-            // Define o valor do diaelétrico com base na opção selecionada
+            // Define o Valor do Diaelétrico com Base na Opção Selecionada
             switch (escolha)
             {
                 case "Air":
@@ -457,10 +464,10 @@ namespace EletroMath.Forms
                     break;
             }
 
-            // Realiza o cálculo da capacitância do condensador
+            // Realiza o Cálculo da Capacitância do Condensador
             double capacitancia = (dialetrico * area) / distancia;
 
-            // Exibe o resultado na TextBox de resultado
+            // Exibe o Resultado na TextBox de Resultado
             textBoxResultado.Text = capacitancia.ToString("0.####") + " Farads";
             labelResultado1.Visible = true;
             textBox3.Visible = true;
@@ -471,36 +478,46 @@ namespace EletroMath.Forms
         #region Codigo Botoes
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //Adiciona Caixa de Texto
             AddBoxes();
         }
 
         private void btnRem_Click(object sender, EventArgs e)
         {
+            //Remove Caixa de Texto
             RemoveBoxes();
         }
         
         private void btnPar_Click(object sender, EventArgs e)
         {
+            //Executa Programa ConParalelo(textBox5)
             ConParalelo(textBox5);
         }
         
         private void btnSer_Click(object sender, EventArgs e)
         {
+            //Executa Programa ConSerie(textBox5)
             ConSerie(textBox5);
         }
         
         private void btnCal_Click(object sender, EventArgs e)
         {
+            //Executa Programa Capacitancia(textBox5)
             Capacitancia(textBox3);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            //Limpa as TextBox
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
+
+            //Esconde a Impressão de Resultado
             textBox3.Visible = false;
             labelResultado1.Visible = false;
+
+            //Limpa a Opção Selecionada na ComboBoxCapacitância
             comboBoxCapacitância.SelectedItem = null;
         }
 

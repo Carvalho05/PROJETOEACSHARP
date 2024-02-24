@@ -314,11 +314,13 @@
             // 
             // comboBoxCapacitância
             // 
+            this.comboBoxCapacitância.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCapacitância.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxCapacitância.FormattingEnabled = true;
             this.comboBoxCapacitância.Location = new System.Drawing.Point(697, 196);
             this.comboBoxCapacitância.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCapacitância.Name = "comboBoxCapacitância";
-            this.comboBoxCapacitância.Size = new System.Drawing.Size(137, 24);
+            this.comboBoxCapacitância.Size = new System.Drawing.Size(236, 24);
             this.comboBoxCapacitância.TabIndex = 31;
             // 
             // labelResultado1

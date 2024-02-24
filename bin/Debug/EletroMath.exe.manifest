@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EletroMath.exe" size="150496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EletroMath.exe" size="160736">
       <assemblyIdentity name="EletroMath" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ObVQVd/to8OPdJaP3d/wy9nLAsi9BqKd9c1V20K8MzY=</dsig:DigestValue>
+        <dsig:DigestValue>TKTltKF74nLM3b3XjRLc0BOFW/AEfEGDbOPEtUCL34Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

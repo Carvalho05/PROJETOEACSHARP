@@ -90,3 +90,4 @@ C:\Users\ruisi\source\repos\EletroMathV1\obj\Debug\EletroMath.exe.manifest
 C:\Users\ruisi\source\repos\EletroMathV1\obj\Debug\EletroMath.application
 C:\Users\ruisi\source\repos\EletroMathV1\obj\Debug\EletroMath.exe
 C:\Users\ruisi\source\repos\EletroMathV1\obj\Debug\EletroMath.pdb
+C:\Users\diogo\Documents\GitHub\PROJETOEACSHARP\PROJETOEACSHARP\obj\Debug\EletroMath.Forms.FormResTemp.resources

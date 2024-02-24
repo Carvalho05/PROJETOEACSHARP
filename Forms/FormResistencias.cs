@@ -8,13 +8,13 @@ namespace EletroMath.Forms
     {
         #region Misc
 
-        //Criação de Variável Geral de Idioma para o Código Condensadores
+        //Criação de Variável Geral de Idioma para o Código Resistências
         private string idiomaResistencias;
         public FormResistencias(string idiomaAtual)
         {
             InitializeComponent();
 
-            //Associação da Variãvel Geral de Idioma das Resistências com a do Programa
+            //Associação da Variável Geral de Idioma das Resistências com a do Programa
             this.idiomaResistencias = idiomaAtual;
 
             AtualizarTextos();
@@ -29,11 +29,11 @@ namespace EletroMath.Forms
             comboBoxUnidades.Items.Add("MicroOhms (µΩ)");
             comboBoxUnidades.Items.Add("NanoOhms (nΩ)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
 
 
-            //Opçoes da comboBoxUnidades2
+            //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidades2.Items.Add("MegaOhms (MΩ)");
             comboBoxUnidades2.Items.Add("KiloOhms (kΩ)");
@@ -42,7 +42,7 @@ namespace EletroMath.Forms
             comboBoxUnidades2.Items.Add("MicroOhms (µΩ)");
             comboBoxUnidades2.Items.Add("NanoOhms (nΩ)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
 
 
@@ -55,7 +55,7 @@ namespace EletroMath.Forms
             comboBoxUnidadesCondutancia.Items.Add("MicroOhms (µΩ)");
             comboBoxUnidadesCondutancia.Items.Add("NanoOhms (nΩ)");
 
-            // Indice da opção desejada como seleção inicial
+            // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidadesCondutancia.SelectedIndex = 3;
 
 
@@ -63,7 +63,7 @@ namespace EletroMath.Forms
             labelResultado2.Visible = false;
             textBox5.Visible = false;
 
-            //Esconder Resultado no Cálculo da Capacitância
+            //Esconder Resultado no Cálculo da Condutância
             labelResultado1.Visible = false;
             textBox2.Visible = false;
         }
@@ -141,11 +141,14 @@ namespace EletroMath.Forms
         #endregion Misc
 
         #region Adicionar/Remover Caixas Texto
+
+        //Inicia Contador de Caixas de Texto no Valor 3
         private int textboxCount = 3;
 
+        //Função para Adicionar Caixas de Texto
         private void AddBoxes()
         {
-            // Verificação se o número máximo de TextBoxes foi atingido
+            // Verificação se o Número Máximo de TextBoxes foi Atingido
             if (textboxCount <= 8)
             {
 
@@ -153,21 +156,21 @@ namespace EletroMath.Forms
                 TextBox newTextBox = new TextBox();
                 ComboBox newComboBox = new ComboBox();
 
-                // Propriedades dos novos controles
+                // Propriedades dos Novos Controles
 
                 if (idiomaResistencias == "portugues")
                 {
                     newLabel.Text = string.Format(" Resistência {0}", textboxCount);
                     newLabel.Margin = new Padding(5, 0, 0, 6);
-                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de texto 
-                    newLabel.ForeColor = Color.Blue; // Aplicar cor azul
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de Texto 
+                    newLabel.ForeColor = Color.Blue; // Aplicar Cor Azul
                 }
                 else if (idiomaResistencias == "ingles")
                 {
                     newLabel.Text = string.Format(" Resistor {0}", textboxCount);
                     newLabel.Margin = new Padding(5, 0, 0, 6);
-                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de texto 
-                    newLabel.ForeColor = Color.Blue; // Aplicar cor azul
+                    newLabel.Font = new Font("Calibri", 10.2f, FontStyle.Bold); // Aplicar Formatação de Texto 
+                    newLabel.ForeColor = Color.Blue; // Aplicar Cor Azul
                 }
 
                 // Adição de caixas
@@ -184,21 +187,23 @@ namespace EletroMath.Forms
                 newComboBox.Items.Add("microOhms (µΩ)");
                 newComboBox.Items.Add("nanoOhms (nΩ)");
 
-                // Indice da opção desejada como seleção inicial
+                // Indice da Opção Desejada como Seleção Inicial
                 newComboBox.SelectedIndex = 3;
 
-                // Incrementa o contador
+                // Incrementa o Contador
                 textboxCount++;
             }
         }
 
+        //Função para Remover Caixas de Texto
         private void RemoveBoxes()
         {
+            //Remove as Caixas Inseridas até só Existir Menos que 3
             if (textboxCount > 3)
             {
                 if (flowLayoutPanel1.Controls.Count > 1)
                 {
-                    // Remova os últimos controles adicionados do FlowLayoutPanel
+                    // Remova os Últimos Controles Adicionados dos FlowLayoutPanels
                     flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
                     flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     flowLayoutPanel3.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
@@ -217,7 +222,7 @@ namespace EletroMath.Forms
         private void ResSerie(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
-            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -229,15 +234,15 @@ namespace EletroMath.Forms
                 }
                 else
                 {
-                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    // Se um Valor não puder ser Vonvertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
 
             if (!valoresValidos)
             {
-                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -253,7 +258,7 @@ namespace EletroMath.Forms
             }
             else
             {
-                // Exibimos o valor calculado na TextBox de resultado
+                // Exibimos o Valor Calculado na TextBox de Resultado
                 textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
@@ -264,7 +269,7 @@ namespace EletroMath.Forms
         private void ResParalelo(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
-            bool valoresValidos = true; // Flag para verificar se todos os valores são válidos
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -276,15 +281,15 @@ namespace EletroMath.Forms
                 }
                 else
                 {
-                    // Se um valor não puder ser convertido para double, definimos a flag como false
+                    // Se um Valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do loop, pois não há necessidade de continuar verificando
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
             ResistenciaTotal = 1 / ResistenciaTotal;
             if (!valoresValidos)
             {
-                // Se algum valor não for válido, exibimos uma mensagem de erro na TextBox de resultado
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro 
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -300,7 +305,7 @@ namespace EletroMath.Forms
             }
             else
             {
-                // Exibimos o valor calculado na TextBox de resultado
+                // Exibimos o Valor Calculado na TextBox de Resultado
                 textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
@@ -314,7 +319,7 @@ namespace EletroMath.Forms
 
             if (!double.TryParse(textBox1.Text, out resistencia))
             {
-                // Se algum valor não puder ser convertido para double, exibe uma mensagem de erro
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -328,10 +333,10 @@ namespace EletroMath.Forms
                 return;
             }
 
-            // Verifica se uma opção foi selecionada na ComboBox
+            // Verifica se uma Opção foi Selecionada na ComboBox
             if (comboBoxUnidadesCondutancia.SelectedItem == null)
             {
-                // Se nenhuma opção foi selecionada, exibe uma mensagem de erro
+                // Se nenhuma Ppção foi Selecionada, Exibe uma Mensagem de Erro
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Selecione uma Unidade da Lista");
@@ -345,10 +350,10 @@ namespace EletroMath.Forms
                 return;
             }
 
-            // Obtém a opção selecionada na ComboBox como uma string
+            // Obtém a Opção Selecionada na ComboBox como uma String
             string escolha = comboBoxUnidadesCondutancia.SelectedItem.ToString();
 
-            // Define o valor do diaelétrico com base na opção selecionada
+            // Define o Valor da Resistência com Base na Opção Selecionada
             switch (escolha)
             {
                 case "GigaOhms (GΩ)":
@@ -380,10 +385,10 @@ namespace EletroMath.Forms
 
             }
 
-            // Realiza o cálculo da condutância do condensador
+            // Realiza o Cálculo da Condutância da Resistência
             condutancia = 1 / resistencia;
 
-            // Exibe o resultado na TextBox de resultado
+            // Exibe o Resultado na TextBox de Resultado
             textBoxResultado.Text = condutancia.ToString("0.####") + " Siemens";
             labelResultado1.Visible = true;
             textBox2.Visible = true;
@@ -396,35 +401,45 @@ namespace EletroMath.Forms
         #region Codigo Botoes
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //Adiciona Caixa de Texto
             AddBoxes();
         }
 
         private void btnRem_Click(object sender, EventArgs e)
         {
+            //Remove Caixa de Texto
             RemoveBoxes();
         }
 
         private void btnPar_Click(object sender, EventArgs e)
         {
+            //Executa Programa ResParalelo(textBox5)
             ResParalelo(textBox5);
         }
 
         private void btnSer_Click(object sender, EventArgs e)
         {
+            //Executa Programa ResSerie(textBox5)
             ResSerie(textBox5);
         }
 
         private void btnCal_Click(object sender, EventArgs e)
         {
+            //Executa Programa Condutancia(textBox5)
             Condutancia(textBox2);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            //Limpa as TextBox
             textBox1.Text = "";
             textBox2.Text = "";
+
+            //Esconde a Impressão de Resultado
             textBox2.Visible = false;
             labelResultado1.Visible = false;
+
+            //Limpa a Opção Selecionada na ComboBoxCondutância
             comboBoxUnidadesCondutancia.SelectedIndex = 3;
         }
 

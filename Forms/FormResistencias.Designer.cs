@@ -274,10 +274,12 @@
             // 
             // comboBoxUnidadesCondutancia
             // 
+            this.comboBoxUnidadesCondutancia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidadesCondutancia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxUnidadesCondutancia.FormattingEnabled = true;
             this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(401, 188);
             this.comboBoxUnidadesCondutancia.Name = "comboBoxUnidadesCondutancia";
-            this.comboBoxUnidadesCondutancia.Size = new System.Drawing.Size(121, 29);
+            this.comboBoxUnidadesCondutancia.Size = new System.Drawing.Size(130, 29);
             this.comboBoxUnidadesCondutancia.TabIndex = 49;
             // 
             // textBox2
