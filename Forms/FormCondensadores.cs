@@ -97,6 +97,7 @@ namespace EletroMath.Forms
             textBox3.Visible = false;
 
         }
+
         //Aplicar Tema de Cores aos Botões
         private void LoadTheme()
         {

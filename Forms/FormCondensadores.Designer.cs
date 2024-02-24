@@ -34,15 +34,9 @@
             this.btnPar = new System.Windows.Forms.Button();
             this.btnRem = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
-            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
             this.labelCapacitancia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,10 +50,16 @@
             this.labelResultado2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.btnRem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,46 +125,6 @@
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1163, 210);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 334);
-            this.flowLayoutPanel1.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(0, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 18);
-            this.label1.Size = new System.Drawing.Size(124, 39);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Condensador 1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(0, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 14);
-            this.label4.Size = new System.Drawing.Size(124, 35);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Condensador 2";
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -193,37 +153,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(97, 27);
             this.textBox6.TabIndex = 16;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades);
-            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades2);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(1432, 210);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(165, 334);
-            this.flowLayoutPanel3.TabIndex = 22;
-            // 
-            // comboBoxUnidades
-            // 
-            this.comboBoxUnidades.FormattingEnabled = true;
-            this.comboBoxUnidades.Location = new System.Drawing.Point(3, 2);
-            this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxUnidades.Name = "comboBoxUnidades";
-            this.comboBoxUnidades.Size = new System.Drawing.Size(161, 27);
-            this.comboBoxUnidades.TabIndex = 0;
-            // 
-            // comboBoxUnidades2
-            // 
-            this.comboBoxUnidades2.FormattingEnabled = true;
-            this.comboBoxUnidades2.Location = new System.Drawing.Point(3, 33);
-            this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
-            this.comboBoxUnidades2.Size = new System.Drawing.Size(161, 27);
-            this.comboBoxUnidades2.TabIndex = 1;
             // 
             // labelCapacitancia
             // 
@@ -369,6 +298,77 @@
             this.textBox5.Size = new System.Drawing.Size(301, 25);
             this.textBox5.TabIndex = 35;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(0, 44);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(8, 0, 0, 14);
+            this.label4.Size = new System.Drawing.Size(124, 35);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Condensador 2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(0, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 18);
+            this.label1.Size = new System.Drawing.Size(124, 39);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Condensador 1";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1163, 210);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 334);
+            this.flowLayoutPanel1.TabIndex = 20;
+            // 
+            // comboBoxUnidades2
+            // 
+            this.comboBoxUnidades2.FormattingEnabled = true;
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(3, 33);
+            this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
+            this.comboBoxUnidades2.Size = new System.Drawing.Size(161, 27);
+            this.comboBoxUnidades2.TabIndex = 1;
+            // 
+            // comboBoxUnidades
+            // 
+            this.comboBoxUnidades.FormattingEnabled = true;
+            this.comboBoxUnidades.Location = new System.Drawing.Point(3, 2);
+            this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxUnidades.Name = "comboBoxUnidades";
+            this.comboBoxUnidades.Size = new System.Drawing.Size(161, 27);
+            this.comboBoxUnidades.TabIndex = 0;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades);
+            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades2);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1432, 210);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(165, 334);
+            this.flowLayoutPanel3.TabIndex = 22;
+            // 
             // FormCondensadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,10 +401,10 @@
             this.Load += new System.EventHandler(this.FormCondensadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnRem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -418,12 +418,8 @@
         private System.Windows.Forms.Button btnPar;
         private System.Windows.Forms.PictureBox btnRem;
         private System.Windows.Forms.PictureBox btnAdd;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.ComboBox comboBoxUnidades;
         private System.Windows.Forms.Label labelCapacitancia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -437,8 +433,12 @@
         private System.Windows.Forms.Label labelResultado2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBoxUnidades2;
+        private System.Windows.Forms.ComboBox comboBoxUnidades;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }
