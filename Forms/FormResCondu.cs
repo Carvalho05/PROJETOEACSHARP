@@ -514,7 +514,7 @@ namespace EletroMath.Forms
 
         #endregion ConverterUnidades
 
-       private Color ObterCorDigito(int valor)// Obter o valor da resistencia associado à cor
+       /*private Color ObterCorDigito(int valor)// Obter o valor da resistencia associado à cor
         {
             Dictionary<Color, int> coresDigitos = new Dictionary<Color, int>
         {
@@ -530,7 +530,7 @@ namespace EletroMath.Forms
             {Color.White, 9}
             };
 
-            return coresDigitos.ContainsKey[valor] ? coresDigitos(valor) : Color.Black;
+            return coresDigitos.ContainsKey(valor) ? coresDigitos[valor] : Color.Black;
             /*foreach (var corValor in coresDigitos)
             {
                 // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
@@ -543,9 +543,9 @@ namespace EletroMath.Forms
                     // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido
                 }
             }
-            return Color.Black;*/
+            return Color.Black;
 
-        }
+        }*/
 
         private Color ObterCorMultiplicador(int valor)// Obter o valor do multiplicador associado à cor
         {
@@ -637,7 +637,7 @@ namespace EletroMath.Forms
             }
 
 
-            pctBox1st.BackColor = ObterCorDigito(primeiroDigito);
+            /*pctBox1st.BackColor = ObterCorDigito(primeiroDigito);
             pctBox2st.BackColor = ObterCorDigito(segundoDigito);
             pctBox3st.BackColor = ObterCorDigito(terceiroDigito);
             pctBox4st.BackColor = ObterCorDigito(multiplicador);
@@ -647,7 +647,7 @@ namespace EletroMath.Forms
             //string corMultiplicador = MapearMultiplicadorParaCor(multiplicador);
 
 
-            // Construir o código de cores
+            // Construir o código de cores*/
 
          }
 

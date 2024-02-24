@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EletroMath.Forms
 {
-    public partial class FormTeoremas : Form
+    public partial class FormTeo1 : Form
     {
-        public FormTeoremas()
+        public FormTeo1()
         {
             InitializeComponent();
         }

@@ -31,6 +31,7 @@ namespace EletroMath
             AtualizarTextos();
             this.Text=string.Empty;
             panelSubMenuRes.Visible = false;
+            panelSubMenuTeo.Visible = false;
         }
 
         //Codigo para esconder o submenu das resistencias
@@ -104,6 +105,16 @@ namespace EletroMath
                     btnLang.Visible = true;
                 }
             }
+            foreach (Control previousBtn in panelSubMenuTeo.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(73, 73, 100);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                    new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    btnLang.Visible = true;
+                }
+            }
         }
         //Código para definicoes ao abrir forms
         private void OpenChildForm(Form childForm, object btnSender)
@@ -124,29 +135,33 @@ namespace EletroMath
 
         private void btnRes_Click(object sender, EventArgs e)
         {
+            panelSubMenuTeo.Visible = false;
             showSubMenu(panelSubMenuRes);
         }
 
         private void btnTeo_Click(object sender, EventArgs e)
         {
             panelSubMenuRes.Visible = false;
-            OpenChildForm(new Forms.FormTeoremas(), sender);
+            showSubMenu(panelSubMenuTeo);
         }
 
         private void btnCon_Click(object sender, EventArgs e)
         {
+            panelSubMenuTeo.Visible = false;
             panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormCondensadores(idiomaAtual), sender);
         }
 
         private void btnBob_Click(object sender, EventArgs e)
         {
+            panelSubMenuTeo.Visible = false;
             panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormBobines(idiomaAtual), sender);
         }
 
         private void btnSin_Click(object sender, EventArgs e)
         {
+            panelSubMenuTeo.Visible = false;
             panelSubMenuRes.Visible = false;
             OpenChildForm(new Forms.FormSinais(idiomaAtual), sender);
         }
@@ -232,6 +247,21 @@ namespace EletroMath
                 btnCondRes.Text = "Código Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
             }
+        }
+
+        private void btnSMteo1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTeo1(), sender);
+        }
+
+        private void btnSMteo2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTeo2(), sender);
+        }
+
+        private void btnSMteo3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTeo3(), sender);
         }
     }
 }

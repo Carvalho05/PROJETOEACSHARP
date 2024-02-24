@@ -121,11 +121,23 @@
     <Compile Include="Forms\FormSinais.Designer.cs">
       <DependentUpon>FormSinais.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormTeoremas.cs">
+    <Compile Include="Forms\FormTeo2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormTeoremas.Designer.cs">
-      <DependentUpon>FormTeoremas.cs</DependentUpon>
+    <Compile Include="Forms\FormTeo2.Designer.cs">
+      <DependentUpon>FormTeo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTeo1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTeo1.Designer.cs">
+      <DependentUpon>FormTeo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTeo3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTeo3.Designer.cs">
+      <DependentUpon>FormTeo3.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
