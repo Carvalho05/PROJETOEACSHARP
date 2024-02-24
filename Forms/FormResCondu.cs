@@ -15,7 +15,6 @@ namespace EletroMath.Forms
     public partial class FormResCondu : Form
     {
         int tipoResistencia;
-        private PictureBox pictureBoxSelected;
         double resistenciaOhms;
         public FormResCondu(string idiomaAtual)
         {
@@ -48,7 +47,7 @@ namespace EletroMath.Forms
 
             btn4stripes.BackColor = ThemeColor.PrimaryColor;
             btn5stripes.BackColor = ThemeColor.PrimaryColor;
-        } 
+        }
         private void FormResCondu_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -205,7 +204,7 @@ namespace EletroMath.Forms
             }
         }
 
-      
+
         #endregion Idioma
         #region TipoResistencia
         private void btn4stripes_Click(object sender, EventArgs e)
@@ -216,7 +215,7 @@ namespace EletroMath.Forms
             pctBox3st.Visible = false;
             flowLayoutPanelCombo.Visible = true;
             comboBoxFaixa3.Visible = false;
-            labelFaixa3.Visible=false;
+            labelFaixa3.Visible = false;
             btn4stripes.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
             comboBoxUnidades.Visible = true;
             textBoxResultado.Visible = true;
@@ -412,7 +411,7 @@ namespace EletroMath.Forms
             }
             resistenciaOhms = valorResistencia;
             // Exibe o valor da resistência na textbox
-           textBoxResultado.Text=($"{valorResistencia}");
+            textBoxResultado.Text = ($"{valorResistencia}");
         }
 
         private int ObterValorDigito(Color cor)// Obter o valor da resistencia associado à cor
@@ -443,13 +442,13 @@ namespace EletroMath.Forms
                 {Color.Black, 1},
                 {Color.Brown, 10},
                 {Color.Red, 100},
-                {Color.Orange, 1}, //k
-                {Color.Yellow, 10},//k
-                {Color.Green, 100}, //k
-                {Color.Blue, 1},//M
-                {Color.Purple, 10},//M
-                {Color.Gray, 100},//M
-                {Color.White, 1},//G
+                {Color.Orange, 1000}, //k
+                {Color.Yellow, 10000},//k
+                {Color.Green, 100000}, //k
+                {Color.Blue, 1000000},//M
+                {Color.Purple, 10000000},//M
+                {Color.Gray, 100000000},//M
+                {Color.White, 1000000000},//G
                 {Color.Gold, 0.1},
                 {Color.Silver, 0.01},
 
@@ -484,7 +483,7 @@ namespace EletroMath.Forms
                     break;
 
                 case "Ohms (Ω)":
-                    resistencia= resistenciaOhms;
+                    resistencia = resistenciaOhms;
                     break;
 
                 case "miliOhms (mΩ)":
@@ -501,11 +500,11 @@ namespace EletroMath.Forms
 
             }
 
-       
+
 
             // Exibe o resultado na TextBox de resultado
             textBoxResultado.Text = resistencia.ToString("0.####");
- 
+
         }
 
 
@@ -514,7 +513,7 @@ namespace EletroMath.Forms
 
         #endregion ConverterUnidades
 
-       /*private Color ObterCorDigito(int valor)// Obter o valor da resistencia associado à cor
+        private Color ObterCorDigito(int valor)// Obter o valor da resistencia associado à cor
         {
             Dictionary<Color, int> coresDigitos = new Dictionary<Color, int>
         {
@@ -530,8 +529,7 @@ namespace EletroMath.Forms
             {Color.White, 9}
             };
 
-            return coresDigitos.ContainsKey(valor) ? coresDigitos[valor] : Color.Black;
-            /*foreach (var corValor in coresDigitos)
+            foreach (var corValor in coresDigitos)
             {
                 // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
 
@@ -543,9 +541,9 @@ namespace EletroMath.Forms
                     // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido
                 }
             }
-            return Color.Black;
+            return Color.Cyan;
 
-        }*/
+        }
 
         private Color ObterCorMultiplicador(int valor)// Obter o valor do multiplicador associado à cor
         {
@@ -555,13 +553,13 @@ namespace EletroMath.Forms
                 {Color.Black, 1},
                 {Color.Brown, 10},
                 {Color.Red, 100},
-                {Color.Orange, 1}, //k
-                {Color.Yellow, 10},//k
-                {Color.Green, 100}, //k
-                {Color.Blue, 1},//M
-                {Color.Purple, 10},//M
-                {Color.Gray, 100},//M
-                {Color.White, 1},//G
+                {Color.Orange, 1000}, //k
+                {Color.Yellow, 10000},//k
+                {Color.Green, 100000}, //k
+                {Color.Blue, 1000000},//M
+                {Color.Purple, 10000000},//M
+                {Color.Gray, 100000000},//M
+                {Color.White, 1000000000},//G
                 {Color.Gold, 0.1},
                 {Color.Silver, 0.01},
 
@@ -582,24 +580,26 @@ namespace EletroMath.Forms
             }
             return Color.Black;
         }
+
         private void ObterCores()
         {
-            int primeiroDigito=0, segundoDigito=0, terceiroDigito=0, multiplicador = 0; 
+            int primeiroDigito = 0, segundoDigito = 0, terceiroDigito = 0, multiplicador = 0;
             string valorRes = textBoxValor.Text;
             int tamanhodaRes = valorRes.Length;
 
             if (tamanhodaRes >= 1)
             {
-                primeiroDigito = valorRes[0];
+                int.TryParse(valorRes[0].ToString(), out primeiroDigito);
             }
-            else if (tamanhodaRes >= 2)
+
+            if (tamanhodaRes >= 2)
             {
-                segundoDigito = valorRes[1];
+                int.TryParse(valorRes[1].ToString(), out segundoDigito);
             }
-            else if (tipoResistencia == 5)
+            if (tipoResistencia == 5 && tamanhodaRes>=3)
             {
-                terceiroDigito = valorRes[2];
-            }
+                int.TryParse(valorRes[2].ToString(), out terceiroDigito);
+             }
             
 
             switch (tamanhodaRes)
@@ -637,25 +637,16 @@ namespace EletroMath.Forms
             }
 
 
-            /*pctBox1st.BackColor = ObterCorDigito(primeiroDigito);
+            pctBox1st.BackColor = ObterCorDigito(primeiroDigito);
             pctBox2st.BackColor = ObterCorDigito(segundoDigito);
             pctBox3st.BackColor = ObterCorDigito(terceiroDigito);
-            pctBox4st.BackColor = ObterCorDigito(multiplicador);
-            // Mapear os dígitos para cores
-            // string corPrimeiroDigito = MapearDigitoParaCor(primeiroDigito);
-            // string corSegundoDigito = MapearDigitoParaCor(segundoDigito);
-            //string corMultiplicador = MapearMultiplicadorParaCor(multiplicador);
+            pctBox4st.BackColor = ObterCorMultiplicador(multiplicador);
+      }
 
-
-            // Construir o código de cores*/
-
-         }
 
         private void textBoxValor_TextChanged(object sender, EventArgs e)
         {
             ObterCores();
         }
     }
-    
-
 }

@@ -52,6 +52,8 @@
             this.labelResultado = new System.Windows.Forms.Label();
             this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
             this.textBoxValor = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelValor = new System.Windows.Forms.Label();
             this.flowLayoutPanelCombo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox4st)).BeginInit();
@@ -70,7 +72,6 @@
             this.textBoxResultado.Location = new System.Drawing.Point(1369, 487);
             this.textBoxResultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxResultado.Name = "textBoxResultado";
-            this.textBoxResultado.ReadOnly = true;
             this.textBoxResultado.Size = new System.Drawing.Size(133, 23);
             this.textBoxResultado.TabIndex = 34;
             // 
@@ -338,17 +339,35 @@
             // 
             // textBoxValor
             // 
-            this.textBoxValor.Location = new System.Drawing.Point(1304, 554);
+            this.textBoxValor.Location = new System.Drawing.Point(1369, 550);
             this.textBoxValor.Name = "textBoxValor";
-            this.textBoxValor.Size = new System.Drawing.Size(100, 22);
+            this.textBoxValor.Size = new System.Drawing.Size(133, 22);
             this.textBoxValor.TabIndex = 37;
             this.textBoxValor.TextChanged += new System.EventHandler(this.textBoxValor_TextChanged);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 38;
+            // 
+            // labelValor
+            // 
+            this.labelValor.AutoSize = true;
+            this.labelValor.Location = new System.Drawing.Point(1136, 553);
+            this.labelValor.Name = "labelValor";
+            this.labelValor.Size = new System.Drawing.Size(132, 16);
+            this.labelValor.TabIndex = 39;
+            this.labelValor.Text = "Valor da Resistência";
             // 
             // FormResCondu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1768, 1033);
+            this.Controls.Add(this.labelValor);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.textBoxValor);
             this.Controls.Add(this.comboBoxUnidades);
             this.Controls.Add(this.labelResultado);
@@ -404,5 +423,7 @@
         private System.Windows.Forms.Label labelResultado;
         private System.Windows.Forms.ComboBox comboBoxUnidades;
         private System.Windows.Forms.TextBox textBoxValor;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label labelValor;
     }
 }

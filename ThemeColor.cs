@@ -12,31 +12,24 @@ namespace EletroMath
 
         public static Color PrimaryColor { get; set; }
         public static Color SecundaryColor { get; set; }
-        public static List<string> ColorList = new List<string>{    "#3F51B5",
-                                                                    "#009688",
-                                                                    "#FF5722",
-                                                                    "#607D8B",
-                                                                    "#FF9800",
-                                                                    "#9C27B0",
-                                                                    "#2196F3",
-                                                                    "#E41A4A",
-                                                                    "#5978BB",
-                                                                    "#018790",
-                                                                    "#0E3441",
-                                                                    "#00B0AD",
-                                                                    "#721D47",
-                                                                    "#EA4833",
-                                                                    "#EF937E",
-                                                                    "#F37521",
-                                                                    "#A12059",
-                                                                    "#126881",
-                                                                    "#8BC240",
-                                                                    "#364D5B",
-                                                                    "#C7DC5B",
-                                                                    "#0094BC",
-                                                                    "#43B76E",
-                                                                    "#7BCFE9",
-                                                                    "#B71C46"};
+        public static List<string> ColorList = new List<string>{"#065535",
+                                                                "#007777",
+                                                                "#006666",
+                                                                "#005555",
+                                                                "#004444",
+                                                                "#003333",
+                                                                "#52bf90",
+                                                                "#49ab81",
+                                                                "#419873",
+                                                                "#398564",
+                                                                "#317256",
+                                                                "#011f4b",
+                                                                "#03396c",
+                                                                "#005b96",
+                                                                "#6497b1",
+                                                                "#133337",
+                                                                "#333333"};
+
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
             double red = color.R;

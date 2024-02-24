@@ -249,7 +249,7 @@
             this.btnCondRes.Margin = new System.Windows.Forms.Padding(4);
             this.btnCondRes.Name = "btnCondRes";
             this.btnCondRes.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnCondRes.Size = new System.Drawing.Size(293, 33);
+            this.btnCondRes.Size = new System.Drawing.Size(293, 52);
             this.btnCondRes.TabIndex = 2;
             this.btnCondRes.Text = "Código de Cores";
             this.btnCondRes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
