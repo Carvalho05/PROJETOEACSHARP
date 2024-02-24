@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formteo1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formteo1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formrescondu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formteo1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formteo1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formteo1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formteo1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\forms\\formrescondu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formrescondu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formcondensadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +50,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormResCondu.cs",
-              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResCondu.cs",
-              "RelativeDocumentMoniker": "Forms\\FormResCondu.cs",
-              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResCondu.cs",
-              "RelativeToolTip": "Forms\\FormResCondu.cs",
-              "ViewState": "AQIAAD4CAAAAAAAAAAAlwE0CAAAQAAAA",
+              "DocumentIndex": 3,
+              "Title": "FormTeo1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormTeo1.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FormTeo1.Designer.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormTeo1.Designer.cs",
+              "RelativeToolTip": "Forms\\FormTeo1.Designer.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAlwDsAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-24T02:30:24.351Z",
+              "WhenOpened": "2024-02-24T16:15:37.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormCondensadores.cs",
-              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormCondensadores.cs",
-              "RelativeDocumentMoniker": "Forms\\FormCondensadores.cs",
-              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormCondensadores.cs",
-              "RelativeToolTip": "Forms\\FormCondensadores.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAgwJkAAAA4AAAA",
+              "DocumentIndex": 4,
+              "Title": "FormResTemp.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResTemp.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs",
+              "RelativeToolTip": "Forms\\FormResTemp.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAgwIgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-24T01:53:39.055Z",
+              "WhenOpened": "2024-02-24T15:48:32.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormCondensadores.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormCondensadores.cs",
-              "RelativeDocumentMoniker": "Forms\\FormCondensadores.cs",
-              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormCondensadores.cs [Design]",
-              "RelativeToolTip": "Forms\\FormCondensadores.cs [Design]",
+              "Title": "FormResTemp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResTemp.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs [Design]",
+              "RelativeToolTip": "Forms\\FormResTemp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-24T01:48:28.365Z",
+              "WhenOpened": "2024-02-24T15:28:36.441Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormTeo1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormTeo1.cs",
+              "RelativeDocumentMoniker": "Forms\\FormTeo1.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormTeo1.cs [Design]",
+              "RelativeToolTip": "Forms\\FormTeo1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-24T15:28:57.31Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormTeo1.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormTeo1.cs",
+              "RelativeDocumentMoniker": "Forms\\FormTeo1.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormTeo1.cs",
+              "RelativeToolTip": "Forms\\FormTeo1.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAcwHMAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-24T15:48:09.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormResCondu.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResCondu.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResCondu.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResCondu.cs",
+              "RelativeToolTip": "Forms\\FormResCondu.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAlwBEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-24T02:30:24.351Z",
+              "EditorCaption": ""
             }
           ]
         }
