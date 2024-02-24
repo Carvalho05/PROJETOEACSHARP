@@ -217,7 +217,51 @@ namespace EletroMath.Forms
         #region Calculo Resistencias
 
         #region Codigo Calculo 
+        /*private void ConverterUnidades(TextBox textBoxResultado)
+        {
+            double resistencia = 0;
 
+            // Obtém a opção selecionada na ComboBox como uma string
+            string escolha = comboBoxUnidades.SelectedItem.ToString();
+
+            switch (escolha)
+            {
+                case "GigaOhms (GΩ)":
+                    resistencia = resistenciaOhms * 1e-9;
+                    break;
+
+                case "MegaOhms (MΩ)":
+                    resistencia = resistenciaOhms * 1e-6;
+                    break;
+
+                case "kiloOhms (KΩ)":
+                    resistencia = resistenciaOhms * 1e-3;
+                    break;
+
+                case "Ohms (Ω)":
+                    resistencia = resistenciaOhms;
+                    break;
+
+                case "miliOhms (mΩ)":
+                    resistencia = resistenciaOhms * 1e3;
+                    break;
+
+                case "microOhms (µΩ)":
+                    resistencia = resistenciaOhms * 1e6;
+                    break;
+
+                case "nanoOhms (nΩ)":
+                    resistencia = resistenciaOhms * 1e9;
+                    break;
+
+            }
+
+
+
+            // Exibe o resultado na TextBox de resultado
+            textBoxResultado.Text = resistencia.ToString("0.####");
+
+        }*/
         //Cálculo Série Resistências
         private void ResSerie(TextBox textBoxResultado)
         {
