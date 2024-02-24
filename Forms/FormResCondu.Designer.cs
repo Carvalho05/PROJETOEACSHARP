@@ -340,7 +340,7 @@
             // 
             // textBoxValor
             // 
-            this.textBoxValor.Location = new System.Drawing.Point(1320, 556);
+            this.textBoxValor.Location = new System.Drawing.Point(1311, 556);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(133, 22);
             this.textBoxValor.TabIndex = 37;
@@ -371,7 +371,7 @@
             "miliOhms (mΩ)",
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
-            this.comboBoxUnidades2.Location = new System.Drawing.Point(1470, 553);
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(1460, 554);
             this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxUnidades2.Name = "comboBoxUnidades2";
             this.comboBoxUnidades2.Size = new System.Drawing.Size(172, 27);
