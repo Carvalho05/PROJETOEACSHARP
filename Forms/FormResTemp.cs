@@ -133,6 +133,11 @@ namespace EletroMath.Forms
                 button2.Text = "Calculate R2";
             }
         }
+
+        private void FormResTemp_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
         #endregion Misc
 
         #region Coeficiente
@@ -499,9 +504,6 @@ namespace EletroMath.Forms
 
         #endregion Coeficiente
 
-        private void FormResTemp_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
-        }
+
     }
 }

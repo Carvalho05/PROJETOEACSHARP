@@ -163,6 +163,9 @@
     <EmbeddedResource Include="Forms\FormSinais.resx">
       <DependentUpon>FormSinais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTeo1.resx">
+      <DependentUpon>FormTeo1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

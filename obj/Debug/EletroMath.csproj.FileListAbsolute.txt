@@ -92,3 +92,4 @@ C:\Users\ruisi\source\repos\EletroMathV1\obj\Debug\EletroMath.exe
 C:\Users\ruisi\source\repos\EletroMathV1\obj\Debug\EletroMath.pdb
 C:\Users\diogo\Documents\GitHub\PROJETOEACSHARP\PROJETOEACSHARP\obj\Debug\EletroMath.Forms.FormResTemp.resources
 C:\Users\carla\source\repos\EletroMathv1\PROJETOEACSHARP\obj\Debug\EletroMath.Forms.FormResTemp.resources
+C:\Users\diogo\Documents\GitHub\PROJETOEACSHARP\PROJETOEACSHARP\obj\Debug\EletroMath.Forms.FormTeo1.resources

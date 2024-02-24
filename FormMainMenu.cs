@@ -181,7 +181,7 @@ namespace EletroMath
         }
         private void btnSMteo1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormTeo1(), sender);
+            OpenChildForm(new Forms.FormTeo1(idiomaAtual), sender);
         }
 
         private void btnSMteo2_Click(object sender, EventArgs e)
