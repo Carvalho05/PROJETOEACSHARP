@@ -21,11 +21,15 @@ namespace EletroMath.Forms
             InitializeComponent();
             AtualizarTextos(idiomaAtual);
             comboBoxUnidades.SelectedIndex = 3;
+            comboBoxUnidades2.SelectedIndex = 3;
             pictureBoxRes.Visible = false;
             flowLayoutPanelCombo.Visible = false;
             labelResultado.Visible = false;
             comboBoxUnidades.Visible = false;
             textBoxResultado.Visible = false;
+            labelValor.Visible = false;
+            textBoxValor.Visible = false;
+            comboBoxUnidades2.Visible = false;
         }
         #region Tema
         private void LoadTheme() // Aplicar tema de cors aos Botoes
@@ -220,6 +224,9 @@ namespace EletroMath.Forms
             comboBoxUnidades.Visible = true;
             textBoxResultado.Visible = true;
             labelResultado.Visible = true;
+            labelValor.Visible = true;
+            textBoxValor.Visible = true;
+            comboBoxUnidades2.Visible = true;
         }
 
         private void btn5stripes_Click(object sender, EventArgs e)
@@ -235,6 +242,9 @@ namespace EletroMath.Forms
             comboBoxUnidades.Visible = true;
             textBoxResultado.Visible = true;
             labelResultado.Visible = true;
+            labelValor.Visible = true;
+            textBoxValor.Visible = true;
+            comboBoxUnidades2.Visible=true;
         }
         #endregion TipoResistencia  
         #region ComboBox
@@ -327,8 +337,11 @@ namespace EletroMath.Forms
         {
             if (comboBoxFaixa1.SelectedItem != null)
             {
+                textBoxResultado.Visible = true;
+                textBoxTolerancia.Visible = true;
+                labelResultado.Visible = true;
+                comboBoxUnidades.Visible = true;
                 string corSelecionada = comboBoxFaixa1.SelectedItem.ToString();
-
                 pctBox1st.BackColor = GetItemColor(corSelecionada);
                 CalcularValorResistencia();
 
@@ -339,8 +352,11 @@ namespace EletroMath.Forms
         {
             if (comboBoxFaixa2.SelectedItem != null)
             {
+                textBoxResultado.Visible = true;
+                textBoxTolerancia.Visible = true;
+                labelResultado.Visible = true;
+                comboBoxUnidades.Visible = true;
                 string corSelecionada = comboBoxFaixa2.SelectedItem.ToString();
-
                 pctBox2st.BackColor = GetItemColor(corSelecionada);
                 CalcularValorResistencia();
             }
@@ -350,9 +366,11 @@ namespace EletroMath.Forms
         {
             if (comboBoxFaixa3.SelectedItem != null)
             {
+                textBoxResultado.Visible = true;
+                textBoxTolerancia.Visible = true;
+                labelResultado.Visible = true;
+                comboBoxUnidades.Visible = true;
                 string corSelecionada = comboBoxFaixa3.SelectedItem.ToString();
-                CalcularValorResistencia();
-
                 pctBox3st.BackColor = GetItemColor(corSelecionada);
                 CalcularValorResistencia();
             }
@@ -362,8 +380,11 @@ namespace EletroMath.Forms
         {
             if (comboBoxMult.SelectedItem != null)
             {
+                textBoxResultado.Visible = true;
+                textBoxTolerancia.Visible = true;
+                labelResultado.Visible = true;
+                comboBoxUnidades.Visible = true;
                 string corSelecionada = comboBoxMult.SelectedItem.ToString();
-
                 pctBox4st.BackColor = GetItemColor(corSelecionada);
                 CalcularValorResistencia();
             }
@@ -373,8 +394,11 @@ namespace EletroMath.Forms
         {
             if (comboBoxTole.SelectedItem != null)
             {
+                textBoxResultado.Visible = true;
+                textBoxTolerancia.Visible = true;
+                labelResultado.Visible = true;
+                comboBoxUnidades.Visible = true;
                 string corSelecionada = comboBoxTole.SelectedItem.ToString();
-
                 pctBox5st.BackColor = GetItemColor(corSelecionada);
                 CalcularValorResistencia();
             }
@@ -384,6 +408,21 @@ namespace EletroMath.Forms
             ConverterUnidades(textBoxResultado);
         }
 
+        private void textBoxValor_TextChanged(object sender, EventArgs e)
+        {
+            ResetColors();
+            pctBox3st.Visible = true;
+            comboBoxFaixa1.SelectedIndex = -1;
+            comboBoxFaixa2.SelectedIndex = -1;
+            comboBoxFaixa3.SelectedIndex = -1;
+            comboBoxMult.SelectedIndex = -1;
+            comboBoxTole.SelectedIndex = -1;
+            textBoxResultado.Visible = false;
+            textBoxTolerancia.Visible = false;
+            labelResultado.Visible = false;
+            comboBoxUnidades.Visible = false;
+            ObterCores();
+        }
         #endregion DefinicoesComboBox
 
 
@@ -662,9 +701,5 @@ namespace EletroMath.Forms
       }
 
 
-        private void textBoxValor_TextChanged(object sender, EventArgs e)
-        {
-            ObterCores();
-        }
     }
 }

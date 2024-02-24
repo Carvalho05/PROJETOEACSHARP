@@ -53,7 +53,7 @@
             this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.labelValor = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
             this.textBoxTolerancia = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelCombo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox5st)).BeginInit();
@@ -344,6 +344,7 @@
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(133, 22);
             this.textBoxValor.TabIndex = 37;
+            this.textBoxValor.TextChanged += new System.EventHandler(this.textBoxValor_TextChanged);
             // 
             // labelValor
             // 
@@ -355,14 +356,14 @@
             this.labelValor.TabIndex = 39;
             this.labelValor.Text = "Valor da Resistência";
             // 
-            // comboBox1
+            // comboBoxUnidades2
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 19;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxUnidades2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxUnidades2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUnidades2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.comboBoxUnidades2.FormattingEnabled = true;
+            this.comboBoxUnidades2.ItemHeight = 19;
+            this.comboBoxUnidades2.Items.AddRange(new object[] {
             "GigaOhms (GΩ)",
             "MegaOhms (MΩ)",
             "kiloOhms (KΩ)",
@@ -370,11 +371,11 @@
             "miliOhms (mΩ)",
             "microOhms (µΩ)",
             "nanoOhms (nΩ)"});
-            this.comboBox1.Location = new System.Drawing.Point(1470, 553);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 27);
-            this.comboBox1.TabIndex = 40;
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(1470, 553);
+            this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
+            this.comboBoxUnidades2.Size = new System.Drawing.Size(172, 27);
+            this.comboBoxUnidades2.TabIndex = 40;
             // 
             // textBoxTolerancia
             // 
@@ -394,7 +395,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1713, 1033);
             this.Controls.Add(this.textBoxTolerancia);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxUnidades2);
             this.Controls.Add(this.labelValor);
             this.Controls.Add(this.textBoxValor);
             this.Controls.Add(this.comboBoxUnidades);
@@ -452,7 +453,7 @@
         private System.Windows.Forms.ComboBox comboBoxUnidades;
         private System.Windows.Forms.TextBox textBoxValor;
         private System.Windows.Forms.Label labelValor;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxUnidades2;
         private System.Windows.Forms.TextBox textBoxTolerancia;
     }
 }
