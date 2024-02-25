@@ -44,7 +44,7 @@ namespace EletroMath.Forms
                 button1.Text = "Onda Sinusoidal";
                 button2.Text = "Onda Quadratica";
                 button3.Text = "Onda Triangular";
-                label3.Text = "Frequência (emHz)";
+                label3.Text = "Frequência (em Hz)";
                 label2.Text = "Tensão (em V)";
             }
         }

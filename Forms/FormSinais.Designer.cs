@@ -52,7 +52,7 @@
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(340, 172);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -69,11 +69,10 @@
             this.txtBoxFreq.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxFreq.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxFreq.Location = new System.Drawing.Point(158, 245);
-            this.txtBoxFreq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxFreq.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxFreq.Name = "txtBoxFreq";
             this.txtBoxFreq.Size = new System.Drawing.Size(132, 21);
             this.txtBoxFreq.TabIndex = 14;
-            this.txtBoxFreq.Text = "1";
             // 
             // txtBoxVolt
             // 
@@ -81,11 +80,10 @@
             this.txtBoxVolt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxVolt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxVolt.Location = new System.Drawing.Point(158, 195);
-            this.txtBoxVolt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxVolt.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxVolt.Name = "txtBoxVolt";
             this.txtBoxVolt.Size = new System.Drawing.Size(133, 21);
             this.txtBoxVolt.TabIndex = 13;
-            this.txtBoxVolt.Text = "1";
             // 
             // label3
             // 
@@ -115,7 +113,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(585, 49);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 50);
             this.button3.TabIndex = 10;
@@ -129,7 +127,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(340, 49);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 50);
             this.button2.TabIndex = 9;
@@ -143,7 +141,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(93, 49);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 50);
             this.button1.TabIndex = 8;
@@ -164,7 +162,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(898, 446);
             this.Name = "FormSinais";
             this.Text = "Sinais Digitais";
