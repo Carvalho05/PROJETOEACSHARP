@@ -30,7 +30,7 @@ namespace EletroMath.Forms
             comboBoxUnidades.Items.Add("microOhms (µΩ)");
             comboBoxUnidades.Items.Add("nanoOhms (nΩ)");
 
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
 
 
@@ -56,7 +56,7 @@ namespace EletroMath.Forms
             comboBoxUnidadesCondutancia.Items.Add("MicroOhms (µΩ)");
             comboBoxUnidadesCondutancia.Items.Add("NanoOhms (nΩ)");
 
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidadesCondutancia.SelectedIndex = 3;
 
 
@@ -69,6 +69,7 @@ namespace EletroMath.Forms
             textBox2.Visible = false;
         }
 
+        //Função para Aplicar Tema de Cor aos Botões
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -81,15 +82,19 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+
+            //Coloca as Seguintes Labels com a Cor do Tema Principal
             labelResultado1.ForeColor = ThemeColor.PrimaryColor;
             labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
+        //Função para Carregar o Tema de Cores Principal
         private void FormResistencias_Load(object sender, EventArgs e)
         {
             LoadTheme();
         }
 
+        //Função que Troca o Idioma dos Textos da Página
         private void AtualizarTextos()
         {
             if (idiomaResistencias == "ingles")
@@ -155,9 +160,9 @@ namespace EletroMath.Forms
             if (textboxCount <= 8)
             {
 
-                Label newLabel = new Label();
-                TextBox newTextBox = new TextBox();
-                ComboBox newComboBox = new ComboBox();
+               Label newLabel = new Label();
+               TextBox newTextBox = new TextBox();
+               ComboBox newComboBox = new ComboBox();
 
                //Propriedades das Novas ComboBoxs
                newComboBox.FlatStyle = FlatStyle.Flat;
@@ -180,7 +185,7 @@ namespace EletroMath.Forms
                     newLabel.ForeColor = Color.Blue; // Aplicar Cor Azul
                 }
 
-                // Adição de caixas
+                //Adição de Caixas
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
                 flowLayoutPanel2.Controls.Add(newComboBox);
@@ -225,6 +230,8 @@ namespace EletroMath.Forms
         #region Calculo Resistencias
 
         #region Codigo Calculo 
+
+        //Função para Converter as Unidades
         private double ConverterUnidade(double valor, string unidade)
         {
             switch (unidade)
@@ -251,7 +258,7 @@ namespace EletroMath.Forms
                     return valor * 1e-9;
 
                 default:
-                    // Se a unidade não for reconhecida, retorna o valor original
+                    // Se a Unidade não for Reconhecida, Retorna o Valor Original
                     return valor;
             }
         }
@@ -261,7 +268,7 @@ namespace EletroMath.Forms
             double ResistenciaTotal = 0;
             bool valoresValidos = true;
 
-            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para Processar TextBox e ComboBox Associada
             {
                 Control controlResistencia = flowLayoutPanel2.Controls[i];
                 Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
@@ -271,7 +278,7 @@ namespace EletroMath.Forms
 
                 if (double.TryParse(controlResistencia.Text, out Resistencia))
                 {
-                    // Aplica a conversão de unidades à resistência individual
+                    // Aplica a Conversão de Unidades à Resistência Individual
                     Resistencia = ConverterUnidade(Resistencia, unidade);
 
                     ResistenciaTotal += Resistencia;
@@ -315,7 +322,7 @@ namespace EletroMath.Forms
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para Processar TextBox e ComboBox Associada
             {
                 Control controlResistencia = flowLayoutPanel2.Controls[i];
                 Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
@@ -325,7 +332,7 @@ namespace EletroMath.Forms
 
                 if (double.TryParse(controlResistencia.Text, out Resistencia))
                 {
-                    // Aplica a conversão de unidades à resistência individual
+                    // Aplica a Conversão de Unidades à Resistência Individual
                     Resistencia = ConverterUnidade(Resistencia, unidade);
 
                     ResistenciaTotal += 1/Resistencia;
@@ -386,7 +393,7 @@ namespace EletroMath.Forms
             // Verifica se uma Opção foi Selecionada na ComboBox
             if (comboBoxUnidadesCondutancia.SelectedItem == null)
             {
-                // Se nenhuma Ppção foi Selecionada, Exibe uma Mensagem de Erro
+                // Se nenhuma Opção foi Selecionada, Exibe uma Mensagem de Erro
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Selecione uma Unidade da Lista");

@@ -23,6 +23,8 @@ namespace EletroMath.Forms
         {
             InitializeComponent();
             LoadTheme();
+
+            //Coloca a Seguinte Label da Cor do Tema Principal
             labelResultado1.ForeColor = ThemeColor.PrimaryColor;
 
             //Associação da Variável Geral de Idioma do Form Coeficiente com a do Programa
@@ -119,7 +121,7 @@ namespace EletroMath.Forms
                 comboBoxResistividade.Items.Add("Glass");
             }
 
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxMaterial.SelectedIndex = -1;
             comboBoxResistividade.SelectedIndex = -1;
 
@@ -143,6 +145,7 @@ namespace EletroMath.Forms
             labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
+        //Função que Troca o Idioma dos Textos da Página
         private void AtualizarTextos()
         {
             if (idiomaCoeficiente == "portugues")
@@ -182,6 +185,7 @@ namespace EletroMath.Forms
             }
         }
 
+        //Função para Carregar o Tema de Cores Principal
         private void FormResTemp_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -488,6 +492,7 @@ namespace EletroMath.Forms
         private void CalcularResistividade()
         {
             double area = 0, comprimento = 0, resistividade = 1;
+            
             // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
             if (!double.TryParse(textBoxArea.Text, out area) ||
                 !double.TryParse(textBoxComprimento.Text, out comprimento))
@@ -505,10 +510,12 @@ namespace EletroMath.Forms
                 textBox5.Visible = false;
                 return;
             }
+                //Lê a Opção Selecionada na ComboBoxResistividade
                 string escolha = comboBoxResistividade.SelectedItem.ToString();
-                
-                switch (escolha)
-                {
+
+            //Consoante a Escolha na ComboBoxResistividade irá Realizar o Código Associado
+            switch (escolha)
+             {
                     case "Cobre":
                     case "Copper":
                         resistividade = 1.68e-8;
@@ -575,8 +582,9 @@ namespace EletroMath.Forms
                     default:
                         MessageBox.Show("Material não reconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                }
+              }
 
+                //Impressão de Resultado
                 double calculoRes = resistividade * comprimento / area;
                 textBox5.Text = ($"{calculoRes}"+ " Ω");
                 labelResultado1.Visible = true;

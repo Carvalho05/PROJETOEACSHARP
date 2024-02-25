@@ -21,7 +21,7 @@ namespace EletroMath.Forms
             idioma=idiomaAtual;
             InitializeComponent();
             AtualizarTextos(idiomaAtual);
-            chart1.Visible = false; //esconde o grafico
+            chart1.Visible = false; //Esconde o Grafico
         }
         private void FormSinais_Load(object sender, EventArgs e)
         {
@@ -63,7 +63,7 @@ namespace EletroMath.Forms
         }
         private void ResetColors()
         {
-            // Restaura a cor original de todos os botões
+            // Restaura a Cor Original de todos os Botões
             button1.BackColor = ThemeColor.PrimaryColor;
             button2.BackColor = ThemeColor.PrimaryColor;
             button3.BackColor = ThemeColor.PrimaryColor;
@@ -172,14 +172,14 @@ namespace EletroMath.Forms
         }
         private void GerarGrafico(string title, Func<double, double> gerarFuncao)
         {
-            // Limpar pontos anteriores do gráfico
+            // Limpar Pontos anteriores do Gráfico
             chart1.Series.Clear();
 
-            // Adicionar nova série ao gráfico
+            // Adicionar nova Série ao Gráfico
             var series = chart1.Series.Add(title);
-            series.ChartType = SeriesChartType.Line;  // Definir o tipo de gráfico como linhas
+            series.ChartType = SeriesChartType.Line;  // Definir o tipo de Gráfico como Linhas
 
-            // Adicionar pontos à série
+            // Adicionar Pontos à Série
             for (double tempo = 0.0; tempo <= 1.0; tempo += 0.01)
             {
                 double valor = gerarFuncao(tempo);
@@ -191,7 +191,7 @@ namespace EletroMath.Forms
 
             }
 
-            // Configurar propriedades do gráfico
+            // Configurar Propriedades do Gráfico
             chart1.ChartAreas[0].AxisX.Minimum = 0.0;
             chart1.ChartAreas[0].AxisX.Maximum = 1.0;
             chart1.ChartAreas[0].AxisY.Minimum = -3 * ParseDouble(txtBoxVolt.Text);

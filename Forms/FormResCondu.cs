@@ -20,18 +20,28 @@ namespace EletroMath.Forms
         {
             InitializeComponent();
             AtualizarTextos(idiomaAtual);
+
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
+
+            //Esconder Labels
+            labelResultado.Visible = false;
+            labelValor.Visible = false;
+
+            //Esconder ComboBoxs
+            comboBoxUnidades.Visible = false;
+            comboBoxUnidades2.Visible = false;
+            
+            //Esconder TextBoxs
+            textBoxResultado.Visible = false;
+            textBoxValor.Visible = false;
+
+            //Esconder Outros
             pictureBoxRes.Visible = false;
             flowLayoutPanelCombo.Visible = false;
-            labelResultado.Visible = false;
-            comboBoxUnidades.Visible = false;
-            textBoxResultado.Visible = false;
-            labelValor.Visible = false;
-            textBoxValor.Visible = false;
-            comboBoxUnidades2.Visible = false;
         }
         #region Tema
-        private void LoadTheme() // Aplicar tema de cors aos Botoes
+        private void LoadTheme() // Aplicar Tema de Cor aos Botões
         {
             foreach (Control btns in this.Controls)
             {
@@ -43,10 +53,12 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+
+            //Coloca as Seguintes Labels com a Cor do Tema Principal
             labelResultado.ForeColor = ThemeColor.PrimaryColor;
             labelValor.ForeColor = ThemeColor.PrimaryColor;
         }
-        private void ResetColors()  // Codigo para retirar o realce do botao das resistencias
+        private void ResetColors()  // Codigo para Retirar o Realce do Botão das Resistências
         {
 
             btn4stripes.BackColor = ThemeColor.PrimaryColor;
@@ -292,7 +304,7 @@ namespace EletroMath.Forms
             comboBox.DrawItem += new DrawItemEventHandler(DrawItemHandler);
         }
         #endregion ComboBox
-        private Color GetItemColor(string itemText) //Pintar as faixas da resistencia consoante o texto da ComboBox 
+        private Color GetItemColor(string itemText) //Pintar as Faixas da Resistência Consoante o Texto da ComboBox 
         {
             switch (itemText)
             {

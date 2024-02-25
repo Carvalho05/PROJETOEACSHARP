@@ -43,7 +43,7 @@ namespace EletroMath.Forms
             comboBoxUnidades2.Items.Add("microFarads (µF)");
             comboBoxUnidades2.Items.Add("nanoFarads (nF)");
 
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
 
 
@@ -83,7 +83,7 @@ namespace EletroMath.Forms
                 comboBoxCapacitância.Items.Add("Silicone Rubber");
                 comboBoxCapacitância.Items.Add("Ethylene Propylene Rubber");
             }
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxCapacitância.SelectedIndex = -1;
 
 
@@ -170,6 +170,7 @@ namespace EletroMath.Forms
             }
         }
 
+        //Aplicar Tema de Cores Principal
         private void FormCondensadores_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -259,6 +260,8 @@ namespace EletroMath.Forms
         #region Calculo Condensadores
 
         #region Codigo Calculo 
+
+        //Função para Converter Unidades
         private double ConverterUnidade(double valor, string unidade)
         {
             switch (unidade)
@@ -285,7 +288,7 @@ namespace EletroMath.Forms
                     return valor * 1e-9;
 
                 default:
-                    // Se a unidade não for reconhecida, retorna o valor original
+                    // Se a Unidade não for Reconhecida, Retorna o Valor Original
                     return valor;
             }
         }
@@ -296,7 +299,7 @@ namespace EletroMath.Forms
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para Processar TextBox e ComboBox Associada
             {
                 Control controlCondensador = flowLayoutPanel2.Controls[i];
                 Control controlUnidade = flowLayoutPanel2.Controls[i + 1];

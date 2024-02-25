@@ -38,7 +38,7 @@ namespace EletroMath.Forms
             comboBoxUnidades.Items.Add("MicroHenrys (µH)");
             comboBoxUnidades.Items.Add("NanoHenrys (nH)");
 
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
 
 
@@ -75,7 +75,7 @@ namespace EletroMath.Forms
                 comboBoxIndutancia.Items.Add("Air");
             }
 
-            // Indice da Opção Desejada como Seleção Inicial
+            //Indice da Opção Desejada como Seleção Inicial
             comboBoxIndutancia.SelectedIndex = -1;
 
 
@@ -142,6 +142,7 @@ namespace EletroMath.Forms
             else if (idiomaBobines == "portugues")
             {
                 this.Text = "Bobines";
+                
                 //Tradução das Frases
                 label2.Text = "Permeabilidade Magnética do Núcleo da Bobina (em Henrys por Metro, H/m)";
                 label3.Text = "Área da Seção Transversal do Núcleo da Bobina (em Metros Quadrados, m²)";
@@ -169,6 +170,7 @@ namespace EletroMath.Forms
             }
         }
 
+        //Aplicar Tema de Cor Principal
         private void FormBobines_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -258,6 +260,8 @@ namespace EletroMath.Forms
         #region Calculo Bobines
 
         #region Codigo Calculo 
+
+        //Função para Converter Unidades
         private double ConverterUnidade(double valor, string unidade)
         {
             switch (unidade)
@@ -284,7 +288,7 @@ namespace EletroMath.Forms
                     return valor * 1e-9;
 
                 default:
-                    // Se a unidade não for reconhecida, retorna o valor original
+                    // Se a Unidade não for Reconhecida, Retorna o Valor Original
                     return valor;
             }
         }
@@ -295,7 +299,7 @@ namespace EletroMath.Forms
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para Processar TextBox e ComboBox Associada
             {
                 Control controlBobine = flowLayoutPanel2.Controls[i];
                 Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
