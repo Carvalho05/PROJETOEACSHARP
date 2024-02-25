@@ -150,19 +150,18 @@ namespace EletroMath.Forms
                 double periodo = 1.0 / frequencia;
                 double duracaoInclinacao = periodo / 2.0;
 
-                // Utilize a função módulo para obter um comportamento periódico
                 tempo = tempo % periodo;
 
                 double valor = 0.0;
 
                 if (tempo < duracaoInclinacao)
                 {
-                    // Parte crescente da onda triangular
+               
                     valor = (2.0 * amplitudePico / duracaoInclinacao) * tempo;
                 }
                 else
                 {
-                    // Parte decrescente da onda triangular
+                   
                     valor = 2.0 * amplitudePico - (2.0 * amplitudePico / duracaoInclinacao) * (tempo - duracaoInclinacao);
                 }
 
@@ -185,11 +184,9 @@ namespace EletroMath.Forms
             {
                 double valor = gerarFuncao(tempo);
 
-                // Criar um ponto de dados e definir a cor personalizada
-                var ponto = new DataPoint(tempo, valor);
-                ponto.Color = ThemeColor.PrimaryColor;  // Substitua por sua lógica de obtenção de cor
 
-                // Adicionar ponto de dados à série
+                var ponto = new DataPoint(tempo, valor);
+                ponto.Color = ThemeColor.PrimaryColor;  
                 series.Points.Add(ponto);
 
             }
@@ -210,7 +207,7 @@ namespace EletroMath.Forms
             {
                 return result;
             }
-            return 0.0; // Valor padrão se não puder ser convertido
+            return 0.0; 
         }
     
     }

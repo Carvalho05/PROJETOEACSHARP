@@ -77,7 +77,7 @@ namespace EletroMath.Forms
         {
             if (idiomaTeoremas1 == "portugues")
             {
-                this.Text = "Teoremas";
+                this.Text = "Lei de Ohm e Divisores";
                 labelCoeficiente.Text = "Lei de Ohm";
                 labelDivTensaoCorrente.Text = "Divisor de Tensão e Corrente";
                 labelResultado1.Text = "O Resultado é:";
@@ -94,7 +94,7 @@ namespace EletroMath.Forms
             }
             else if (idiomaTeoremas1 == "ingles")
             {
-                this.Text = "Theorems";
+                this.Text = "Ohm's Law and Dividers";
                 labelCoeficiente.Text = "Ohm's Law";
                 labelDivTensaoCorrente.Text = "Voltage and Current Divider";
                 labelResultado1.Text = "The result is:";

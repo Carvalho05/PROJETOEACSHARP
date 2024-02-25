@@ -256,25 +256,25 @@ namespace EletroMath.Forms
             {
                 ComboBox comboBox = sender as ComboBox;
 
-                // Verifica se o objeto sender é uma ComboBox válida
+                
                 if (comboBox != null)
                 {
                     // Obtém o texto do item
                     string itemText = comboBox.Items[e.Index].ToString();
 
-                    // Obtém a cor para o item atual
+                    // Obtém a cor 
                     Color color = GetItemColor(itemText);
 
                     // Desenha o fundo com a cor correspondente
                     e.Graphics.FillRectangle(new SolidBrush(color), e.Bounds);
 
-                    // Desenha o texto do item
+                    
                     using (SolidBrush brush = new SolidBrush(e.ForeColor))
                     {
                         e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds.X, e.Bounds.Y);
                     }
 
-                    // Indica que o desenho do item está completo
+                    
                     e.DrawFocusRectangle();
                 }
             }
@@ -282,7 +282,7 @@ namespace EletroMath.Forms
 
         private void SetupColorComboBox(ComboBox comboBox)
         {
-            // Manipula o evento DrawItem para personalizar a aparência dos itens
+            // Manipula o evento DrawItem para personalizar a aparência
             comboBox.DrawMode = DrawMode.OwnerDrawFixed;
 
             // Conecta o evento DrawItem ao manipulador DrawItemHandler
@@ -611,11 +611,11 @@ namespace EletroMath.Forms
 
             foreach (var corValor in coresDigitos)
             {
-                // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
+              
 
                 if (corValor.Value == valor)
                 {
-                    // Verifica se o valor associado à chave atual é igual ao valor fornecido como parâmetro
+                    // Verifica se o valor associado é igual ao valor fornecido como parâmetro
 
                     return corValor.Key;
                     // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido
@@ -648,11 +648,10 @@ namespace EletroMath.Forms
 
             foreach (var corMultiplicador in coresMultiplicadores)
             {
-                // Itera sobre cada par chave-valor no dicionário 'coresDigitos'
-
+            
                 if (corMultiplicador.Value == valor)
                 {
-                    // Verifica se o valor associado à chave atual é igual ao valor fornecido como parâmetro
+                    // Verifica se o valor associado é igual ao valor fornecido como parâmetro
 
                     return corMultiplicador.Key;
                     // Se for verdadeiro, retorna a chave (cor) correspondente ao valor fornecido

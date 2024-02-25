@@ -259,6 +259,7 @@ namespace EletroMath
                 btnAssoRes.Text = "Resistor Calculation and Conductance";
                 btnCondRes.Text = "Resistor Color Code";
                 btnTempRes.Text = "Temperature Coefficient";
+                btnSMteo1.Text = "Ohm's Law and Dividers";
             }
             else if (idiomaAtual == "portugues")
             {
@@ -270,6 +271,7 @@ namespace EletroMath
                 btnAssoRes.Text = "Cálculo de Resistências e Condutância";
                 btnCondRes.Text = "Código de Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
+                btnSMteo1.Text = "Lei de Ohm e Divisores";
             }
         }
 

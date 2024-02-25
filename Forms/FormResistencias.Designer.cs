@@ -251,7 +251,7 @@
             this.btnCal.FlatAppearance.BorderSize = 0;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCal.Location = new System.Drawing.Point(60, 318);
+            this.btnCal.Location = new System.Drawing.Point(72, 367);
             this.btnCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(179, 79);
@@ -265,7 +265,7 @@
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(298, 318);
+            this.btnLimpar.Location = new System.Drawing.Point(336, 367);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(179, 79);
