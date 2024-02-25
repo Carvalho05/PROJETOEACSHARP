@@ -340,7 +340,7 @@
             // 
             // textBoxValor
             // 
-            this.textBoxValor.Location = new System.Drawing.Point(1311, 556);
+            this.textBoxValor.Location = new System.Drawing.Point(1354, 556);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(133, 22);
             this.textBoxValor.TabIndex = 37;
@@ -350,7 +350,7 @@
             // 
             this.labelValor.AutoSize = true;
             this.labelValor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValor.Location = new System.Drawing.Point(1114, 553);
+            this.labelValor.Location = new System.Drawing.Point(1092, 556);
             this.labelValor.Name = "labelValor";
             this.labelValor.Size = new System.Drawing.Size(178, 24);
             this.labelValor.TabIndex = 39;
@@ -375,7 +375,7 @@
             "±5%",
             "±10%",
             "±20%"});
-            this.comboBoxUnidades2.Location = new System.Drawing.Point(1460, 554);
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(1503, 554);
             this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxUnidades2.Name = "comboBoxUnidades2";
             this.comboBoxUnidades2.Size = new System.Drawing.Size(172, 27);

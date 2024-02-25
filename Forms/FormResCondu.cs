@@ -136,6 +136,9 @@ namespace EletroMath.Forms
                 comboBoxTole.Items.Add("Grey");
                 comboBoxTole.Items.Add("Gold");
                 comboBoxTole.Items.Add("Silver");
+
+                textBoxValor.Location = new Point(970, 452);
+                comboBoxUnidades2.Location = new Point(1080, 451);
             }
             else if (idiomaAtual == "portugues")
             {
