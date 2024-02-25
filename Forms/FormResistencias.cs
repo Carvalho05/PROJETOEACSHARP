@@ -409,22 +409,22 @@ namespace EletroMath.Forms
                     resistencia *= 1e6;
                     break;
 
-                case "KiloOhms (KΩ)":
+                case "kiloOhms (kΩ)":
                     resistencia *= 1e3;
                     break;
 
                 case "Ohms (Ω)":
                     break;
 
-                case "MiliOhms (mΩ)":
+                case "miliOhms (mΩ)":
                     resistencia *= 1e-3;
                     break;
 
-                case "MicroOhms (µΩ)":
+                case "microOhms (µΩ)":
                     resistencia *= 1e-6;
                     break;
 
-                case "NanoOhms (nΩ)":
+                case "nanoOhms (nΩ)":
                     resistencia *= 1e-9;
                     break;
 
