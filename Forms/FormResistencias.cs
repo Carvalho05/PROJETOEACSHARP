@@ -37,11 +37,11 @@ namespace EletroMath.Forms
             //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidades2.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidades2.Items.Add("kiloOhms (KΩ)");
+            comboBoxUnidades2.Items.Add("KiloOhms (KΩ)");
             comboBoxUnidades2.Items.Add("Ohms (Ω)");
-            comboBoxUnidades2.Items.Add("miliOhms (mΩ)");
-            comboBoxUnidades2.Items.Add("microOhms (µΩ)");
-            comboBoxUnidades2.Items.Add("nanoOhms (nΩ)");
+            comboBoxUnidades2.Items.Add("MiliOhms (mΩ)");
+            comboBoxUnidades2.Items.Add("MicroOhms (µΩ)");
+            comboBoxUnidades2.Items.Add("NanoOhms (nΩ)");
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
@@ -402,22 +402,22 @@ namespace EletroMath.Forms
                     resistencia *= 1e6;
                     break;
 
-                case "kiloOhms (KΩ)":
+                case "KiloOhms (KΩ)":
                     resistencia *= 1e3;
                     break;
 
                 case "Ohms (Ω)":
                     break;
 
-                case "miliOhms (mΩ)":
+                case "MiliOhms (mΩ)":
                     resistencia *= 1e-3;
                     break;
 
-                case "microOhms (µΩ)":
+                case "MicroOhms (µΩ)":
                     resistencia *= 1e-6;
                     break;
 
-                case "nanoOhms (nΩ)":
+                case "NanoOhms (nΩ)":
                     resistencia *= 1e-9;
                     break;
 
