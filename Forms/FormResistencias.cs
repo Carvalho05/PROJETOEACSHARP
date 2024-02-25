@@ -184,11 +184,11 @@ namespace EletroMath.Forms
                 //Opções da ComboBox
                 newComboBox.Items.Add("GigaOhms (GΩ)");
                 newComboBox.Items.Add("MegaOhms (MΩ)");
-                newComboBox.Items.Add("KiloOhms (KΩ)");
+                newComboBox.Items.Add("kiloOhms (KΩ)");
                 newComboBox.Items.Add("Ohms (Ω)");
-                newComboBox.Items.Add("MiliOhms (mΩ)");
-                newComboBox.Items.Add("MicroOhms (µΩ)");
-                newComboBox.Items.Add("NanoOhms (nΩ)");
+                newComboBox.Items.Add("miliOhms (mΩ)");
+                newComboBox.Items.Add("microOhms (µΩ)");
+                newComboBox.Items.Add("nanoOhms (nΩ)");
 
                 // Indice da Opção Desejada como Seleção Inicial
                 newComboBox.SelectedIndex = 3;
@@ -199,7 +199,7 @@ namespace EletroMath.Forms
         }
 
         //Função para Remover Caixas de Texto
-       private void RemoveBoxes()
+        private void RemoveBoxes()
         {
             //Remove as Caixas Inseridas até só Existir Menos que 3
             if (textboxCount > 3)
@@ -250,55 +250,8 @@ namespace EletroMath.Forms
                     return valor;
             }
         }
-        //Cálculo Paralelo Resistencias
+        //Cálculo Série Resistências
         private void ResSerie(TextBox textBoxResultado)
-        {
-            double ResistenciaTotal = 0;
-            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
-
-            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
-            {
-                double Resistencia;
-                if (double.TryParse(control.Text, out Resistencia))
-                {
-                    ResistenciaTotal += Resistencia;
-                }
-                else
-                {
-                    // Se um valor não puder ser Convertido para Double, Definimos a Flag como False
-                    valoresValidos = false;
-                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
-                }
-            }
-
-            if (!valoresValidos)
-            {
-                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
-                if (idiomaResistencias == "portugues")
-                {
-                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
-                }
-                else if (idiomaResistencias == "ingles")
-                {
-                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
-                }
-
-                labelResultado2.Visible = false;
-                textBox5.Visible = false;
-                return;
-            }
-            else
-            {
-                // Exibimos o Valor Calculado na TextBox de Resultado
-                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Farads";
-                labelResultado2.Visible = true;
-                textBox5.Visible = true;
-            }
-        }
-
-        //Cálculo Série Resistencias
-        private void ResParalelo(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
             bool valoresValidos = true;
@@ -316,7 +269,7 @@ namespace EletroMath.Forms
                     // Aplica a conversão de unidades à resistência individual
                     Resistencia = ConverterUnidade(Resistencia, unidade);
 
-                    ResistenciaTotal += 1/Resistencia;
+                    ResistenciaTotal += Resistencia;
                 }
                 else
                 {
@@ -344,14 +297,68 @@ namespace EletroMath.Forms
             else
             {
                 // Exibimos o Valor Calculado na TextBox de Resultado
-                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Farads";
+                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
+                labelResultado2.Visible = true;
+                textBox5.Visible = true;
+            }
+        }
+
+        //Cálculo Paralelo Resistências
+        private void ResParalelo(TextBox textBoxResultado)
+        {
+            double ResistenciaTotal = 0;
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
+
+            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
+            {
+                Control controlResistencia = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
+
+                double Resistencia;
+                string unidade = controlUnidade.Text;
+
+                if (double.TryParse(controlResistencia.Text, out Resistencia))
+                {
+                    // Aplica a conversão de unidades à resistência individual
+                    Resistencia = ConverterUnidade(Resistencia, unidade);
+
+                    ResistenciaTotal += 1/Resistencia;
+                }
+                else
+                {
+                    valoresValidos = false;
+                    break;
+                }
+            }
+            ResistenciaTotal = 1 / ResistenciaTotal;
+            if (!valoresValidos)
+            {
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro 
+                if (idiomaResistencias == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaResistencias == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+
+                labelResultado2.Visible = false;
+                textBox5.Visible = false;
+                return;
+            }
+            else
+            {
+                // Exibimos o Valor Calculado na TextBox de Resultado
+                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
             }
         }
 
         //Cálculo Condutância
-        private void Condutancia(TextBox textBoxResultado) 
+        private void Condutancia(TextBox textBoxResultado)
         {
             double resistencia = 0, condutancia = 0;
 
@@ -433,7 +440,7 @@ namespace EletroMath.Forms
         }
 
 
-    
+
         #endregion Codigo Calculo 
 
         #region Codigo Botoes
