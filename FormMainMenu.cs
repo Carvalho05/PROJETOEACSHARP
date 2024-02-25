@@ -258,11 +258,11 @@ namespace EletroMath
                 btnSin.Text = "Digital Signals";
                 btnAssoRes.Text = "Resistor Calculation and Conductance";
                 btnCondRes.Text = "Resistor Color Code";
-<<<<<<< Updated upstream
+
                 btnTempRes.Text = "Resistivity and Temperature Coefficient";
-=======
+
                 btnTempRes.Text = "Temperature Coefficient and Resistivity";
->>>>>>> Stashed changes
+
                 btnSMteo1.Text = "Ohm's Law and Dividers";
             }
             else if (idiomaAtual == "portugues")
@@ -274,11 +274,11 @@ namespace EletroMath
                 btnSin.Text = "Sinais Digitais";
                 btnAssoRes.Text = "Cálculo de Resistências e Condutância";
                 btnCondRes.Text = "Código de Cores";
-<<<<<<< Updated upstream
+
                 btnTempRes.Text = "Resistividade e Coeficiente de Temperatura";
-=======
+
                 btnTempRes.Text = "Coeficiente de Temperatura e Resistividade";
->>>>>>> Stashed changes
+
                 btnSMteo1.Text = "Lei de Ohm e Divisores";
                 
             }
