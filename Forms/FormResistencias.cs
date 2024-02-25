@@ -26,9 +26,9 @@ namespace EletroMath.Forms
             comboBoxUnidades.Items.Add("MegaOhms (MΩ)");
             comboBoxUnidades.Items.Add("KiloOhms (kΩ)");
             comboBoxUnidades.Items.Add("Ohms (Ω)");
-            comboBoxUnidades.Items.Add("MiliOhms (mΩ)");
-            comboBoxUnidades.Items.Add("MicroOhms (µΩ)");
-            comboBoxUnidades.Items.Add("NanoOhms (nΩ)");
+            comboBoxUnidades.Items.Add("miliOhms (mΩ)");
+            comboBoxUnidades.Items.Add("microOhms (µΩ)");
+            comboBoxUnidades.Items.Add("nanoOhms (nΩ)");
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
@@ -39,9 +39,9 @@ namespace EletroMath.Forms
             comboBoxUnidades2.Items.Add("MegaOhms (MΩ)");
             comboBoxUnidades2.Items.Add("KiloOhms (KΩ)");
             comboBoxUnidades2.Items.Add("Ohms (Ω)");
-            comboBoxUnidades2.Items.Add("MiliOhms (mΩ)");
-            comboBoxUnidades2.Items.Add("MicroOhms (µΩ)");
-            comboBoxUnidades2.Items.Add("NanoOhms (nΩ)");
+            comboBoxUnidades2.Items.Add("miliOhms (mΩ)");
+            comboBoxUnidades2.Items.Add("microOhms (µΩ)");
+            comboBoxUnidades2.Items.Add("nanoOhms (nΩ)");
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;

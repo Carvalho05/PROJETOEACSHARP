@@ -212,7 +212,7 @@ namespace EletroMath.Forms
                 // Adicionamento de Novos Controles aos FlowLayoutPanels
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
-                flowLayoutPanel3.Controls.Add(newComboBox);
+                flowLayoutPanel2.Controls.Add(newComboBox);
 
                 //Opções da ComboBox
                 newComboBox.Items.Add("GigaHenrys (GH)");
@@ -242,7 +242,7 @@ namespace EletroMath.Forms
                     //Remove os Últimos Controles Adicionados aos FlowLayoutPanels
                     flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
                     flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
-                    flowLayoutPanel3.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
+                    flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     textboxCount--;
                 }
             }
@@ -253,19 +253,52 @@ namespace EletroMath.Forms
         #region Calculo Bobines
 
         #region Codigo Calculo 
+        private double ConverterUnidade(double valor, string unidade)
+        {
+            switch (unidade)
+            {
+                case "GigaHenrys (GH)":
+                    return valor * 1e9;
 
-        //Cálculo Paralelo Bobines
+                case "MegaHenrys (MH)":
+                    return valor * 1e6;
+
+                case "KiloHenrys (kH)":
+                    return valor * 1e3;
+
+                case "Henrys (H)":
+                    return valor;
+
+                case "MiliHenrys (mH)":
+                    return valor * 1e-3;
+
+                case "MicroHenrys (µH)":
+                    return valor * 1e-6;
+
+                case "NanoHenrys (nH)":
+                    return valor * 1e-9;
+
+                default:
+                    // Se a unidade não for reconhecida, retorna o valor original
+                    return valor;
+            }
+        }
+        //Cálculo Série Bobines
         private void BobSerie(TextBox textBoxResultado)
         {
             double BobineTotal = 0;
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
             {
+                Control controlBobine = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
                 double Bobine;
-                if (double.TryParse(control.Text, out Bobine))
+                string unidade = controlUnidade.Text;
+                if (double.TryParse(controlBobine.Text, out Bobine))
                 {
+                    Bobine = ConverterUnidade(Bobine, unidade);
                     BobineTotal += Bobine;
                 }
                 else
@@ -301,19 +334,23 @@ namespace EletroMath.Forms
             }
         }
 
-        //Cálculo Série Bobines
+        //Cálculo Paralelo Bobines
         private void BobParalelo(TextBox textBoxResultado)
         {
             double BobineTotal = 0;
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
             {
+                Control controlBobine = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
                 double Bobine;
-                if (double.TryParse(control.Text, out Bobine))
+                string unidade = controlUnidade.Text;
+                if (double.TryParse(controlBobine.Text, out Bobine))
                 {
-                    BobineTotal += 1 / Bobine;
+                    Bobine = ConverterUnidade(Bobine, unidade);
+                    BobineTotal += 1/Bobine;
                 }
                 else
                 {

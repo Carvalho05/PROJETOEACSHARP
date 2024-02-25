@@ -21,15 +21,14 @@ namespace EletroMath.Forms
             
             AtualizarTextos();
 
-
             //Opções da comboBoxUnidades
             comboBoxUnidades.Items.Add("GigaFarads (GF)");
             comboBoxUnidades.Items.Add("MegaFarads (MF)");
-            comboBoxUnidades.Items.Add("KiloFarads (KF)");
+            comboBoxUnidades.Items.Add("kiloFarads (kF)");
             comboBoxUnidades.Items.Add("Farads (F)");
-            comboBoxUnidades.Items.Add("MiliFarads (mF)");
-            comboBoxUnidades.Items.Add("MicroFarads (µF)");
-            comboBoxUnidades.Items.Add("NanoFarads (nF)");
+            comboBoxUnidades.Items.Add("miliFarads (mF)");
+            comboBoxUnidades.Items.Add("microFarads (µF)");
+            comboBoxUnidades.Items.Add("nanoFarads (nF)");
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades.SelectedIndex = 3;
@@ -38,11 +37,11 @@ namespace EletroMath.Forms
             //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaFarads (GF)");
             comboBoxUnidades2.Items.Add("MegaFarads (MF)");
-            comboBoxUnidades2.Items.Add("KiloFarads (KF)");
+            comboBoxUnidades2.Items.Add("kiloFarads (kF)");
             comboBoxUnidades2.Items.Add("Farads (F)");
-            comboBoxUnidades2.Items.Add("MiliFarads (mF)");
-            comboBoxUnidades2.Items.Add("MicroFarads (µF)");
-            comboBoxUnidades2.Items.Add("NanoFarads (nF)");
+            comboBoxUnidades2.Items.Add("miliFarads (mF)");
+            comboBoxUnidades2.Items.Add("microFarads (µF)");
+            comboBoxUnidades2.Items.Add("nanoFarads (nF)");
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxUnidades2.SelectedIndex = 3;
@@ -216,12 +215,12 @@ namespace EletroMath.Forms
                 // Adicionamento de Novos Controles ao FlowLayoutPanel
                 flowLayoutPanel1.Controls.Add(newLabel);
                 flowLayoutPanel2.Controls.Add(newTextBox);
-                flowLayoutPanel3.Controls.Add(newComboBox);
+                flowLayoutPanel2.Controls.Add(newComboBox);
 
                 //Opções da ComboBox
                 newComboBox.Items.Add("GigaFarads (GF)");
                 newComboBox.Items.Add("MegaFarads (MF)");
-                newComboBox.Items.Add("kiloFarads (KF)");
+                newComboBox.Items.Add("kiloFarads (kF)");
                 newComboBox.Items.Add("Farads (F)");
                 newComboBox.Items.Add("miliFarads (mF)");
                 newComboBox.Items.Add("microFarads (µF)");
@@ -246,7 +245,7 @@ namespace EletroMath.Forms
                     // Remova os Últimos Controles Adicionados dos FlowLayoutPanels
                     flowLayoutPanel1.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
                     flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
-                    flowLayoutPanel3.Controls.RemoveAt(flowLayoutPanel1.Controls.Count - 1);
+                    flowLayoutPanel2.Controls.RemoveAt(flowLayoutPanel2.Controls.Count - 1);
                     textboxCount--;
                 }
             }
@@ -257,7 +256,36 @@ namespace EletroMath.Forms
         #region Calculo Condensadores
 
         #region Codigo Calculo 
+        private double ConverterUnidade(double valor, string unidade)
+        {
+            switch (unidade)
+            {
+                case "GigaFarads (GF)":
+                    return valor * 1e9;
 
+                case "MegaFarads (MF)":
+                    return valor * 1e6;
+
+                case "kiloFarads (kF)":
+                    return valor * 1e3;
+
+                case "Farads (F)":
+                    return valor;
+
+                case "miliFarads (mF)":
+                    return valor * 1e-3;
+
+                case "microFarads (µF)":
+                    return valor * 1e-6;
+
+                case "nanoFarads (nF)":
+                    return valor * 1e-9;
+
+                default:
+                    // Se a unidade não for reconhecida, retorna o valor original
+                    return valor;
+            }
+        }
         //Cálculo Paralelo Condensadores
         private void ConParalelo(TextBox textBoxResultado)
         {
@@ -265,11 +293,15 @@ namespace EletroMath.Forms
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
             {
+                Control controlCondensador = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
                 double Condensador;
-                if (double.TryParse(control.Text, out Condensador))
+                string unidade = controlUnidade.Text;
+                if (double.TryParse(controlCondensador.Text, out Condensador))
                 {
+                    Condensador = ConverterUnidade(Condensador, unidade);
                     CondensadorTotal += Condensador;
                 }
                 else
@@ -312,16 +344,20 @@ namespace EletroMath.Forms
             bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
             // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
             {
+                Control controlCondensador = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
                 double Condensador;
-                if (double.TryParse(control.Text, out Condensador))
+                string unidade = controlUnidade.Text;
+                if (double.TryParse(controlCondensador.Text, out Condensador))
                 {
-                    CondensadorTotal += 1 / Condensador;
+                    Condensador = ConverterUnidade(Condensador, unidade);
+                    CondensadorTotal += 1/Condensador;
                 }
                 else
                 {
-                    // Se um Valor não puder ser Convertido para Double, Definimos a Flag como False
+                    // Se um valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
                     break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }

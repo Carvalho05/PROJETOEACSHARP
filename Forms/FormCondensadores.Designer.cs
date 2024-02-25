@@ -34,9 +34,6 @@
             this.btnPar = new System.Windows.Forms.Button();
             this.btnRem = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.labelCapacitancia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,14 +50,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBoxUnidades = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBoxUnidades2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnRem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAssoRes
@@ -124,35 +122,6 @@
             this.btnAdd.TabIndex = 15;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.Controls.Add(this.textBox4);
-            this.flowLayoutPanel2.Controls.Add(this.textBox6);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(1324, 210);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(100, 334);
-            this.flowLayoutPanel2.TabIndex = 21;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(3, 4);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(97, 27);
-            this.textBox4.TabIndex = 15;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(3, 39);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(97, 27);
-            this.textBox6.TabIndex = 16;
             // 
             // labelCapacitancia
             // 
@@ -335,45 +304,61 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1163, 210);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 334);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(143, 310);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
-            // comboBoxUnidades2
+            // flowLayoutPanel2
             // 
-            this.comboBoxUnidades2.FormattingEnabled = true;
-            this.comboBoxUnidades2.Location = new System.Drawing.Point(3, 33);
-            this.comboBoxUnidades2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
-            this.comboBoxUnidades2.Size = new System.Drawing.Size(161, 27);
-            this.comboBoxUnidades2.TabIndex = 1;
+            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel2.Controls.Add(this.textBox7);
+            this.flowLayoutPanel2.Controls.Add(this.comboBoxUnidades);
+            this.flowLayoutPanel2.Controls.Add(this.textBox8);
+            this.flowLayoutPanel2.Controls.Add(this.comboBoxUnidades2);
+            this.flowLayoutPanel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1332, 210);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 305);
+            this.flowLayoutPanel2.TabIndex = 43;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(3, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(98, 27);
+            this.textBox7.TabIndex = 15;
             // 
             // comboBoxUnidades
             // 
             this.comboBoxUnidades.FormattingEnabled = true;
-            this.comboBoxUnidades.Location = new System.Drawing.Point(3, 2);
-            this.comboBoxUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxUnidades.Location = new System.Drawing.Point(107, 3);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
-            this.comboBoxUnidades.Size = new System.Drawing.Size(161, 27);
-            this.comboBoxUnidades.TabIndex = 0;
+            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxUnidades.TabIndex = 16;
             // 
-            // flowLayoutPanel3
+            // textBox8
             // 
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades);
-            this.flowLayoutPanel3.Controls.Add(this.comboBoxUnidades2);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(1432, 210);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(165, 334);
-            this.flowLayoutPanel3.TabIndex = 22;
+            this.textBox8.Location = new System.Drawing.Point(3, 39);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(98, 27);
+            this.textBox8.TabIndex = 17;
+            // 
+            // comboBoxUnidades2
+            // 
+            this.comboBoxUnidades2.FormattingEnabled = true;
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(107, 38);
+            this.comboBoxUnidades2.Name = "comboBoxUnidades2";
+            this.comboBoxUnidades2.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxUnidades2.TabIndex = 18;
             // 
             // FormCondensadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1883, 1004);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.labelResultado2);
@@ -387,9 +372,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelCapacitancia);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.labelAssoRes);
             this.Controls.Add(this.btnSer);
             this.Controls.Add(this.btnPar);
@@ -401,11 +384,10 @@
             this.Load += new System.EventHandler(this.FormCondensadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnRem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,8 +400,6 @@
         private System.Windows.Forms.Button btnPar;
         private System.Windows.Forms.PictureBox btnRem;
         private System.Windows.Forms.PictureBox btnAdd;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label labelCapacitancia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -433,12 +413,13 @@
         private System.Windows.Forms.Label labelResultado2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBoxUnidades2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ComboBox comboBoxUnidades;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox comboBoxUnidades2;
     }
 }
