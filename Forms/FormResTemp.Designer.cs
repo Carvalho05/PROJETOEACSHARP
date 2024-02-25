@@ -84,7 +84,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox5.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(696, 456);
+            this.textBox5.Location = new System.Drawing.Point(336, 429);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -97,7 +97,7 @@
             this.labelResultado1.AutoSize = true;
             this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado1.Location = new System.Drawing.Point(544, 456);
+            this.labelResultado1.Location = new System.Drawing.Point(191, 429);
             this.labelResultado1.Name = "labelResultado1";
             this.labelResultado1.Size = new System.Drawing.Size(139, 24);
             this.labelResultado1.TabIndex = 68;
@@ -268,30 +268,33 @@
             // labelMaterial
             // 
             this.labelMaterial.AutoSize = true;
-            this.labelMaterial.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaterial.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaterial.ForeColor = System.Drawing.Color.Blue;
             this.labelMaterial.Location = new System.Drawing.Point(283, 245);
             this.labelMaterial.Name = "labelMaterial";
-            this.labelMaterial.Size = new System.Drawing.Size(69, 21);
+            this.labelMaterial.Size = new System.Drawing.Size(70, 21);
             this.labelMaterial.TabIndex = 78;
             this.labelMaterial.Text = "Material";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
             this.label5.Location = new System.Drawing.Point(191, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 21);
+            this.label5.Size = new System.Drawing.Size(163, 21);
             this.label5.TabIndex = 79;
             this.label5.Text = "Comprimento (em m)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
             this.label6.Location = new System.Drawing.Point(247, 346);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 21);
+            this.label6.Size = new System.Drawing.Size(107, 21);
             this.label6.TabIndex = 80;
             this.label6.Text = "Área (em m2)";
             // 
