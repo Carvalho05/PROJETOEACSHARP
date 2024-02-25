@@ -340,7 +340,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(1337, 212);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 305);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(337, 305);
             this.flowLayoutPanel2.TabIndex = 59;
             // 
             // textBox8
@@ -348,15 +348,15 @@
             this.textBox8.Location = new System.Drawing.Point(3, 4);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(98, 27);
+            this.textBox8.Size = new System.Drawing.Size(133, 27);
             this.textBox8.TabIndex = 15;
             // 
             // comboBoxUnidades
             // 
             this.comboBoxUnidades.FormattingEnabled = true;
-            this.comboBoxUnidades.Location = new System.Drawing.Point(107, 3);
+            this.comboBoxUnidades.Location = new System.Drawing.Point(142, 3);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
-            this.comboBoxUnidades.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxUnidades.Size = new System.Drawing.Size(162, 27);
             this.comboBoxUnidades.TabIndex = 16;
             // 
             // textBox9
@@ -364,15 +364,15 @@
             this.textBox9.Location = new System.Drawing.Point(3, 39);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(98, 27);
+            this.textBox9.Size = new System.Drawing.Size(133, 27);
             this.textBox9.TabIndex = 17;
             // 
             // comboBoxUnidades2
             // 
             this.comboBoxUnidades2.FormattingEnabled = true;
-            this.comboBoxUnidades2.Location = new System.Drawing.Point(107, 38);
+            this.comboBoxUnidades2.Location = new System.Drawing.Point(142, 38);
             this.comboBoxUnidades2.Name = "comboBoxUnidades2";
-            this.comboBoxUnidades2.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxUnidades2.Size = new System.Drawing.Size(162, 27);
             this.comboBoxUnidades2.TabIndex = 18;
             // 
             // FormBobines
