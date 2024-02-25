@@ -398,6 +398,7 @@
             this.Controls.Add(this.labelCoeficiente);
             this.Name = "FormTeo1";
             this.Text = "Teoremas";
+            this.Load += new System.EventHandler(this.FormTeo1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

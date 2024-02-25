@@ -49,15 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        <dsig:DigestValue>W6/4L/3jFw7VgihowQiFS475yuDPCTCrM553vpQztNk=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>tQx5XMrs+4IHEKji4CBU8RJbndlBGMhweJxwvgAXCeA=</dsig:DigestValue>
->>>>>>> Stashed changes
-=======
-        <dsig:DigestValue>vAhfes70sYdTjukhc9XoEuXXTdW+xUux2dMKLCQZfsY=</dsig:DigestValue>
->>>>>>> Stashed changes
+        <dsig:DigestValue>LIfll5RvtD2eMDurawjruTkoxgemLS1CjMXWMG626Ck=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

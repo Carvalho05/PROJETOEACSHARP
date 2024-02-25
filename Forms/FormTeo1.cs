@@ -71,8 +71,6 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
-            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
-            labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
         private void AtualizarTextos()
@@ -720,5 +718,9 @@ namespace EletroMath.Forms
 
         #endregion Calculo Divisores
 
+        private void FormTeo1_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
     }
 }
