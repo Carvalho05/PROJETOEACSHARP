@@ -272,6 +272,7 @@ namespace EletroMath
                 btnCondRes.Text = "Código de Cores";
                 btnTempRes.Text = "Coeficiente de Temperatura";
                 btnSMteo1.Text = "Lei de Ohm e Divisores";
+                
             }
         }
 

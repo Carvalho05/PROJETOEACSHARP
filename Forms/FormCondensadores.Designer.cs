@@ -226,7 +226,7 @@
             this.labelResultado1.AutoSize = true;
             this.labelResultado1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado1.Location = new System.Drawing.Point(145, 568);
+            this.labelResultado1.Location = new System.Drawing.Point(110, 568);
             this.labelResultado1.Name = "labelResultado1";
             this.labelResultado1.Size = new System.Drawing.Size(164, 29);
             this.labelResultado1.TabIndex = 32;
@@ -237,7 +237,7 @@
             this.labelResultado2.AutoSize = true;
             this.labelResultado2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.labelResultado2.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado2.Location = new System.Drawing.Point(1179, 542);
+            this.labelResultado2.Location = new System.Drawing.Point(1175, 538);
             this.labelResultado2.Name = "labelResultado2";
             this.labelResultado2.Size = new System.Drawing.Size(164, 29);
             this.labelResultado2.TabIndex = 33;
@@ -249,7 +249,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox3.Font = new System.Drawing.Font("Calibri Light", 14F);
-            this.textBox3.Location = new System.Drawing.Point(324, 571);
+            this.textBox3.Location = new System.Drawing.Point(280, 568);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(298, 29);
@@ -261,7 +261,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox5.Font = new System.Drawing.Font("Calibri Light", 14F);
-            this.textBox5.Location = new System.Drawing.Point(1349, 546);
+            this.textBox5.Location = new System.Drawing.Point(1345, 538);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(301, 29);
