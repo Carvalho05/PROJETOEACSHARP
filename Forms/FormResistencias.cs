@@ -307,27 +307,33 @@ namespace EletroMath.Forms
         private void ResParalelo(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
-            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
+            bool valoresValidos = true;
 
-            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
-            foreach (Control control in flowLayoutPanel2.Controls)
+            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
             {
+                Control controlResistencia = flowLayoutPanel2.Controls[i];
+                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
+
                 double Resistencia;
-                if (double.TryParse(control.Text, out Resistencia))
+                string unidade = controlUnidade.Text;
+
+                if (double.TryParse(controlResistencia.Text, out Resistencia))
                 {
-                    ResistenciaTotal += 1 / Resistencia;
+                    // Aplica a conversão de unidades à resistência individual
+                    Resistencia = ConverterUnidade(Resistencia, unidade);
+
+                    ResistenciaTotal += 1/Resistencia;
                 }
                 else
                 {
-                    // Se um Valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
+                    break;
                 }
             }
-            ResistenciaTotal = 1 / ResistenciaTotal;
+
             if (!valoresValidos)
             {
-                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro 
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");

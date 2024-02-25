@@ -23,6 +23,7 @@ namespace EletroMath.Forms
         {
             InitializeComponent();
             LoadTheme();
+            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
 
             //Associação da Variável Geral de Idioma do Form Coeficiente com a do Programa
             this.idiomaCoeficiente = idiomaAtual;
@@ -52,11 +53,12 @@ namespace EletroMath.Forms
             //Esconder Resultado
             labelResultado1.Visible = false;
             textBox5.Visible = false;
+            
 
             //Desativa TextBox1
             textBox1.Enabled = false;
 
-            //Opções da comboBoxMaterial
+            //Opções da comboBoxMaterial e ComboBox Resistividade
             if (idiomaCoeficiente == "portugues")
             {
                 comboBoxMaterial.Items.Add("Cobre");
@@ -72,6 +74,20 @@ namespace EletroMath.Forms
                 comboBoxMaterial.Items.Add("Poliestireno");
                 comboBoxMaterial.Items.Add("Polipropileno");
                 comboBoxMaterial.Items.Add(" PVC (Policloreto de Vinila)");
+
+                comboBoxResistividade.Items.Add("Cobre");
+                comboBoxResistividade.Items.Add("Alumínio");
+                comboBoxResistividade.Items.Add("Ouro");
+                comboBoxResistividade.Items.Add("Prata");
+                comboBoxResistividade.Items.Add("Ferro");
+                comboBoxResistividade.Items.Add("Níquel");
+                comboBoxResistividade.Items.Add("Carbono");
+                comboBoxResistividade.Items.Add("Tungstênio");
+                comboBoxResistividade.Items.Add("Zinco");
+                comboBoxResistividade.Items.Add("Platina");
+                comboBoxResistividade.Items.Add("Constantan");
+                comboBoxResistividade.Items.Add("Silício");
+                comboBoxResistividade.Items.Add("Vidro");
             }
             else if (idiomaCoeficiente == "ingles")
             {
@@ -88,10 +104,25 @@ namespace EletroMath.Forms
                 comboBoxMaterial.Items.Add("Polystyrene");
                 comboBoxMaterial.Items.Add("Polypropylene");
                 comboBoxMaterial.Items.Add("PVC (Polyvinyl Chloride)");
+
+                comboBoxResistividade.Items.Add("Copper");
+                comboBoxResistividade.Items.Add("Aluminum");
+                comboBoxResistividade.Items.Add("Gold");
+                comboBoxResistividade.Items.Add("Silver");
+                comboBoxResistividade.Items.Add("Iron");
+                comboBoxResistividade.Items.Add("Nickel");
+                comboBoxResistividade.Items.Add("Carbon (graphite)");
+                comboBoxResistividade.Items.Add("Tungsten");
+                comboBoxResistividade.Items.Add("Zinc");
+                comboBoxResistividade.Items.Add("Platinum");
+                comboBoxResistividade.Items.Add("Constantan");
+                comboBoxResistividade.Items.Add("Silicon");
+                comboBoxResistividade.Items.Add("Glass");
             }
 
             // Indice da Opção Desejada como Seleção Inicial
             comboBoxMaterial.SelectedIndex = -1;
+            comboBoxResistividade.SelectedIndex = -1;
 
         }
 
@@ -112,25 +143,36 @@ namespace EletroMath.Forms
 
         private void AtualizarTextos()
         {
-            if(idiomaCoeficiente == "portugues")
+            if (idiomaCoeficiente == "portugues")
             {
-                this.Text = "Coeficiente de Temperatura";
+                this.Text = "Resistividade e Coeficiente de Temperatura";
                 labelCoeficiente.Text = "Coeficiente de Temperatura";
                 labelResultado1.Text = "O Resultado é:";
                 btnCal.Text = "Calcular";
                 btnLimpar.Text = "Limpar";
                 button1.Text = "Calcular α";
                 button2.Text = "Calcular R2";
+                label5.Text = "Comprimento (em m)";
+                label6.Text = "Área (em m2)";
+                button3.Text = "Calcular";
+                btnLimparRes.Text = "Limpar";
+                labelResistividade.Text = "Resistividade";
+
             }
             else if (idiomaCoeficiente == "ingles")
             {
-                this.Text = "Temperature Coefficient";
+                this.Text = "Resistivity and Temperature Coefficient";
                 labelCoeficiente.Text = "Temperature Coefficient";
                 labelResultado1.Text = "The result is:";
                 btnCal.Text = "Calculate";
                 btnLimpar.Text = "Clear";
                 button1.Text = "Calculate α";
                 button2.Text = "Calculate R2";
+                label5.Text = "Length (in m)";
+                label6.Text = "Area (in m2)";
+                button3.Text = "Calculate";
+                btnLimparRes.Text = "Clear";
+                labelResistividade.Text = "Resistivity";
             }
         }
 
@@ -196,7 +238,7 @@ namespace EletroMath.Forms
                 textBox2.Location = new Point(930, 243);
                 textBox3.Location = new Point(930, 293);
                 textBox4.Location = new Point(930, 338);
-                
+
                 label1.Location = new Point(790, 197);
                 label2.Location = new Point(790, 243);
                 label3.Location = new Point(790, 293);
@@ -308,7 +350,7 @@ namespace EletroMath.Forms
         private void CalcularR2(TextBox textBoxResultado)
         {
             double R1 = 0, T1 = 0, R2 = 0, T2 = 0, alpha = 0;
-            
+
             // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
             if (!double.TryParse(textBox2.Text, out R1) ||
                 !double.TryParse(textBox3.Text, out T1) ||
@@ -419,7 +461,7 @@ namespace EletroMath.Forms
             }
 
             //Cálculo Seguindo a Respetiva Formúla
-            R2 = R1 * (1 + alpha * (T2-T1));
+            R2 = R1 * (1 + alpha * (T2 - T1));
 
             //Imprime o Resultado
             textBoxResultado.Text = R2.ToString("0.####") + " Ω";
@@ -446,7 +488,7 @@ namespace EletroMath.Forms
 
             //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
             this.TipoCalculo = TipoCalculo;
-            
+
             //Executa a Função InserirAlpha()
             InserirAlpha();
         }
@@ -455,7 +497,7 @@ namespace EletroMath.Forms
         {
             //Limpa Tudo que o Usuário Inseriu
             btnLimpar_Click(sender, e);
-            
+
             //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 1 ( Que Corresponde ao Cálculo do R2)
             int TipoCalculo = 1;
 
@@ -468,7 +510,7 @@ namespace EletroMath.Forms
 
         private void btnCal_Click(object sender, EventArgs e)
         {
-         //Se a Variável TipoCalculo for 0 será Execuatada a Função CalcularAlpha(), se for 1 será Execuatada a Função CalcularR2() 
+            //Se a Variável TipoCalculo for 0 será Execuatada a Função CalcularAlpha(), se for 1 será Execuatada a Função CalcularR2() 
             if (TipoCalculo == 0)
             {
                 //Executa a Função CalcularAlpha()
@@ -497,13 +539,127 @@ namespace EletroMath.Forms
             comboBoxMaterial.SelectedIndex = -1;
         }
 
+         private void btnLimparRes_Click(object sender, EventArgs e)
+         {
+                    //Limpa as TextBox
+                    textBoxComprimento.Text = "";
+                    textBoxArea.Text = "";
+                    textBox5.Text = "";
 
 
+                    //Esconde a Impressão de Resultado
+                    textBox5.Visible = false;
+                    labelResultado1.Visible = false;
+
+                    //Limpa a Opção Selecionada na ComboBoxMaterial
+                    comboBoxResistividade.SelectedIndex = -1;
+         }
+         private void button3_Click(object sender, EventArgs e)
+         {
+                    CalcularResistividade();
+                    labelResultado1.Visible = true;
+                    textBox5.Visible = true;
+            textBox5.Visible = true;
+        }
 
         #endregion Código Botões
 
         #endregion Coeficiente
 
+        #region Resistividade
+        private void CalcularResistividade()
+        {
+            double area = 0, comprimento = 0, resistividade = 1;
+            // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
+            if (!double.TryParse(textBoxArea.Text, out area) ||
+                !double.TryParse(textBoxComprimento.Text, out comprimento))
+            {
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
+                if (idiomaCoeficiente == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaCoeficiente == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+            }
+                string escolha = comboBoxResistividade.SelectedItem.ToString();
+                
+                switch (escolha)
+                {
+                    case "Cobre":
+                    case "Copper":
+                        resistividade = 1.68e-8;
+                        break;
+
+                    case "Alumínio":
+                    case "Aluminum":
+                        resistividade = 2.82e-8;
+                        break;
+
+                    case "Ouro":
+                    case "Gold":
+                        resistividade = 2.44e-8;
+                        break;
+
+                    case "Prata":
+                    case "Silver":
+                        resistividade = 1.59e-8;
+                        break;
+
+                    case "Ferro":
+                    case "Iron":
+                        resistividade = 9.71e-8;
+                        break;
+
+                    case "Níquel":
+                    case "Nickel":
+                        resistividade = 6.99e-7;
+                        break;
+
+                    case "Carbono":
+                    case "Carbon":
+                        resistividade = 1.0e-4;
+                        break;
+
+                    case "Tungstênio":
+                    case "Tungsten":
+                        resistividade = 5.6e-8;
+                        break;
+
+                    case "Zinco":
+                    case "Zinc":
+                        resistividade = 5.9e-7;
+                        break;
+
+                    case "Platina":
+                        resistividade = 1.06e-7;
+                        break;
+
+                    case "Constantan":
+                        resistividade = 4.9e-7;
+                        break;
+
+                    case "Silício":
+                    case "Silicon":
+                        resistividade = 6.4e2;
+                        break;
+
+                    case "Vidro":
+                    case "Glass":
+                        resistividade = 1.0e11;
+                        break;
+
+                    default:
+                        MessageBox.Show("Material não reconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                }
+
+                double calculoRes = resistividade * comprimento / area;
+                textBox5.Text = ($"{calculoRes}"+ " Ω");       
+        }
+        #endregion Resistividade
 
     }
 }
