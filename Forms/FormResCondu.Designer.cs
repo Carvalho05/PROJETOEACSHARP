@@ -110,6 +110,7 @@
             // 
             this.comboBoxFaixa1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxFaixa1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxFaixa1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFaixa1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxFaixa1.FormattingEnabled = true;
             this.comboBoxFaixa1.IntegralHeight = false;
@@ -136,6 +137,7 @@
             // 
             this.comboBoxFaixa2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxFaixa2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxFaixa2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFaixa2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxFaixa2.FormattingEnabled = true;
             this.comboBoxFaixa2.IntegralHeight = false;
@@ -162,6 +164,7 @@
             // 
             this.comboBoxFaixa3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxFaixa3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxFaixa3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFaixa3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxFaixa3.FormattingEnabled = true;
             this.comboBoxFaixa3.ItemHeight = 20;
@@ -186,6 +189,7 @@
             // 
             this.comboBoxMult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxMult.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxMult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMult.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxMult.FormattingEnabled = true;
             this.comboBoxMult.IntegralHeight = false;
@@ -211,6 +215,7 @@
             // 
             this.comboBoxTole.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxTole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxTole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxTole.FormattingEnabled = true;
             this.comboBoxTole.ItemHeight = 20;
@@ -232,6 +237,7 @@
             // 
             // btn5stripes
             // 
+            this.btn5stripes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5stripes.FlatAppearance.BorderSize = 0;
             this.btn5stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,6 +252,7 @@
             // 
             // btn4stripes
             // 
+            this.btn4stripes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4stripes.FlatAppearance.BorderSize = 0;
             this.btn4stripes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4stripes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,6 +325,8 @@
             // 
             // comboBoxUnidades
             // 
+            this.comboBoxUnidades.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxUnidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUnidades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxUnidades.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUnidades.ForeColor = System.Drawing.SystemColors.MenuText;
@@ -358,6 +367,8 @@
             // 
             // comboBoxUnidades2
             // 
+            this.comboBoxUnidades2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxUnidades2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUnidades2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxUnidades2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUnidades2.ForeColor = System.Drawing.SystemColors.MenuText;

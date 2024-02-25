@@ -191,6 +191,11 @@ namespace EletroMath.Forms
                 System.Windows.Forms.TextBox newTextBox = new System.Windows.Forms.TextBox();
                 System.Windows.Forms.ComboBox newComboBox = new System.Windows.Forms.ComboBox();
 
+                //Propriedades das Novas ComboBoxs
+                newComboBox.FlatStyle = FlatStyle.Flat;
+                newComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                newComboBox.Cursor = Cursors.Hand;
+
                 if (idiomaBobines == "portugues")
                 {
                     // Propriedades dos Novos Controles

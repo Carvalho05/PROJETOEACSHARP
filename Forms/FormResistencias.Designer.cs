@@ -64,7 +64,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox5.Font = new System.Drawing.Font("Calibri Light", 14F);
-            this.textBox5.Location = new System.Drawing.Point(1019, 525);
+            this.textBox5.Location = new System.Drawing.Point(1000, 513);
             this.textBox5.Margin = new System.Windows.Forms.Padding(0);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(244, 29);
@@ -75,7 +75,7 @@
             this.labelResultado2.AutoSize = true;
             this.labelResultado2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.labelResultado2.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado2.Location = new System.Drawing.Point(846, 525);
+            this.labelResultado2.Location = new System.Drawing.Point(827, 513);
             this.labelResultado2.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.labelResultado2.Name = "labelResultado2";
             this.labelResultado2.Size = new System.Drawing.Size(164, 29);
@@ -88,7 +88,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(859, 188);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(840, 188);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(111, 305);
@@ -126,7 +126,7 @@
             // 
             this.labelAssoRes.AutoSize = true;
             this.labelAssoRes.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssoRes.Location = new System.Drawing.Point(932, 37);
+            this.labelAssoRes.Location = new System.Drawing.Point(913, 37);
             this.labelAssoRes.Name = "labelAssoRes";
             this.labelAssoRes.Size = new System.Drawing.Size(238, 28);
             this.labelAssoRes.TabIndex = 40;
@@ -134,10 +134,11 @@
             // 
             // btnSer
             // 
+            this.btnSer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSer.FlatAppearance.BorderSize = 0;
             this.btnSer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSer.Location = new System.Drawing.Point(1052, 561);
+            this.btnSer.Location = new System.Drawing.Point(1033, 561);
             this.btnSer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSer.Name = "btnSer";
             this.btnSer.Size = new System.Drawing.Size(179, 79);
@@ -148,10 +149,11 @@
             // 
             // btnPar
             // 
+            this.btnPar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPar.FlatAppearance.BorderSize = 0;
             this.btnPar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPar.Location = new System.Drawing.Point(823, 561);
+            this.btnPar.Location = new System.Drawing.Point(804, 561);
             this.btnPar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPar.Name = "btnPar";
             this.btnPar.Size = new System.Drawing.Size(179, 79);
@@ -162,8 +164,9 @@
             // 
             // btnRem
             // 
+            this.btnRem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRem.Image = ((System.Drawing.Image)(resources.GetObject("btnRem.Image")));
-            this.btnRem.Location = new System.Drawing.Point(963, 119);
+            this.btnRem.Location = new System.Drawing.Point(944, 119);
             this.btnRem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRem.Name = "btnRem";
             this.btnRem.Size = new System.Drawing.Size(39, 46);
@@ -174,8 +177,9 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(1064, 119);
+            this.btnAdd.Location = new System.Drawing.Point(1045, 119);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(39, 46);
@@ -188,7 +192,7 @@
             // 
             this.labelCondutancia.AutoSize = true;
             this.labelCondutancia.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCondutancia.Location = new System.Drawing.Point(175, 37);
+            this.labelCondutancia.Location = new System.Drawing.Point(191, 37);
             this.labelCondutancia.Name = "labelCondutancia";
             this.labelCondutancia.Size = new System.Drawing.Size(130, 28);
             this.labelCondutancia.TabIndex = 46;
@@ -196,7 +200,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(269, 188);
+            this.textBox1.Location = new System.Drawing.Point(299, 188);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 28);
             this.textBox1.TabIndex = 47;
@@ -206,7 +210,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(56, 191);
+            this.label1.Location = new System.Drawing.Point(72, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 21);
             this.label1.TabIndex = 48;
@@ -214,10 +218,11 @@
             // 
             // comboBoxUnidadesCondutancia
             // 
+            this.comboBoxUnidadesCondutancia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxUnidadesCondutancia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUnidadesCondutancia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxUnidadesCondutancia.FormattingEnabled = true;
-            this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(401, 188);
+            this.comboBoxUnidadesCondutancia.Location = new System.Drawing.Point(428, 188);
             this.comboBoxUnidadesCondutancia.Name = "comboBoxUnidadesCondutancia";
             this.comboBoxUnidadesCondutancia.Size = new System.Drawing.Size(130, 29);
             this.comboBoxUnidadesCondutancia.TabIndex = 49;
@@ -228,7 +233,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox2.Font = new System.Drawing.Font("Calibri Light", 14F);
-            this.textBox2.Location = new System.Drawing.Point(217, 483);
+            this.textBox2.Location = new System.Drawing.Point(233, 483);
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(260, 29);
@@ -239,7 +244,7 @@
             this.labelResultado1.AutoSize = true;
             this.labelResultado1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado1.Location = new System.Drawing.Point(56, 483);
+            this.labelResultado1.Location = new System.Drawing.Point(72, 483);
             this.labelResultado1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.labelResultado1.Name = "labelResultado1";
             this.labelResultado1.Size = new System.Drawing.Size(164, 29);
@@ -248,10 +253,11 @@
             // 
             // btnCal
             // 
+            this.btnCal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCal.FlatAppearance.BorderSize = 0;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCal.Location = new System.Drawing.Point(72, 367);
+            this.btnCal.Location = new System.Drawing.Point(73, 367);
             this.btnCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(179, 79);
@@ -262,10 +268,11 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(336, 367);
+            this.btnLimpar.Location = new System.Drawing.Point(303, 367);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(179, 79);
@@ -290,7 +297,7 @@
             this.flowLayoutPanel2.Controls.Add(this.textBox3);
             this.flowLayoutPanel2.Controls.Add(this.comboBoxUnidades2);
             this.flowLayoutPanel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(974, 188);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(955, 188);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 305);
@@ -298,6 +305,9 @@
             // 
             // comboBoxUnidades
             // 
+            this.comboBoxUnidades.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxUnidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxUnidades.FormattingEnabled = true;
             this.comboBoxUnidades.Location = new System.Drawing.Point(107, 3);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
@@ -314,6 +324,9 @@
             // 
             // comboBoxUnidades2
             // 
+            this.comboBoxUnidades2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxUnidades2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidades2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxUnidades2.FormattingEnabled = true;
             this.comboBoxUnidades2.Location = new System.Drawing.Point(107, 38);
             this.comboBoxUnidades2.Name = "comboBoxUnidades2";

@@ -109,8 +109,8 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Clear";
 
                 //Ajuste nas Posições
-                textBox1.Location = new Point(223, 187);
-                comboBoxUnidadesCondutancia.Location = new Point(343, 187);
+                textBox1.Location = new Point(240, 187);
+                comboBoxUnidadesCondutancia.Location = new Point(358, 187);
 
                 //Ajuste nas Margens
                 labelResultado1.Padding = new Padding(35, 0, 0, 0);
@@ -133,8 +133,8 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Limpar";
 
                 //Ajuste nas Posições
-                textBox1.Location = new Point(227, 187);
-                comboBoxUnidadesCondutancia.Location = new Point(347, 187);
+                textBox1.Location = new Point(250, 187);
+                comboBoxUnidadesCondutancia.Location = new Point(368, 187);
 
                 //Ajuste nas Margens
                 labelResultado1.Padding = new Padding(25, 0, 0, 0);
@@ -159,8 +159,12 @@ namespace EletroMath.Forms
                 TextBox newTextBox = new TextBox();
                 ComboBox newComboBox = new ComboBox();
 
-                // Propriedades dos Novos Controles
+               //Propriedades das Novas ComboBoxs
+               newComboBox.FlatStyle = FlatStyle.Flat;
+               newComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+               newComboBox.Cursor = Cursors.Hand;
 
+                // Propriedades dos Novos Controles
                 if (idiomaResistencias == "portugues")
                 {
                     newLabel.Text = string.Format(" Resistência {0}", textboxCount);
@@ -192,9 +196,10 @@ namespace EletroMath.Forms
 
                 // Indice da Opção Desejada como Seleção Inicial
                 newComboBox.SelectedIndex = 3;
-
+                    
                 // Incrementa o Contador
                 textboxCount++;
+
             }
         }
 

@@ -139,6 +139,7 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,6 +154,7 @@
             // 
             // btnCal
             // 
+            this.btnCal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCal.FlatAppearance.BorderSize = 0;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,6 +262,7 @@
             // 
             // btnSer
             // 
+            this.btnSer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSer.FlatAppearance.BorderSize = 0;
             this.btnSer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,6 +277,7 @@
             // 
             // btnPar
             // 
+            this.btnPar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPar.FlatAppearance.BorderSize = 0;
             this.btnPar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -288,6 +292,7 @@
             // 
             // btnRem
             // 
+            this.btnRem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRem.Image = ((System.Drawing.Image)(resources.GetObject("btnRem.Image")));
             this.btnRem.Location = new System.Drawing.Point(1319, 144);
             this.btnRem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -300,6 +305,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Location = new System.Drawing.Point(1408, 144);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -353,6 +359,9 @@
             // 
             // comboBoxUnidades
             // 
+            this.comboBoxUnidades.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxUnidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxUnidades.FormattingEnabled = true;
             this.comboBoxUnidades.Location = new System.Drawing.Point(142, 3);
             this.comboBoxUnidades.Name = "comboBoxUnidades";
@@ -369,6 +378,9 @@
             // 
             // comboBoxUnidades2
             // 
+            this.comboBoxUnidades2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxUnidades2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidades2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxUnidades2.FormattingEnabled = true;
             this.comboBoxUnidades2.Location = new System.Drawing.Point(142, 38);
             this.comboBoxUnidades2.Name = "comboBoxUnidades2";

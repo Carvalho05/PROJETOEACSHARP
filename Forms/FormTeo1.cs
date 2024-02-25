@@ -121,7 +121,7 @@ namespace EletroMath.Forms
 
         #endregion Misc
 
-        #region Coeficiente
+        #region Lei de Ohm
 
         #region Cálculo
 
@@ -450,18 +450,10 @@ namespace EletroMath.Forms
             textBox2.Text = "";
 
             //Esconde as TextBoxs
-            textBox1.Visible = false;
-            textBox2.Visible = false;
             textBox5.Visible = false;
 
             //Esconde os Labels
             labelResultado1.Visible = false;
-            label1.Visible = false;
-            label2.Visible = false;
-
-            //Esconde os Botões
-            btnCal.Visible = false;
-            btnLimpar.Visible = false;
         }
 
 
@@ -470,7 +462,7 @@ namespace EletroMath.Forms
 
         #endregion Código Botões
 
-        #endregion Coeficiente
+        #endregion Lei de Ohm
 
         #region Calculo Divisores
 

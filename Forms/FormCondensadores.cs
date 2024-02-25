@@ -136,8 +136,6 @@ namespace EletroMath.Forms
                 label1.Text = "Capacitor 1";
                 label4.Text = "Capacitor 2";
 
-               
-
                 //Ajuste nas Posições
                 textBox1.Location = new Point(335, 205);
                 textBox2.Location = new Point(300, 253);
@@ -193,6 +191,11 @@ namespace EletroMath.Forms
                 System.Windows.Forms.Label newLabel = new System.Windows.Forms.Label();
                 System.Windows.Forms.TextBox newTextBox = new System.Windows.Forms.TextBox();
                 System.Windows.Forms.ComboBox newComboBox = new System.Windows.Forms.ComboBox();
+
+                //Propriedades das Novas ComboBoxs
+                newComboBox.FlatStyle = FlatStyle.Flat;
+                newComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                newComboBox.Cursor = Cursors.Hand;
 
                 if (idiomaCondensadores == "portugues")
                 {

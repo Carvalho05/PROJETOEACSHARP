@@ -154,9 +154,9 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Limpar";
                 button1.Text = "Calcular α";
                 button2.Text = "Calcular R2";
-                label5.Text = "Comprimento (em m)";
-                label6.Text = "Área (em m2)";
-                button3.Text = "Calcular";
+                label5.Text = "Comprimento (em Metros, m)";
+                label6.Text = "Área (em Metros Quadradros,  m²)";
+                btnCal2.Text = "Calcular";
                 btnLimparRes.Text = "Limpar";
                 labelResistividade.Text = "Resistividade";
 
@@ -170,11 +170,15 @@ namespace EletroMath.Forms
                 btnLimpar.Text = "Clear";
                 button1.Text = "Calculate α";
                 button2.Text = "Calculate R2";
-                label5.Text = "Length (in m)";
-                label6.Text = "Area (in m2)";
-                button3.Text = "Calculate";
+                label5.Text = "Length (in Meters, m)";
+                label6.Text = "Area (in Square Meters, m²)";
+                btnCal2.Text = "Calculate";
                 btnLimparRes.Text = "Clear";
                 labelResistividade.Text = "Resistivity";
+
+                //Ajuste nas Posições
+                label5.Location = new Point(135, 240);
+                label6.Location = new Point(100, 279);
             }
         }
 
@@ -183,6 +187,8 @@ namespace EletroMath.Forms
             LoadTheme();
         }
         #endregion Misc
+
+        #region Calculo
 
         #region Coeficiente
 
@@ -476,96 +482,6 @@ namespace EletroMath.Forms
 
         #endregion Cálculo
 
-        #region Código Botões
-
-
-        private int TipoCalculo = 0;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Limpa Tudo que o Usuário Inseriu
-            btnLimpar_Click(sender, e);
-
-            //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 0 ( Que Corresponde ao Cálculo do Alpha)
-            int TipoCalculo = 0;
-
-            //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
-            this.TipoCalculo = TipoCalculo;
-
-            //Executa a Função InserirAlpha()
-            InserirAlpha();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Limpa Tudo que o Usuário Inseriu
-            btnLimpar_Click(sender, e);
-
-            //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 1 ( Que Corresponde ao Cálculo do R2)
-            int TipoCalculo = 1;
-
-            //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
-            this.TipoCalculo = TipoCalculo;
-
-            //Executa a Função InserirR2()
-            InserirR2();
-        }
-
-        private void btnCal_Click(object sender, EventArgs e)
-        {
-            //Se a Variável TipoCalculo for 0 será Execuatada a Função CalcularAlpha(), se for 1 será Execuatada a Função CalcularR2() 
-            if (TipoCalculo == 0)
-            {
-                //Executa a Função CalcularAlpha()
-                CalcularAlpha(textBox6);
-            }
-            else if (TipoCalculo == 1)
-            {
-                //Executa a Função CalcularR2()
-                CalcularR2(textBox6);
-            }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            //Limpa as TextBox
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-
-            //Esconde a Impressão de Resultado
-            textBox6.Visible = false;
-            labelResultado2.Visible = false;
-
-            //Limpa a Opção Selecionada na ComboBoxMaterial
-            comboBoxMaterial.SelectedIndex = -1;
-        }
-
-         private void btnLimparRes_Click(object sender, EventArgs e)
-         {
-                    //Limpa as TextBox
-                    textBoxComprimento.Text = "";
-                    textBoxArea.Text = "";
-                    textBox5.Text = "";
-
-
-                    //Esconde a Impressão de Resultado
-                    textBox5.Visible = false;
-                    labelResultado1.Visible = false;
-
-                    //Limpa a Opção Selecionada na ComboBoxMaterial
-                    comboBoxResistividade.SelectedIndex = -1;
-         }
-         private void button3_Click(object sender, EventArgs e)
-         {
-                    CalcularResistividade();
-                    labelResultado1.Visible = true;
-                    textBox5.Visible = true;
-            textBox5.Visible = true;
-        }
-
-        #endregion Código Botões
-
         #endregion Coeficiente
 
         #region Resistividade
@@ -585,6 +501,9 @@ namespace EletroMath.Forms
                 {
                     MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
                 }
+                labelResultado1.Visible = false;
+                textBox5.Visible = false;
+                return;
             }
                 string escolha = comboBoxResistividade.SelectedItem.ToString();
                 
@@ -659,9 +578,100 @@ namespace EletroMath.Forms
                 }
 
                 double calculoRes = resistividade * comprimento / area;
-                textBox5.Text = ($"{calculoRes}"+ " Ω");       
+                textBox5.Text = ($"{calculoRes}"+ " Ω");
+                labelResultado1.Visible = true;
+                textBox5.Visible = true;
         }
         #endregion Resistividade
+
+        #endregion Calculo
+
+        #region Código Botões
+
+
+        private int TipoCalculo = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Limpa Tudo que o Usuário Inseriu
+            btnLimpar_Click(sender, e);
+
+            //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 0 ( Que Corresponde ao Cálculo do Alpha)
+            int TipoCalculo = 0;
+
+            //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
+            this.TipoCalculo = TipoCalculo;
+
+            //Executa a Função InserirAlpha()
+            InserirAlpha();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Limpa Tudo que o Usuário Inseriu
+            btnLimpar_Click(sender, e);
+
+            //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 1 ( Que Corresponde ao Cálculo do R2)
+            int TipoCalculo = 1;
+
+            //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
+            this.TipoCalculo = TipoCalculo;
+
+            //Executa a Função InserirR2()
+            InserirR2();
+        }
+
+        private void btnCal_Click(object sender, EventArgs e)
+        {
+            //Se a Variável TipoCalculo for 0 será Execuatada a Função CalcularAlpha(), se for 1 será Execuatada a Função CalcularR2() 
+            if (TipoCalculo == 0)
+            {
+                //Executa a Função CalcularAlpha()
+                CalcularAlpha(textBox6);
+            }
+            else if (TipoCalculo == 1)
+            {
+                //Executa a Função CalcularR2()
+                CalcularR2(textBox6);
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            //Limpa as TextBox
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+
+            //Esconde a Impressão de Resultado
+            textBox6.Visible = false;
+            labelResultado2.Visible = false;
+
+            //Limpa a Opção Selecionada na ComboBoxMaterial
+            comboBoxMaterial.SelectedIndex = -1;
+        }
+
+        private void btnLimparRes_Click(object sender, EventArgs e)
+        {
+            //Limpa as TextBox
+            textBoxComprimento.Text = "";
+            textBoxArea.Text = "";
+            textBox5.Text = "";
+
+
+            //Esconde a Impressão de Resultado
+            textBox5.Visible = false;
+            labelResultado1.Visible = false;
+
+            //Limpa a Opção Selecionada na ComboBoxMaterial
+            comboBoxResistividade.SelectedIndex = -1;
+        }
+        private void btnCal2_Click(object sender, EventArgs e)
+        {
+            CalcularResistividade();
+        }
+
+        #endregion Código Botões
 
     }
 }
