@@ -63,22 +63,22 @@
             this.textBox5.BackColor = System.Drawing.SystemColors.Control;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox5.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(963, 655);
+            this.textBox5.Font = new System.Drawing.Font("Calibri Light", 14F);
+            this.textBox5.Location = new System.Drawing.Point(1019, 525);
             this.textBox5.Margin = new System.Windows.Forms.Padding(0);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(244, 25);
+            this.textBox5.Size = new System.Drawing.Size(244, 29);
             this.textBox5.TabIndex = 45;
             // 
             // labelResultado2
             // 
             this.labelResultado2.AutoSize = true;
-            this.labelResultado2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelResultado2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.labelResultado2.ForeColor = System.Drawing.Color.Red;
-            this.labelResultado2.Location = new System.Drawing.Point(826, 655);
+            this.labelResultado2.Location = new System.Drawing.Point(846, 525);
             this.labelResultado2.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.labelResultado2.Name = "labelResultado2";
-            this.labelResultado2.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado2.Size = new System.Drawing.Size(164, 29);
             this.labelResultado2.TabIndex = 44;
             this.labelResultado2.Text = "O Resultado é: ";
             // 
@@ -91,7 +91,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(859, 188);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(111, 334);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(111, 305);
             this.flowLayoutPanel1.TabIndex = 41;
             // 
             // label2
@@ -137,7 +137,7 @@
             this.btnSer.FlatAppearance.BorderSize = 0;
             this.btnSer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSer.Location = new System.Drawing.Point(1039, 528);
+            this.btnSer.Location = new System.Drawing.Point(1052, 561);
             this.btnSer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSer.Name = "btnSer";
             this.btnSer.Size = new System.Drawing.Size(179, 79);
@@ -151,7 +151,7 @@
             this.btnPar.FlatAppearance.BorderSize = 0;
             this.btnPar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPar.Location = new System.Drawing.Point(810, 528);
+            this.btnPar.Location = new System.Drawing.Point(823, 561);
             this.btnPar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPar.Name = "btnPar";
             this.btnPar.Size = new System.Drawing.Size(179, 79);
@@ -227,22 +227,22 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox2.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(192, 483);
+            this.textBox2.Font = new System.Drawing.Font("Calibri Light", 14F);
+            this.textBox2.Location = new System.Drawing.Point(217, 483);
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 25);
+            this.textBox2.Size = new System.Drawing.Size(260, 29);
             this.textBox2.TabIndex = 51;
             // 
             // labelResultado1
             // 
             this.labelResultado1.AutoSize = true;
-            this.labelResultado1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelResultado1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.labelResultado1.ForeColor = System.Drawing.Color.Red;
             this.labelResultado1.Location = new System.Drawing.Point(56, 483);
             this.labelResultado1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.labelResultado1.Name = "labelResultado1";
-            this.labelResultado1.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado1.Size = new System.Drawing.Size(164, 29);
             this.labelResultado1.TabIndex = 50;
             this.labelResultado1.Text = "O Resultado é: ";
             // 
@@ -293,7 +293,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(974, 188);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 334);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 305);
             this.flowLayoutPanel2.TabIndex = 42;
             // 
             // comboBoxUnidades
