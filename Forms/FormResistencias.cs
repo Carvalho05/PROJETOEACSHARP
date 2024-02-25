@@ -184,11 +184,11 @@ namespace EletroMath.Forms
                 //Opções da ComboBox
                 newComboBox.Items.Add("GigaOhms (GΩ)");
                 newComboBox.Items.Add("MegaOhms (MΩ)");
-                newComboBox.Items.Add("kiloOhms (KΩ)");
+                newComboBox.Items.Add("KiloOhms (KΩ)");
                 newComboBox.Items.Add("Ohms (Ω)");
-                newComboBox.Items.Add("miliOhms (mΩ)");
-                newComboBox.Items.Add("microOhms (µΩ)");
-                newComboBox.Items.Add("nanoOhms (nΩ)");
+                newComboBox.Items.Add("MiliOhms (mΩ)");
+                newComboBox.Items.Add("MicroOhms (µΩ)");
+                newComboBox.Items.Add("NanoOhms (nΩ)");
 
                 // Indice da Opção Desejada como Seleção Inicial
                 newComboBox.SelectedIndex = 3;
@@ -250,31 +250,25 @@ namespace EletroMath.Forms
                     return valor;
             }
         }
-        //Cálculo Série Resistências
+        //Cálculo Paralelo Resistencias
         private void ResSerie(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
-            bool valoresValidos = true; 
+            bool valoresValidos = true; // Flag para Verificar se todos os Valores são Válidos
 
-            for (int i = 0; i < flowLayoutPanel2.Controls.Count; i += 2) // Incremento de 2 para processar TextBox e ComboBox associada
+            // Loop através de todas as TextBoxes dentro do FlowLayoutPanel
+            foreach (Control control in flowLayoutPanel2.Controls)
             {
-                Control controlResistencia = flowLayoutPanel2.Controls[i];
-                Control controlUnidade = flowLayoutPanel2.Controls[i + 1];
-
                 double Resistencia;
-                string unidade = controlUnidade.Text;
-
-                if (double.TryParse(controlResistencia.Text, out Resistencia))
+                if (double.TryParse(control.Text, out Resistencia))
                 {
-                    // Aplica a conversão de unidades à resistência individual
-                    Resistencia = ConverterUnidade(Resistencia, unidade);
-
                     ResistenciaTotal += Resistencia;
                 }
                 else
                 {
+                    // Se um valor não puder ser Convertido para Double, Definimos a Flag como False
                     valoresValidos = false;
-                    break;
+                    break; // Sai do Loop, pois não há Necessidade de Continuar Verificando
                 }
             }
 
@@ -297,13 +291,13 @@ namespace EletroMath.Forms
             else
             {
                 // Exibimos o Valor Calculado na TextBox de Resultado
-                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
+                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Farads";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
             }
         }
 
-        //Cálculo Paralelo Resistências
+        //Cálculo Série Resistencias
         private void ResParalelo(TextBox textBoxResultado)
         {
             double ResistenciaTotal = 0;
@@ -327,7 +321,7 @@ namespace EletroMath.Forms
             ResistenciaTotal = 1 / ResistenciaTotal;
             if (!valoresValidos)
             {
-                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro 
+                // Se algum Valor não for Válido, Exibe uma Mensagem de Erro
                 if (idiomaResistencias == "portugues")
                 {
                     MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
@@ -344,7 +338,7 @@ namespace EletroMath.Forms
             else
             {
                 // Exibimos o Valor Calculado na TextBox de Resultado
-                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Ω";
+                textBoxResultado.Text = ResistenciaTotal.ToString("0.####") + " Farads";
                 labelResultado2.Visible = true;
                 textBox5.Visible = true;
             }
