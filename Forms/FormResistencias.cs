@@ -24,7 +24,7 @@ namespace EletroMath.Forms
             //Opções da comboBoxUnidades
             comboBoxUnidades.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidades.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidades.Items.Add("KiloOhms (kΩ)");
+            comboBoxUnidades.Items.Add("kiloOhms (kΩ)");
             comboBoxUnidades.Items.Add("Ohms (Ω)");
             comboBoxUnidades.Items.Add("miliOhms (mΩ)");
             comboBoxUnidades.Items.Add("microOhms (µΩ)");
@@ -37,7 +37,7 @@ namespace EletroMath.Forms
             //Opções da comboBoxUnidades2
             comboBoxUnidades2.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidades2.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidades2.Items.Add("KiloOhms (KΩ)");
+            comboBoxUnidades2.Items.Add("kiloOhms (kΩ)");
             comboBoxUnidades2.Items.Add("Ohms (Ω)");
             comboBoxUnidades2.Items.Add("miliOhms (mΩ)");
             comboBoxUnidades2.Items.Add("microOhms (µΩ)");
@@ -230,7 +230,7 @@ namespace EletroMath.Forms
                 case "MegaOhms (MΩ)":
                     return valor * 1e6;
 
-                case "kiloOhms (KΩ)":
+                case "kiloOhms (kΩ)":
                     return valor * 1e3;
 
                 case "Ohms (Ω)":
