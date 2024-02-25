@@ -30,7 +30,8 @@ namespace EletroMath
                                                                 "#133337",
                                                                 "#333333",
                                                                 "#ff0000",
-                                                                "#00d27f"};
+                                                                "#00d27f",
+                                                                "#ff4d00"};
 
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
