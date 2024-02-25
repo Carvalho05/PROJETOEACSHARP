@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\projetoeacsharp\\forms\\formbobines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formbobines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\projetoeacsharp\\forms\\formbobines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formbobines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\projetoeacsharp\\forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|c:\\users\\diogo\\documents\\github\\projetoeacsharp\\projetoeacsharp\\projetoeacsharp\\forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2761A915-7916-4BB2-AB7D-94B3FFD7F7F4}|EletroMath.csproj|solutionrelative:forms\\formrestemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +39,56 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormBobines.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormBobines.cs",
+              "RelativeDocumentMoniker": "Forms\\FormBobines.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormBobines.cs",
+              "RelativeToolTip": "Forms\\FormBobines.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAYwHoAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T06:11:37.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormBobines.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormBobines.cs",
+              "RelativeDocumentMoniker": "Forms\\FormBobines.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormBobines.cs [Design]",
+              "RelativeToolTip": "Forms\\FormBobines.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T06:11:35.519Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormResTemp.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResTemp.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs",
+              "RelativeToolTip": "Forms\\FormResTemp.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAcwGYCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T06:05:44.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormResTemp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs",
+              "RelativeDocumentMoniker": "Forms\\FormResTemp.cs",
+              "ToolTip": "C:\\Users\\diogo\\Documents\\GitHub\\PROJETOEACSHARP\\PROJETOEACSHARP\\PROJETOEACSHARP\\Forms\\FormResTemp.cs [Design]",
+              "RelativeToolTip": "Forms\\FormResTemp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T06:05:42.955Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

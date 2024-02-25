@@ -510,8 +510,27 @@ namespace EletroMath.Forms
                 textBox5.Visible = false;
                 return;
             }
-                //Lê a Opção Selecionada na ComboBoxResistividade
-                string escolha = comboBoxResistividade.SelectedItem.ToString();
+
+            // Verifica se uma Opção foi Selecionada na ComboBox
+            if (comboBoxResistividade.SelectedItem == null)
+            {
+                // Se nenhuma Opção Válida for Selecionada, Exibe uma Mensagem de Erro
+                if (idiomaCoeficiente == "portugues")
+                {
+                    MessageBox.Show("Por favor, Selecione um Material na Lista");
+                }
+                else if (idiomaCoeficiente == "ingles")
+                {
+                    MessageBox.Show("Please Select a Material from the List");
+                }
+
+                labelResultado2.Visible = false;
+                textBox6.Visible = false;
+                return;
+            }
+
+            //Lê a Opção Selecionada na ComboBoxResistividade
+            string escolha = comboBoxResistividade.SelectedItem.ToString();
 
             //Consoante a Escolha na ComboBoxResistividade irá Realizar o Código Associado
             switch (escolha)

@@ -121,7 +121,7 @@ namespace EletroMath.Forms
                 labelResultado1.Text = "The result is:";
                 labelResultado2.Text = "The result is:";
                 labelindutancia.Text = "Calculation of Inductance";
-                labelAssoRes.Text = "Capacitor Association";
+                labelAssoRes.Text = "Coil Association";
                 btnSer.Text = "Series";
                 btnPar.Text = "Parallel";
                 btnCal.Text = "Calculate";

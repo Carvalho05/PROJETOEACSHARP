@@ -204,7 +204,7 @@
             // 
             this.labelindutancia.AutoSize = true;
             this.labelindutancia.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelindutancia.Location = new System.Drawing.Point(308, 59);
+            this.labelindutancia.Location = new System.Drawing.Point(282, 59);
             this.labelindutancia.Name = "labelindutancia";
             this.labelindutancia.Size = new System.Drawing.Size(214, 28);
             this.labelindutancia.TabIndex = 44;
@@ -254,11 +254,11 @@
             // 
             this.labelAssoRes.AutoSize = true;
             this.labelAssoRes.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAssoRes.Location = new System.Drawing.Point(1268, 59);
+            this.labelAssoRes.Location = new System.Drawing.Point(1284, 59);
             this.labelAssoRes.Name = "labelAssoRes";
-            this.labelAssoRes.Size = new System.Drawing.Size(295, 28);
+            this.labelAssoRes.Size = new System.Drawing.Size(226, 28);
             this.labelAssoRes.TabIndex = 40;
-            this.labelAssoRes.Text = "Associação de Condensadores";
+            this.labelAssoRes.Text = "Associação de Bobines";
             // 
             // btnSer
             // 
