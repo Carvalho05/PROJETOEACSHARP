@@ -47,20 +47,6 @@
             this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chart1.BackColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderSkin.BorderWidth = 0;
-<<<<<<< Updated upstream
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(255, 140);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(471, 300);
-=======
             chartArea2.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -74,7 +60,6 @@
             series2.Name = "Series1";
             this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(628, 369);
->>>>>>> Stashed changes
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
             // 
@@ -83,12 +68,8 @@
             this.txtBoxFreq.BackColor = System.Drawing.Color.LightGray;
             this.txtBoxFreq.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxFreq.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-            this.txtBoxFreq.Location = new System.Drawing.Point(128, 199);
-=======
             this.txtBoxFreq.Location = new System.Drawing.Point(166, 245);
             this.txtBoxFreq.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.txtBoxFreq.Name = "txtBoxFreq";
             this.txtBoxFreq.Size = new System.Drawing.Size(99, 17);
             this.txtBoxFreq.TabIndex = 14;
@@ -98,12 +79,8 @@
             this.txtBoxVolt.BackColor = System.Drawing.Color.LightGray;
             this.txtBoxVolt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxVolt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-            this.txtBoxVolt.Location = new System.Drawing.Point(127, 158);
-=======
             this.txtBoxVolt.Location = new System.Drawing.Point(166, 195);
             this.txtBoxVolt.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.txtBoxVolt.Name = "txtBoxVolt";
             this.txtBoxVolt.Size = new System.Drawing.Size(100, 17);
             this.txtBoxVolt.TabIndex = 13;
