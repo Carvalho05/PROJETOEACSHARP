@@ -120,7 +120,7 @@ namespace EletroMath.Forms
                 label6.Text = "Number of Turns of the Coil";
                 labelResultado1.Text = "The result is:";
                 labelResultado2.Text = "The result is:";
-                labelindutancia.Text = "Calculation of Indutance";
+                labelindutancia.Text = "Calculation of Inductance";
                 labelAssoRes.Text = "Capacitor Association";
                 btnSer.Text = "Series";
                 btnPar.Text = "Parallel";
