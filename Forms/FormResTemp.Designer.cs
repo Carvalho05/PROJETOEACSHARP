@@ -56,6 +56,8 @@
             this.textBoxArea = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnLimparRes = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.labelResultado2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +127,7 @@
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(1260, 527);
+            this.btnLimpar.Location = new System.Drawing.Point(1260, 580);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(179, 79);
@@ -141,7 +143,7 @@
             this.btnCal.FlatAppearance.BorderSize = 0;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCal.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCal.Location = new System.Drawing.Point(1033, 527);
+            this.btnCal.Location = new System.Drawing.Point(1033, 580);
             this.btnCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(179, 79);
@@ -356,11 +358,38 @@
             this.btnLimparRes.UseVisualStyleBackColor = true;
             this.btnLimparRes.Click += new System.EventHandler(this.btnLimparRes_Click);
             // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox6.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(1196, 506);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(323, 25);
+            this.textBox6.TabIndex = 87;
+            this.textBox6.TabStop = false;
+            // 
+            // labelResultado2
+            // 
+            this.labelResultado2.AutoSize = true;
+            this.labelResultado2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultado2.ForeColor = System.Drawing.Color.Red;
+            this.labelResultado2.Location = new System.Drawing.Point(1041, 506);
+            this.labelResultado2.Name = "labelResultado2";
+            this.labelResultado2.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado2.TabIndex = 86;
+            this.labelResultado2.Text = "O Resultado é: ";
+            // 
             // FormResTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1883, 1004);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.labelResultado2);
             this.Controls.Add(this.btnLimparRes);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBoxArea);
@@ -425,5 +454,7 @@
         private System.Windows.Forms.TextBox textBoxArea;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnLimparRes;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label labelResultado2;
     }
 }

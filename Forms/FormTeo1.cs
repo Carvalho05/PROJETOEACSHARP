@@ -71,6 +71,9 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+
+            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
+            labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
         private void AtualizarTextos()

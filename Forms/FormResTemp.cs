@@ -36,24 +36,23 @@ namespace EletroMath.Forms
             label2.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
+            labelResultado1.Visible = false;
+            labelResultado2.Visible = false;
 
             //Esconder TextBox
             textBox1.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = false;
             textBox4.Visible = false;
+            textBox5.Visible = false;
+            textBox6.Visible = false;
 
             //Esconder Botões
             btnCal.Visible = false;
             btnLimpar.Visible = false;
 
             //Esconder ComboBoxMaterial
-            comboBoxMaterial.Visible = false;
-
-            //Esconder Resultado
-            labelResultado1.Visible = false;
-            textBox5.Visible = false;
-            
+            comboBoxMaterial.Visible = false;         
 
             //Desativa TextBox1
             textBox1.Enabled = false;
@@ -139,6 +138,9 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+
+            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
+            labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
         private void AtualizarTextos()
@@ -245,7 +247,7 @@ namespace EletroMath.Forms
                 label4.Location = new Point(790, 338);
 
                 //Ajuste nas Margens
-                labelResultado1.Padding = new Padding(15, 0, 0, 0);
+                labelResultado2.Padding = new Padding(15, 0, 0, 0);
             }
 
         }
@@ -270,8 +272,8 @@ namespace EletroMath.Forms
                     MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
                 }
 
-                labelResultado1.Visible = false;
-                textBox5.Visible = false;
+                labelResultado2.Visible = false;
+                textBox6.Visible = false;
                 return;
             }
 
@@ -280,8 +282,8 @@ namespace EletroMath.Forms
 
             //Imprime o Resultado
             textBoxResultado.Text = alpha.ToString("0.####") + " Ω/ºC";
-            labelResultado1.Visible = true;
-            textBox5.Visible = true;
+            labelResultado2.Visible = true;
+            textBox6.Visible = true;
 
         }
         #endregion Cálcular Alpha
@@ -343,7 +345,7 @@ namespace EletroMath.Forms
                 label4.Location = new Point(790, 338);
 
                 //Ajuste nas Margens
-                labelResultado1.Padding = new Padding(15, 0, 0, 0);
+                labelResultado2.Padding = new Padding(15, 0, 0, 0);
             }
         }
 
@@ -366,8 +368,8 @@ namespace EletroMath.Forms
                     MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
                 }
 
-                labelResultado1.Visible = false;
-                textBox5.Visible = false;
+                labelResultado2.Visible = false;
+                textBox6.Visible = false;
                 return;
             }
 
@@ -384,8 +386,8 @@ namespace EletroMath.Forms
                     MessageBox.Show("Please Select a Material from the List");
                 }
 
-                labelResultado1.Visible = false;
-                textBox5.Visible = false;
+                labelResultado2.Visible = false;
+                textBox6.Visible = false;
                 return;
             }
 
@@ -465,8 +467,8 @@ namespace EletroMath.Forms
 
             //Imprime o Resultado
             textBoxResultado.Text = R2.ToString("0.####") + " Ω";
-            labelResultado1.Visible = true;
-            textBox5.Visible = true;
+            labelResultado2.Visible = true;
+            textBox6.Visible = true;
 
         }
 
@@ -514,12 +516,12 @@ namespace EletroMath.Forms
             if (TipoCalculo == 0)
             {
                 //Executa a Função CalcularAlpha()
-                CalcularAlpha(textBox5);
+                CalcularAlpha(textBox6);
             }
             else if (TipoCalculo == 1)
             {
                 //Executa a Função CalcularR2()
-                CalcularR2(textBox5);
+                CalcularR2(textBox6);
             }
         }
 
@@ -532,8 +534,8 @@ namespace EletroMath.Forms
             textBox4.Text = "";
 
             //Esconde a Impressão de Resultado
-            textBox5.Visible = false;
-            labelResultado1.Visible = false;
+            textBox6.Visible = false;
+            labelResultado2.Visible = false;
 
             //Limpa a Opção Selecionada na ComboBoxMaterial
             comboBoxMaterial.SelectedIndex = -1;
