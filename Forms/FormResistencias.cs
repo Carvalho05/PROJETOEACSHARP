@@ -50,7 +50,7 @@ namespace EletroMath.Forms
             //Opções da comboBoxCondutancia
             comboBoxUnidadesCondutancia.Items.Add("GigaOhms (GΩ)");
             comboBoxUnidadesCondutancia.Items.Add("MegaOhms (MΩ)");
-            comboBoxUnidadesCondutancia.Items.Add("KiloOhms (kΩ)");
+            comboBoxUnidadesCondutancia.Items.Add("kiloOhms (kΩ)");
             comboBoxUnidadesCondutancia.Items.Add("Ohms (Ω)");
             comboBoxUnidadesCondutancia.Items.Add("MiliOhms (mΩ)");
             comboBoxUnidadesCondutancia.Items.Add("MicroOhms (µΩ)");
@@ -184,7 +184,7 @@ namespace EletroMath.Forms
                 //Opções da ComboBox
                 newComboBox.Items.Add("GigaOhms (GΩ)");
                 newComboBox.Items.Add("MegaOhms (MΩ)");
-                newComboBox.Items.Add("kiloOhms (KΩ)");
+                newComboBox.Items.Add("kiloOhms (kΩ)");
                 newComboBox.Items.Add("Ohms (Ω)");
                 newComboBox.Items.Add("miliOhms (mΩ)");
                 newComboBox.Items.Add("microOhms (µΩ)");
