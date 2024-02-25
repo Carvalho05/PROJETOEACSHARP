@@ -30,17 +30,32 @@ namespace EletroMath.Forms
             label1.Visible = false;
             label2.Visible = false;
 
+            label4.Visible = false;
+            label3.Visible = false;
+            label5.Visible = false;
+
             //Esconder TextBox
             textBox1.Visible = false;
             textBox2.Visible = false;
+
+            textBox3.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
 
             //Esconder Botões
             btnCal.Visible = false;
             btnLimpar.Visible = false;
 
+            btnCal2.Visible = false;
+            btnLimpar2.Visible = false;
+
             //Esconder Resultado
             labelResultado1.Visible = false;
             textBox5.Visible = false;
+
+            labelResultado2.Visible = false;
+            textBox4.Visible = false;
+
         }
 
         //Aplicar Tema de Cores aos Botões
@@ -56,6 +71,8 @@ namespace EletroMath.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecundaryColor;
                 }
             }
+            labelResultado1.ForeColor = ThemeColor.PrimaryColor;
+            labelResultado2.ForeColor = ThemeColor.PrimaryColor;
         }
 
         private void AtualizarTextos()
@@ -64,23 +81,35 @@ namespace EletroMath.Forms
             {
                 this.Text = "Teoremas";
                 labelCoeficiente.Text = "Lei de Ohm";
+                labelDivTensaoCorrente.Text = "Divisor de Tensão e Corrente";
                 labelResultado1.Text = "O Resultado é:";
+                labelResultado2.Text = "O Resultado é:";
                 btnCal.Text = "Calcular";
                 btnLimpar.Text = "Limpar";
+                btnCal2.Text = "Calcular";
+                btnLimpar2.Text = "Limpar";
                 button1.Text = "Calcular Tensão";
                 button2.Text = "Calcular Corrente";
                 button3.Text = "Calcular Resistência";
+                button5.Text = "Divisor de Tensão";
+                button6.Text = "Divisor de Corrente";
             }
             else if (idiomaTeoremas1 == "ingles")
             {
                 this.Text = "Theorems";
                 labelCoeficiente.Text = "Ohm's Law";
+                labelDivTensaoCorrente.Text = "Voltage and Current Divider";
                 labelResultado1.Text = "The result is:";
+                labelResultado2.Text = "The result is:";
                 btnCal.Text = "Calculate";
                 btnLimpar.Text = "Clear";
+                btnCal2.Text = "Calculate";
+                btnLimpar2.Text = "Clear";
                 button1.Text = "Calculate Voltage";
                 button2.Text = "Calculate Current";
                 button3.Text = "Calculate Resistence";
+                button5.Text = "Voltage Divider";
+                button6.Text = "Current Divider";
             }
         }
 
@@ -419,9 +448,19 @@ namespace EletroMath.Forms
             textBox1.Text = "";
             textBox2.Text = "";
 
-            //Esconde a Impressão de Resultado
+            //Esconde as TextBoxs
+            textBox1.Visible = false;
+            textBox2.Visible = false;
             textBox5.Visible = false;
+
+            //Esconde os Labels
             labelResultado1.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+
+            //Esconde os Botões
+            btnCal.Visible = false;
+            btnLimpar.Visible = false;
         }
 
 
@@ -431,6 +470,255 @@ namespace EletroMath.Forms
         #endregion Código Botões
 
         #endregion Coeficiente
+
+        #region Calculo Divisores
+
+        #region Divisor de Tensão
+        private void InserirDivTensao()
+        {
+            //Retirar Invisibilidade
+            label4.Visible = true;
+            label3.Visible = true;
+            label5.Visible = true;
+
+            textBox3.Visible = true;
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+
+            btnCal2.Visible = true;
+            btnLimpar2.Visible = true;
+
+            //Inserir Frase nas Labels
+            if (idiomaTeoremas1 == "portugues")
+            {
+                label3.Text = "Digite o Valor da Resistência, Rn (Ω)";
+                label4.Text = "Digite o Valor da Resistência Equivalente, Req (Ω)";
+                label5.Text = "Digite o Valor da Fonte de Tensão, E (V)";
+
+                //Ajuste nas Posições
+                textBox3.Location = new Point(1130, 250);
+                textBox6.Location = new Point(1130, 290);
+                textBox7.Location = new Point(1130, 330);
+
+                label3.Location = new Point(820, 250);
+                label4.Location = new Point(820, 290);
+                label5.Location = new Point(820, 330);
+            }
+            else if (idiomaTeoremas1 == "ingles")
+            {
+                label3.Text = "Enter the Value of Resistance, Rn (Ω)";
+                label4.Text = "Enter the Value of the Equivalent Resistance, Req (Ω)";
+                label5.Text = "Enter the Value of the Voltage Source, E (V)";
+
+                //Ajuste nas Posições
+                textBox3.Location = new Point(1130, 250);
+                textBox6.Location = new Point(1130, 290);
+                textBox7.Location = new Point(1130, 330);
+
+                label3.Location = new Point(800, 250);
+                label4.Location = new Point(800, 290);
+                label5.Location = new Point(800, 330);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(15, 0, 0, 0);
+            }
+
+        }
+
+        private void CalcularDivTensao(TextBox textBoxResultado)
+        {
+            double Rn = 0, Req = 0, E = 0, U = 0;
+
+            // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
+            if (!double.TryParse(textBox3.Text, out Rn) ||
+                !double.TryParse(textBox6.Text, out Req) ||
+                !double.TryParse(textBox7.Text, out E))
+            {
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
+                if (idiomaTeoremas1 == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaTeoremas1 == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+
+                labelResultado2.Visible = false;
+                textBox4.Visible = false;
+                return;
+            }
+
+            //Cálculo Seguindo a Respetiva Formúla
+            U = (Rn / Req) * E;
+
+            //Imprime o Resultado
+            textBoxResultado.Text = U.ToString("0.####") + " V";
+            labelResultado2.Visible = true;
+            textBox4.Visible = true;
+
+        }
+        #endregion Divisor de Tensão
+
+        #region Divisor de Corrente
+        private void InserirDivCorrente()
+        {
+            //Retirar Invisibilidade
+            label4.Visible = true;
+            label3.Visible = true;
+            label5.Visible = true;
+
+
+            textBox3.Visible = true;
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+
+
+            btnCal2.Visible = true;
+            btnLimpar2.Visible = true;
+
+            //Inserir Frase nas Labels
+            if (idiomaTeoremas1 == "portugues")
+            {
+                label3.Text = "Digite o Valor da Resistência, Rn (Ω)";
+                label4.Text = "Digite o Valor da Resistência Equivalente, Req (Ω)";
+                label5.Text = "Digite o Valor da Corrente Total (A)";
+
+                //Ajuste nas Posições
+                textBox3.Location = new Point(1130, 250);
+                textBox6.Location = new Point(1130, 290);
+                textBox7.Location = new Point(1130, 330);
+
+                label3.Location = new Point(820, 250);
+                label4.Location = new Point(820, 290);
+                label5.Location = new Point(820, 330);
+            }
+            else if (idiomaTeoremas1 == "ingles")
+            {
+                label3.Text = "Enter the Value of Resistance, Rn (Ω)";
+                label4.Text = "Enter the Value of the Equivalent Resistance, Req (Ω)";
+                label5.Text = "Enter the Value of Total Current (A)";
+
+                //Ajuste nas Posições
+                textBox3.Location = new Point(1130, 250);
+                textBox6.Location = new Point(1130, 290);
+                textBox7.Location = new Point(1130, 330);
+
+                label3.Location = new Point(800, 250);
+                label4.Location = new Point(800, 290);
+                label5.Location = new Point(800, 330);
+
+                //Ajuste nas Margens
+                labelResultado1.Padding = new Padding(15, 0, 0, 0);
+            }
+
+        }
+
+        private void CalcularDivCorrente(TextBox textBoxResultado)
+        {
+            double Rn = 0, Req = 0, It = 0, I = 0;
+
+            // Verifica se a Conversão dos Valores das TextBoxes é Bem-Sucedida
+            if (!double.TryParse(textBox3.Text, out Rn) ||
+                !double.TryParse(textBox6.Text, out Req) ||
+                !double.TryParse(textBox7.Text, out It))
+            {
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
+                if (idiomaTeoremas1 == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idiomaTeoremas1 == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+
+                labelResultado2.Visible = false;
+                textBox4.Visible = false;
+                return;
+            }
+
+            //Cálculo Seguindo a Respetiva Formúla
+            I = (Req / Rn) * It;
+
+            //Imprime o Resultado
+            textBoxResultado.Text = I.ToString("0.####") + " A";
+            labelResultado2.Visible = true;
+            textBox4.Visible = true;
+
+        }
+
+        #endregion Divisor de Corrente
+
+        #region Código Botões
+
+
+        private int TipoCalculo2 = 0;
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Limpa Tudo que o Usuário Inseriu
+            btnLimpar_Click(sender, e);
+
+            //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 0 ( Que Corresponde ao Cálculo do Alpha)
+            int TipoCalculo2 = 0;
+
+            //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
+            this.TipoCalculo2 = TipoCalculo2;
+
+            //Executa a Função InserirAlpha()
+            InserirDivTensao();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Limpa Tudo que o Usuário Inseriu
+            btnLimpar_Click(sender, e);
+
+            //Caso este botão seje Selecionado a Variável Tipo de Cálculo Fica a 1 ( Que Corresponde ao Cálculo do R2)
+            int TipoCalculo2 = 1;
+
+            //Envio o Valor da Variável TipoCalculo para a Variável TipoCalculo da Página
+            this.TipoCalculo2 = TipoCalculo2;
+
+            //Executa a Função InserirR2()
+            InserirDivCorrente();
+        }
+
+
+
+        private void btnCal2_Click(object sender, EventArgs e)
+        {
+            //Se a Variável TipoCalculo for 0 será Execuatada a Função CalcularAlpha(), se for 1 será Execuatada a Função CalcularR2() 
+            if (TipoCalculo2 == 0)
+            {
+                //Executa a Função CalcularAlpha()
+                CalcularDivTensao(textBox4);
+            }
+            else if (TipoCalculo2 == 1)
+            {
+                //Executa a Função CalcularR2()
+                CalcularDivCorrente(textBox4);
+            }
+        }
+
+
+        private void btnLimpar2_Click(object sender, EventArgs e)
+        {
+            //Limpa as TextBox
+            textBox3.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            
+            //Esconde as TextBoxs
+            textBox4.Visible = false;
+
+            //Esconde os Labels
+            labelResultado2.Visible = false;
+        }
+
+        #endregion Código Botões
+
+        #endregion Calculo Divisores
 
     }
 }

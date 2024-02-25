@@ -41,6 +41,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelCoeficiente = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.button6 = new System.Windows.Forms.Button();
+            this.labelResultado2 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnLimpar2 = new System.Windows.Forms.Button();
+            this.btnCal2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelDivTensaoCorrente = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -196,11 +210,180 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1118, 165);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(179, 79);
+            this.button5.TabIndex = 102;
+            this.button5.TabStop = false;
+            this.button5.Text = "Divisor de Tensão";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(1398, 301);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 101;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox4.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(1301, 657);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(323, 25);
+            this.textBox4.TabIndex = 100;
+            this.textBox4.TabStop = false;
+            // 
+            // button6
+            // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(1402, 165);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(179, 79);
+            this.button6.TabIndex = 104;
+            this.button6.TabStop = false;
+            this.button6.Text = "Divisor de Corrente";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // labelResultado2
+            // 
+            this.labelResultado2.AutoSize = true;
+            this.labelResultado2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultado2.ForeColor = System.Drawing.Color.Red;
+            this.labelResultado2.Location = new System.Drawing.Point(1149, 657);
+            this.labelResultado2.Name = "labelResultado2";
+            this.labelResultado2.Size = new System.Drawing.Size(139, 24);
+            this.labelResultado2.TabIndex = 99;
+            this.labelResultado2.Text = "O Resultado é: ";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(1398, 359);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 98;
+            // 
+            // btnLimpar2
+            // 
+            this.btnLimpar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar2.FlatAppearance.BorderSize = 0;
+            this.btnLimpar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar2.Location = new System.Drawing.Point(1402, 499);
+            this.btnLimpar2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLimpar2.Name = "btnLimpar2";
+            this.btnLimpar2.Size = new System.Drawing.Size(179, 79);
+            this.btnLimpar2.TabIndex = 97;
+            this.btnLimpar2.TabStop = false;
+            this.btnLimpar2.Text = "Limpar";
+            this.btnLimpar2.UseVisualStyleBackColor = true;
+            this.btnLimpar2.Click += new System.EventHandler(this.btnLimpar2_Click);
+            // 
+            // btnCal2
+            // 
+            this.btnCal2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCal2.FlatAppearance.BorderSize = 0;
+            this.btnCal2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCal2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCal2.Location = new System.Drawing.Point(1118, 499);
+            this.btnCal2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCal2.Name = "btnCal2";
+            this.btnCal2.Size = new System.Drawing.Size(179, 79);
+            this.btnCal2.TabIndex = 96;
+            this.btnCal2.TabStop = false;
+            this.btnCal2.Text = "Calcular";
+            this.btnCal2.UseVisualStyleBackColor = true;
+            this.btnCal2.Click += new System.EventHandler(this.btnCal2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(1228, 358);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 21);
+            this.label4.TabIndex = 95;
+            this.label4.Text = ".";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(1228, 301);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 21);
+            this.label3.TabIndex = 94;
+            this.label3.Text = ".";
+            // 
+            // labelDivTensaoCorrente
+            // 
+            this.labelDivTensaoCorrente.AutoSize = true;
+            this.labelDivTensaoCorrente.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDivTensaoCorrente.Location = new System.Drawing.Point(1190, 70);
+            this.labelDivTensaoCorrente.Name = "labelDivTensaoCorrente";
+            this.labelDivTensaoCorrente.Size = new System.Drawing.Size(284, 28);
+            this.labelDivTensaoCorrente.TabIndex = 93;
+            this.labelDivTensaoCorrente.Text = "Divisor de Tensão e Corrente";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(1398, 421);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 106;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(1228, 420);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 21);
+            this.label5.TabIndex = 105;
+            this.label5.Text = ".";
+            // 
             // FormTeo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1883, 1004);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.labelResultado2);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnLimpar2);
+            this.Controls.Add(this.btnCal2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelDivTensaoCorrente);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -234,5 +417,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCoeficiente;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label labelResultado2;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnLimpar2;
+        private System.Windows.Forms.Button btnCal2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDivTensaoCorrente;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label5;
     }
 }
