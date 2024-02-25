@@ -43,7 +43,7 @@ namespace EletroMath.Forms
                 button2.Text = "Onda Quadratica";
                 button3.Text = "Onda Triangular";
                 label3.Text = "Frequência";
-                label2.Text = "Voltagem";
+                label2.Text = "Tensão";
             }
         }
         private void LoadTheme()
@@ -96,11 +96,30 @@ namespace EletroMath.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             ResetColors();
-            double amplitude = ParseDouble(txtBoxVolt.Text);
+            double amplitudePico = ParseDouble(txtBoxVolt.Text) / 2.0;
             double frequencia = ParseDouble(txtBoxFreq.Text);
             GerarGrafico("Onda Triangular", (tempo) =>
             {
-                return (tempo < 0.5) ? 4.0 * amplitude / 1.0 * tempo : 4.0 * amplitude / 1.0 * (1.0 - tempo);
+                double periodo = 1.0 / frequencia;
+                double duracaoInclinacao = periodo / 2.0;
+
+                // Utilize a função módulo para obter um comportamento periódico
+                tempo = tempo % periodo;
+
+                double valor = 0.0;
+
+                if (tempo < duracaoInclinacao)
+                {
+                    // Parte crescente da onda triangular
+                    valor = (2.0 * amplitudePico / duracaoInclinacao) * tempo;
+                }
+                else
+                {
+                    // Parte decrescente da onda triangular
+                    valor = 2.0 * amplitudePico - (2.0 * amplitudePico / duracaoInclinacao) * (tempo - duracaoInclinacao);
+                }
+
+                return valor;
             });
             chart1.Visible = true;
             button3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
@@ -131,8 +150,8 @@ namespace EletroMath.Forms
             // Configurar propriedades do gráfico
             chart1.ChartAreas[0].AxisX.Minimum = 0.0;
             chart1.ChartAreas[0].AxisX.Maximum = 1.0;
-            chart1.ChartAreas[0].AxisY.Minimum = -1.5 * ParseDouble(txtBoxVolt.Text);
-            chart1.ChartAreas[0].AxisY.Maximum = 1.5 * ParseDouble(txtBoxVolt.Text);
+            chart1.ChartAreas[0].AxisY.Minimum = -3 * ParseDouble(txtBoxVolt.Text);
+            chart1.ChartAreas[0].AxisY.Maximum = 3 * ParseDouble(txtBoxVolt.Text);
 
             series.Color = ThemeColor.PrimaryColor;
         }
