@@ -110,11 +110,11 @@ namespace EletroMath.Forms
                 button6.Text = "Current Divider";
             }
         }
-
-        private void FormResTemp_Load(object sender, EventArgs e)
+        private void FormTeo1_Load(object sender, EventArgs e)
         {
             LoadTheme();
         }
+
 
         #endregion Misc
 
@@ -718,9 +718,6 @@ namespace EletroMath.Forms
 
         #endregion Calculo Divisores
 
-        private void FormTeo1_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
-        }
+
     }
 }
