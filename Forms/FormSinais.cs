@@ -15,8 +15,10 @@ namespace EletroMath.Forms
     public partial class FormSinais : Form
     {
         private const double M_PI = Math.PI;
+        string idioma;
         public FormSinais(string idiomaAtual)
         {
+            idioma=idiomaAtual;
             InitializeComponent();
             AtualizarTextos(idiomaAtual);
             chart1.Visible = false; //esconde o grafico
@@ -33,8 +35,8 @@ namespace EletroMath.Forms
                 button1.Text = "Sinusoidal Wave";
                 button2.Text = "Quadratic Wave";
                 button3.Text = "Triangular Wave";
-                label3.Text = "Frequency";
-                label2.Text = "Voltage";
+                label3.Text = "Frequency (in Hz)";
+                label2.Text = "Voltage(in V)";
             }
             else if (idiomaAtual == "portugues")
             {
@@ -42,8 +44,8 @@ namespace EletroMath.Forms
                 button1.Text = "Onda Sinusoidal";
                 button2.Text = "Onda Quadratica";
                 button3.Text = "Onda Triangular";
-                label3.Text = "Frequência";
-                label2.Text = "Tensão";
+                label3.Text = "Frequência (emHz)";
+                label2.Text = "Tensão (em V)";
             }
         }
         private void LoadTheme()
@@ -69,9 +71,23 @@ namespace EletroMath.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             ResetColors();
-            double amplitude = ParseDouble(txtBoxVolt.Text);
-            double frequencia = ParseDouble(txtBoxFreq.Text);
-            GerarGrafico("Onda Sinusoidal", (tempo) => amplitude * Math.Sin(2 * M_PI * frequencia * tempo));
+            double amplitude;
+            double frequencia;
+            if (!double.TryParse(txtBoxVolt.Text, out amplitude) ||
+            (!double.TryParse(txtBoxFreq.Text, out frequencia)))
+            {
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
+                if (idioma == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idioma == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+                return;
+            }
+            GerarGrafico("", (tempo) => amplitude * Math.Sin(2 * M_PI * frequencia * tempo));
 
             chart1.Visible = true;
             button1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.3);
@@ -80,9 +96,24 @@ namespace EletroMath.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             ResetColors();
-            double amplitude = ParseDouble(txtBoxVolt.Text);
-            double frequencia = ParseDouble(txtBoxFreq.Text);
-            GerarGrafico("Onda Quadrada", (tempo) =>
+            double amplitude;
+            double frequencia;
+            if (!double.TryParse(txtBoxVolt.Text, out amplitude)||
+            (!double.TryParse(txtBoxFreq.Text, out frequencia)))
+            {
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
+                if ( idioma == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idioma == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+                return;
+            }
+
+            GerarGrafico("", (tempo) =>
             {
 
                 double periodo = 1.0 / frequencia;
@@ -96,9 +127,25 @@ namespace EletroMath.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             ResetColors();
-            double amplitudePico = ParseDouble(txtBoxVolt.Text) / 2.0;
-            double frequencia = ParseDouble(txtBoxFreq.Text);
-            GerarGrafico("Onda Triangular", (tempo) =>
+            double amplitude;
+            
+            double frequencia;
+            if (!double.TryParse(txtBoxVolt.Text, out amplitude) ||
+            (!double.TryParse(txtBoxFreq.Text, out frequencia)))
+            {
+                // Se algum Valor não puder ser Convertido para Double, Exibe uma Mensagem de Erro
+                if (idioma == "portugues")
+                {
+                    MessageBox.Show("Por favor, Insira Valores Válidos em todas as Caixas de Texto");
+                }
+                else if (idioma == "ingles")
+                {
+                    MessageBox.Show("Please Enter Valid Values ​​in All Text Boxes");
+                }
+                return;
+            }
+            double amplitudePico = amplitude / 2;
+            GerarGrafico("", (tempo) =>
             {
                 double periodo = 1.0 / frequencia;
                 double duracaoInclinacao = periodo / 2.0;
